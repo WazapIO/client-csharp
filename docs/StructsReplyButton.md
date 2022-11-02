@@ -1,5 +1,5 @@
 
-# com.whatsapi.Model.StructsReplyButton
+# whatsapi.Model.StructsReplyButton
 
 ## Properties
 

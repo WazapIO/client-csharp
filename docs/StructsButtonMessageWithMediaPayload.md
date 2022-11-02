@@ -1,5 +1,5 @@
 
-# com.whatsapi.Model.StructsButtonMessageWithMediaPayload
+# whatsapi.Model.StructsButtonMessageWithMediaPayload
 
 ## Properties
 

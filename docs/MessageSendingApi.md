@@ -1,4 +1,4 @@
-# com.whatsapi.Api.MessageSendingApi
+# whatsapi.Api.MessageSendingApi
 
 All URIs are relative to */api*
 
@@ -36,9 +36,9 @@ Gets list of all products registered by you.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -121,9 +121,9 @@ Sends a audio message by uploading to the WhatsApp servers every time. This is n
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -212,9 +212,9 @@ Sends an interactive button message to the given user. This message also has med
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -299,9 +299,9 @@ Sends an interactive button message to the given user. Make sure that all the bu
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -386,9 +386,9 @@ Sends a contact (vcard) message to the given user.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -473,9 +473,9 @@ Sends a document message by uploading to the WhatsApp servers every time. This i
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -564,9 +564,9 @@ Sends a image message by uploading to the WhatsApp servers every time. This is n
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -655,9 +655,9 @@ Sends an interactive List message to the given user.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -742,9 +742,9 @@ Sends a location message to the given user. This is static location and does not
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -829,9 +829,9 @@ Sends a media message to the given user.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -916,9 +916,9 @@ Sends an interactive poll message with a media header to the given user. The pol
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -1003,9 +1003,9 @@ Sends an interactive template message with a media header to the given user. Not
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -1090,9 +1090,9 @@ Sends an interactive template message to the given user. Note: The valid button 
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -1177,9 +1177,9 @@ Sends a text message to the given user.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -1264,9 +1264,9 @@ Uploads media to WhatsApp servers and returns the media keys. Store the returned
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {
@@ -1353,9 +1353,9 @@ Sends a video message by uploading to the WhatsApp servers every time. This is n
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using com.whatsapi.Api;
-using com.whatsapi.Client;
-using com.whatsapi.Model;
+using whatsapi.Api;
+using whatsapi.Client;
+using whatsapi.Model;
 
 namespace Example
 {

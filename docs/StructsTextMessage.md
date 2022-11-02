@@ -1,5 +1,5 @@
 
-# com.whatsapi.Model.StructsTextMessage
+# whatsapi.Model.StructsTextMessage
 
 ## Properties
 

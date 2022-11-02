@@ -1,5 +1,5 @@
 
-# com.whatsapi.Model.StructsGroupUpdateParticipantsPayload
+# whatsapi.Model.StructsGroupUpdateParticipantsPayload
 
 ## Properties
 

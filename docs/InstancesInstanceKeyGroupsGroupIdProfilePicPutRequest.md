@@ -1,5 +1,5 @@
 
-# com.whatsapi.Model.InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest
+# whatsapi.Model.InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest
 
 ## Properties
 

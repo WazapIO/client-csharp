@@ -1,5 +1,5 @@
 
-# com.whatsapi.Model.StructsContactMessagePayload
+# whatsapi.Model.StructsContactMessagePayload
 
 ## Properties
 

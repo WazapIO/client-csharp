@@ -1,5 +1,5 @@
 
-# com.whatsapi.Model.InstancesInstanceKeySendDocumentPostRequest
+# whatsapi.Model.InstancesInstanceKeySendDocumentPostRequest
 
 ## Properties
 

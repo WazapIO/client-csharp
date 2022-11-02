@@ -1,5 +1,5 @@
 
-# com.whatsapi.Model.StructsLocationMessagePayload
+# whatsapi.Model.StructsLocationMessagePayload
 
 ## Properties
 

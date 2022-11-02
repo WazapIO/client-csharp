@@ -1,5 +1,5 @@
 
-# com.whatsapi.Model.StructsPollMessagePayload
+# whatsapi.Model.StructsPollMessagePayload
 
 ## Properties
 

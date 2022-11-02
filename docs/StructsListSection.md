@@ -1,5 +1,5 @@
 
-# com.whatsapi.Model.StructsListSection
+# whatsapi.Model.StructsListSection
 
 ## Properties
 

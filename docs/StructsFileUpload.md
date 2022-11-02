@@ -1,5 +1,5 @@
 
-# com.whatsapi.Model.StructsFileUpload
+# whatsapi.Model.StructsFileUpload
 
 ## Properties
 

@@ -1,5 +1,5 @@
 
-# com.whatsapi.Model.StructsTemplateButtonPayload
+# whatsapi.Model.StructsTemplateButtonPayload
 
 ## Properties
 

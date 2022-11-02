@@ -1,5 +1,5 @@
 
-# com.whatsapi.Model.StructsWebhookPayload
+# whatsapi.Model.StructsWebhookPayload
 
 ## Properties
 
