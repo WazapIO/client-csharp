@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.InstancesInstanceKeySendAudioPostRequest
+# com.whatsapi.Model.InstancesInstanceKeySendAudioPostRequest
 
 ## Properties
 

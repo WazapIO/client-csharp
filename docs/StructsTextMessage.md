@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.StructsTextMessage
+# com.whatsapi.Model.StructsTextMessage
 
 ## Properties
 

@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.StructsContactMessagePayload
+# com.whatsapi.Model.StructsContactMessagePayload
 
 ## Properties
 

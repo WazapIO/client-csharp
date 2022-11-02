@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.StructsTemplateButtonWithMediaPayload
+# com.whatsapi.Model.StructsTemplateButtonWithMediaPayload
 
 ## Properties
 

@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.StructsSendMediaPayload
+# com.whatsapi.Model.StructsSendMediaPayload
 
 ## Properties
 

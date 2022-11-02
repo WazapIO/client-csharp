@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.InstancesInstanceKeySendVideoPostRequest
+# com.whatsapi.Model.InstancesInstanceKeySendVideoPostRequest
 
 ## Properties
 

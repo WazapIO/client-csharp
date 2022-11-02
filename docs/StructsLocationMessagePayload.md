@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.StructsLocationMessagePayload
+# com.whatsapi.Model.StructsLocationMessagePayload
 
 ## Properties
 

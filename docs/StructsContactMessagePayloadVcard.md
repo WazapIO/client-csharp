@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.StructsContactMessagePayloadVcard
+# com.whatsapi.Model.StructsContactMessagePayloadVcard
 
 ## Properties
 

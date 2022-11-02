@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.StructsTemplateButton
+# com.whatsapi.Model.StructsTemplateButton
 
 ## Properties
 

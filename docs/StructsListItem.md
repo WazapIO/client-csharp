@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.StructsListItem
+# com.whatsapi.Model.StructsListItem
 
 ## Properties
 

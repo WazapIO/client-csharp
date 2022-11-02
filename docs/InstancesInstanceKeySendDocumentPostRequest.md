@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.InstancesInstanceKeySendDocumentPostRequest
+# com.whatsapi.Model.InstancesInstanceKeySendDocumentPostRequest
 
 ## Properties
 

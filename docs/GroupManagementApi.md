@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.GroupManagementApi
+# com.whatsapi.Api.GroupManagementApi
 
 All URIs are relative to */api*
 
@@ -36,9 +36,9 @@ Returns list of all groups in which you are admin.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -121,9 +121,9 @@ Creates a group with the participant data. The creator is automatically added to
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -208,9 +208,9 @@ Returns list of all groups with participants data. Set include_participants to f
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -295,9 +295,9 @@ Set if non-admins are allowed to send messages in groups
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -384,9 +384,9 @@ Leaves the specified group.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -471,9 +471,9 @@ Changes the group description
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -560,9 +560,9 @@ Fetches the group data.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -647,9 +647,9 @@ Gets the invite code of the group.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -734,9 +734,9 @@ Set if non-admins are allowed to change the group dp and other stuff
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -823,9 +823,9 @@ Changes the group name. The max limit is 22 chars
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -912,9 +912,9 @@ Handles adding participants to a group. You must be admin in the group or the qu
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -1001,9 +1001,9 @@ Demotes admins in groups. You must be admin in the group or the query will fail.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -1090,9 +1090,9 @@ Promotes participants to admin. You must be admin in the group or the query will
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -1179,9 +1179,9 @@ Handles removing participants from a group. You must be admin in the group or th
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -1268,9 +1268,9 @@ Changes the group profile picture. Currently it only seems to accept JPEG images
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -1357,9 +1357,9 @@ Gets a group info from an invite link. An invite link is a link that can be used
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {

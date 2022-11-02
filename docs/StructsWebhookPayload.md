@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.StructsWebhookPayload
+# com.whatsapi.Model.StructsWebhookPayload
 
 ## Properties
 

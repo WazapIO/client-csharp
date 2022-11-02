@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.MainAPIResponse
+# com.whatsapi.Model.MainAPIResponse
 
 ## Properties
 

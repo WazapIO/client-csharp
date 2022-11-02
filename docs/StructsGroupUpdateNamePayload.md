@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.StructsGroupUpdateNamePayload
+# com.whatsapi.Model.StructsGroupUpdateNamePayload
 
 ## Properties
 

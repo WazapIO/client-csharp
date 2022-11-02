@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest
+# com.whatsapi.Model.InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest
 
 ## Properties
 

@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.StructsFileUpload
+# com.whatsapi.Model.StructsFileUpload
 
 ## Properties
 

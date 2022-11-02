@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.InstancesInstanceKeySendImagePostRequest
+# com.whatsapi.Model.InstancesInstanceKeySendImagePostRequest
 
 ## Properties
 

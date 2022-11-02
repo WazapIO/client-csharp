@@ -1,4 +1,4 @@
-# Org.OpenAPITools.Api.MiscellaneousApi
+# com.whatsapi.Api.MiscellaneousApi
 
 All URIs are relative to */api*
 
@@ -22,9 +22,9 @@ Returns the profile pic of the given user.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {
@@ -109,9 +109,9 @@ Gets the user info for the given user ids. This does not checks if user is regis
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using Org.OpenAPITools.Api;
-using Org.OpenAPITools.Client;
-using Org.OpenAPITools.Model;
+using com.whatsapi.Api;
+using com.whatsapi.Client;
+using com.whatsapi.Model;
 
 namespace Example
 {

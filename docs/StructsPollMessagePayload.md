@@ -1,5 +1,5 @@
 
-# Org.OpenAPITools.Model.StructsPollMessagePayload
+# com.whatsapi.Model.StructsPollMessagePayload
 
 ## Properties
 
