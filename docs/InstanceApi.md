@@ -1,4 +1,4 @@
-# whatsapi.Api.InstanceApi
+# WhatsAPI.whatsapi.InstanceApi
 
 All URIs are relative to */api*
 
@@ -28,9 +28,9 @@ This endpoint is used to create a new WhatsApp Web instance.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using whatsapi.Api;
-using whatsapi.Client;
-using whatsapi.Model;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
 
 namespace Example
 {
@@ -113,9 +113,9 @@ Fetches the list of contacts in the instance.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using whatsapi.Api;
-using whatsapi.Client;
-using whatsapi.Model;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
 
 namespace Example
 {
@@ -198,9 +198,9 @@ Deletes the instance with the provided key.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using whatsapi.Api;
-using whatsapi.Client;
-using whatsapi.Model;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
 
 namespace Example
 {
@@ -283,9 +283,9 @@ Returns the instance data of single instance with connection status.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using whatsapi.Api;
-using whatsapi.Client;
-using whatsapi.Model;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
 
 namespace Example
 {
@@ -368,9 +368,9 @@ Logouts of the instance with the provided key.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using whatsapi.Api;
-using whatsapi.Client;
-using whatsapi.Model;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
 
 namespace Example
 {
@@ -453,9 +453,9 @@ Returns the qrcode in the base64 format.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using whatsapi.Api;
-using whatsapi.Client;
-using whatsapi.Model;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
 
 namespace Example
 {
@@ -538,9 +538,9 @@ Changes the webhook url of an instance.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using whatsapi.Api;
-using whatsapi.Client;
-using whatsapi.Model;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
 
 namespace Example
 {
@@ -625,9 +625,9 @@ Fetches the list of all Instances with login status.
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using whatsapi.Api;
-using whatsapi.Client;
-using whatsapi.Model;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
 
 namespace Example
 {

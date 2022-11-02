@@ -1,5 +1,5 @@
 
-# whatsapi.Model.StructsTextMessage
+# WhatsAPI.models.StructsTextMessage
 
 ## Properties
 

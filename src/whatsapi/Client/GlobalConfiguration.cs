@@ -17,7 +17,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace whatsapi.Client
+namespace WhatsAPI.Client
 {
     /// <summary>
     /// <see cref="GlobalConfiguration"/> provides a compile-time extension point for globally configuring

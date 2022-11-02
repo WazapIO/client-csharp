@@ -1,5 +1,5 @@
 
-# whatsapi.Model.StructsListMessagePayload
+# WhatsAPI.models.StructsListMessagePayload
 
 ## Properties
 

@@ -1,5 +1,5 @@
 
-# whatsapi.Model.StructsContactMessagePayloadVcard
+# WhatsAPI.models.StructsContactMessagePayloadVcard
 
 ## Properties
 

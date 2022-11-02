@@ -11,7 +11,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace whatsapi.Client
+namespace WhatsAPI.Client
 {
     /// <summary>
     /// API Response

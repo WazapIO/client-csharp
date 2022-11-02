@@ -1,5 +1,5 @@
 
-# whatsapi.Model.InstancesInstanceKeySendVideoPostRequest
+# WhatsAPI.models.InstancesInstanceKeySendVideoPostRequest
 
 ## Properties
 

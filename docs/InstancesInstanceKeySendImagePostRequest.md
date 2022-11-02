@@ -1,5 +1,5 @@
 
-# whatsapi.Model.InstancesInstanceKeySendImagePostRequest
+# WhatsAPI.models.InstancesInstanceKeySendImagePostRequest
 
 ## Properties
 

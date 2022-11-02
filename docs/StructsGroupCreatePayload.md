@@ -1,5 +1,5 @@
 
-# whatsapi.Model.StructsGroupCreatePayload
+# WhatsAPI.models.StructsGroupCreatePayload
 
 ## Properties
 

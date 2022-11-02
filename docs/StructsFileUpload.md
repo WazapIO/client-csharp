@@ -1,5 +1,5 @@
 
-# whatsapi.Model.StructsFileUpload
+# WhatsAPI.models.StructsFileUpload
 
 ## Properties
 

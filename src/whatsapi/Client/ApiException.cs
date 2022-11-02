@@ -10,7 +10,7 @@
 
 using System;
 
-namespace whatsapi.Client
+namespace WhatsAPI.Client
 {
     /// <summary>
     /// API Exception

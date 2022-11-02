@@ -1,4 +1,4 @@
-# whatsapi - the C# library for the WhatsAPI Go
+# WhatsAPI - the C# library for the WhatsAPI Go
 
 The V2 of WhatsAPI Go
 
@@ -41,9 +41,9 @@ Run the following command to generate the DLL
 Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
 
 ```csharp
-using whatsapi.Api;
-using whatsapi.Client;
-using whatsapi.Model;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
 
 ```
 
@@ -55,7 +55,7 @@ A `.nuspec` is included with the project. You can follow the Nuget quickstart to
 This `.nuspec` uses placeholders from the `.csproj`, so build the `.csproj` directly:
 
 ```
-nuget pack -Build -OutputDirectory out whatsapi.csproj
+nuget pack -Build -OutputDirectory out WhatsAPI.csproj
 ```
 
 Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-packages/local-feeds) or [other host](https://docs.microsoft.com/en-us/nuget/hosting-packages/overview) and consume the new package via Nuget as usual.
@@ -66,9 +66,9 @@ Then, publish to a [local feed](https://docs.microsoft.com/en-us/nuget/hosting-p
 ```csharp
 using System.Collections.Generic;
 using System.Diagnostics;
-using whatsapi.Api;
-using whatsapi.Client;
-using whatsapi.Model;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
 
 namespace Example
 {
@@ -156,36 +156,36 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [Model.InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest](docs/InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest.md)
- - [Model.InstancesInstanceKeySendAudioPostRequest](docs/InstancesInstanceKeySendAudioPostRequest.md)
- - [Model.InstancesInstanceKeySendDocumentPostRequest](docs/InstancesInstanceKeySendDocumentPostRequest.md)
- - [Model.InstancesInstanceKeySendImagePostRequest](docs/InstancesInstanceKeySendImagePostRequest.md)
- - [Model.InstancesInstanceKeySendUploadPostRequest](docs/InstancesInstanceKeySendUploadPostRequest.md)
- - [Model.InstancesInstanceKeySendVideoPostRequest](docs/InstancesInstanceKeySendVideoPostRequest.md)
- - [Model.MainAPIResponse](docs/MainAPIResponse.md)
- - [Model.StructsButtonMessagePayload](docs/StructsButtonMessagePayload.md)
- - [Model.StructsButtonMessageWithMediaPayload](docs/StructsButtonMessageWithMediaPayload.md)
- - [Model.StructsContactMessagePayload](docs/StructsContactMessagePayload.md)
- - [Model.StructsContactMessagePayloadVcard](docs/StructsContactMessagePayloadVcard.md)
- - [Model.StructsFileUpload](docs/StructsFileUpload.md)
- - [Model.StructsGroupCreatePayload](docs/StructsGroupCreatePayload.md)
- - [Model.StructsGroupUpdateDescriptionPayload](docs/StructsGroupUpdateDescriptionPayload.md)
- - [Model.StructsGroupUpdateNamePayload](docs/StructsGroupUpdateNamePayload.md)
- - [Model.StructsGroupUpdateParticipantsPayload](docs/StructsGroupUpdateParticipantsPayload.md)
- - [Model.StructsListItem](docs/StructsListItem.md)
- - [Model.StructsListMessagePayload](docs/StructsListMessagePayload.md)
- - [Model.StructsListSection](docs/StructsListSection.md)
- - [Model.StructsLocationMessagePayload](docs/StructsLocationMessagePayload.md)
- - [Model.StructsLocationMessagePayloadLocation](docs/StructsLocationMessagePayloadLocation.md)
- - [Model.StructsPollMessagePayload](docs/StructsPollMessagePayload.md)
- - [Model.StructsReplyButton](docs/StructsReplyButton.md)
- - [Model.StructsSendMediaPayload](docs/StructsSendMediaPayload.md)
- - [Model.StructsTemplateButton](docs/StructsTemplateButton.md)
- - [Model.StructsTemplateButtonPayload](docs/StructsTemplateButtonPayload.md)
- - [Model.StructsTemplateButtonWithMediaPayload](docs/StructsTemplateButtonWithMediaPayload.md)
- - [Model.StructsTextMessage](docs/StructsTextMessage.md)
- - [Model.StructsUserInfoPayload](docs/StructsUserInfoPayload.md)
- - [Model.StructsWebhookPayload](docs/StructsWebhookPayload.md)
+ - [models.InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest](docs/InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest.md)
+ - [models.InstancesInstanceKeySendAudioPostRequest](docs/InstancesInstanceKeySendAudioPostRequest.md)
+ - [models.InstancesInstanceKeySendDocumentPostRequest](docs/InstancesInstanceKeySendDocumentPostRequest.md)
+ - [models.InstancesInstanceKeySendImagePostRequest](docs/InstancesInstanceKeySendImagePostRequest.md)
+ - [models.InstancesInstanceKeySendUploadPostRequest](docs/InstancesInstanceKeySendUploadPostRequest.md)
+ - [models.InstancesInstanceKeySendVideoPostRequest](docs/InstancesInstanceKeySendVideoPostRequest.md)
+ - [models.MainAPIResponse](docs/MainAPIResponse.md)
+ - [models.StructsButtonMessagePayload](docs/StructsButtonMessagePayload.md)
+ - [models.StructsButtonMessageWithMediaPayload](docs/StructsButtonMessageWithMediaPayload.md)
+ - [models.StructsContactMessagePayload](docs/StructsContactMessagePayload.md)
+ - [models.StructsContactMessagePayloadVcard](docs/StructsContactMessagePayloadVcard.md)
+ - [models.StructsFileUpload](docs/StructsFileUpload.md)
+ - [models.StructsGroupCreatePayload](docs/StructsGroupCreatePayload.md)
+ - [models.StructsGroupUpdateDescriptionPayload](docs/StructsGroupUpdateDescriptionPayload.md)
+ - [models.StructsGroupUpdateNamePayload](docs/StructsGroupUpdateNamePayload.md)
+ - [models.StructsGroupUpdateParticipantsPayload](docs/StructsGroupUpdateParticipantsPayload.md)
+ - [models.StructsListItem](docs/StructsListItem.md)
+ - [models.StructsListMessagePayload](docs/StructsListMessagePayload.md)
+ - [models.StructsListSection](docs/StructsListSection.md)
+ - [models.StructsLocationMessagePayload](docs/StructsLocationMessagePayload.md)
+ - [models.StructsLocationMessagePayloadLocation](docs/StructsLocationMessagePayloadLocation.md)
+ - [models.StructsPollMessagePayload](docs/StructsPollMessagePayload.md)
+ - [models.StructsReplyButton](docs/StructsReplyButton.md)
+ - [models.StructsSendMediaPayload](docs/StructsSendMediaPayload.md)
+ - [models.StructsTemplateButton](docs/StructsTemplateButton.md)
+ - [models.StructsTemplateButtonPayload](docs/StructsTemplateButtonPayload.md)
+ - [models.StructsTemplateButtonWithMediaPayload](docs/StructsTemplateButtonWithMediaPayload.md)
+ - [models.StructsTextMessage](docs/StructsTextMessage.md)
+ - [models.StructsUserInfoPayload](docs/StructsUserInfoPayload.md)
+ - [models.StructsWebhookPayload](docs/StructsWebhookPayload.md)
 
 
 ## Documentation for Authorization

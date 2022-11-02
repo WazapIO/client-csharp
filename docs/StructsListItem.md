@@ -1,5 +1,5 @@
 
-# whatsapi.Model.StructsListItem
+# WhatsAPI.models.StructsListItem
 
 ## Properties
 

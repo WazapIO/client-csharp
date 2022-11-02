@@ -1,5 +1,5 @@
 
-# whatsapi.Model.StructsUserInfoPayload
+# WhatsAPI.models.StructsUserInfoPayload
 
 ## Properties
 

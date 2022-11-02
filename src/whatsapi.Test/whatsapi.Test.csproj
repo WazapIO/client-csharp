@@ -14,8 +14,8 @@ Contact: manjit@sponsorbook.io
     <ProjectGuid>{19F1DEBC-DE5E-4517-8062-F000CD499087}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>whatsapi.Test</RootNamespace>
-    <AssemblyName>whatsapi.Test</AssemblyName>
+    <RootNamespace>WhatsAPI.Test</RootNamespace>
+    <AssemblyName>WhatsAPI.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -80,9 +80,9 @@ Contact: manjit@sponsorbook.io
   </ItemGroup>
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-      <ProjectReference Include="..\whatsapi\whatsapi.csproj">
-          <Project>{272A19BC-4B64-4E8A-AC3F-7E21EFF43357}</Project>
-          <Name>whatsapi</Name>
+      <ProjectReference Include="..\WhatsAPI\WhatsAPI.csproj">
+          <Project>{BE6CBD9F-4435-483F-BC87-4F7CDB0F9354}</Project>
+          <Name>WhatsAPI</Name>
       </ProjectReference>
   </ItemGroup>
 </Project>

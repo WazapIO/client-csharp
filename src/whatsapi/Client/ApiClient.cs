@@ -22,7 +22,7 @@ using System.Text;
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace whatsapi.Client
+namespace WhatsAPI.Client
 {
     /// <summary>
     /// API client is mainly responsible for making the HTTP call to the API backend.
@@ -53,7 +53,7 @@ namespace whatsapi.Client
         /// </summary>
         public ApiClient()
         {
-            Configuration = whatsapi.Client.Configuration.Default;
+            Configuration = WhatsAPI.Client.Configuration.Default;
             RestClient = new RestClient("/api");
         }
 
@@ -64,7 +64,7 @@ namespace whatsapi.Client
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config)
         {
-            Configuration = config ?? whatsapi.Client.Configuration.Default;
+            Configuration = config ?? WhatsAPI.Client.Configuration.Default;
 
             RestClient = new RestClient(Configuration.BasePath);
         }

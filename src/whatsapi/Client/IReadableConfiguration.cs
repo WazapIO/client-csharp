@@ -11,7 +11,7 @@
 
 using System.Collections.Generic;
 
-namespace whatsapi.Client
+namespace WhatsAPI.Client
 {
     /// <summary>
     /// Represents a readable-only configuration contract.

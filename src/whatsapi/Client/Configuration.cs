@@ -16,7 +16,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace whatsapi.Client
+namespace WhatsAPI.Client
 {
     /// <summary>
     /// Represents a set of configuration settings
@@ -417,7 +417,7 @@ namespace whatsapi.Client
         /// </summary>
         public static String ToDebugReport()
         {
-            String report = "C# SDK (whatsapi) Debug Report:\n";
+            String report = "C# SDK (WhatsAPI) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 2.0\n";

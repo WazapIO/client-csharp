@@ -1,5 +1,5 @@
 
-# whatsapi.Model.StructsSendMediaPayload
+# WhatsAPI.models.StructsSendMediaPayload
 
 ## Properties
 

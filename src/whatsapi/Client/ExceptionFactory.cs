@@ -12,7 +12,7 @@
 using System;
 using RestSharp;
 
-namespace whatsapi.Client
+namespace WhatsAPI.Client
 {
     /// <summary>
     /// A delegate to ExceptionFactory method

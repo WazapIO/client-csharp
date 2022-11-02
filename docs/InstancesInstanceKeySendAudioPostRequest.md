@@ -1,5 +1,5 @@
 
-# whatsapi.Model.InstancesInstanceKeySendAudioPostRequest
+# WhatsAPI.models.InstancesInstanceKeySendAudioPostRequest
 
 ## Properties
 

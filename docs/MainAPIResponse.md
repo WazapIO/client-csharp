@@ -1,5 +1,5 @@
 
-# whatsapi.Model.MainAPIResponse
+# WhatsAPI.models.MainAPIResponse
 
 ## Properties
 
