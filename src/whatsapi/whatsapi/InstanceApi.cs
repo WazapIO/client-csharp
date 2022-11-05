@@ -33,8 +33,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesCreateGet (string instanceKey = default(string));
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesCreateGet (string instanceKey = default(string));
 
         /// <summary>
         /// Creates a new instance key.
@@ -44,8 +44,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesCreateGetWithHttpInfo (string instanceKey = default(string));
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesCreateGetWithHttpInfo (string instanceKey = default(string));
         /// <summary>
         /// Get contacts.
         /// </summary>
@@ -54,8 +54,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyContactsGet (string instanceKey);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyContactsGet (string instanceKey);
 
         /// <summary>
         /// Get contacts.
@@ -65,8 +65,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyContactsGetWithHttpInfo (string instanceKey);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyContactsGetWithHttpInfo (string instanceKey);
         /// <summary>
         /// Delete Instance.
         /// </summary>
@@ -75,8 +75,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyDeleteDelete (string instanceKey);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyDeleteDelete (string instanceKey);
 
         /// <summary>
         /// Delete Instance.
@@ -86,8 +86,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyDeleteDeleteWithHttpInfo (string instanceKey);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyDeleteDeleteWithHttpInfo (string instanceKey);
         /// <summary>
         /// Get Instance.
         /// </summary>
@@ -96,8 +96,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGet (string instanceKey);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGet (string instanceKey);
 
         /// <summary>
         /// Get Instance.
@@ -107,8 +107,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGetWithHttpInfo (string instanceKey);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGetWithHttpInfo (string instanceKey);
         /// <summary>
         /// Logout Instance.
         /// </summary>
@@ -117,8 +117,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyLogoutDelete (string instanceKey);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyLogoutDelete (string instanceKey);
 
         /// <summary>
         /// Logout Instance.
@@ -128,8 +128,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyLogoutDeleteWithHttpInfo (string instanceKey);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyLogoutDeleteWithHttpInfo (string instanceKey);
         /// <summary>
         /// Get QrCode.
         /// </summary>
@@ -138,8 +138,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyQrcodeGet (string instanceKey);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyQrcodeGet (string instanceKey);
 
         /// <summary>
         /// Get QrCode.
@@ -149,8 +149,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyQrcodeGetWithHttpInfo (string instanceKey);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyQrcodeGetWithHttpInfo (string instanceKey);
         /// <summary>
         /// Change Webhook url.
         /// </summary>
@@ -160,8 +160,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyWebhookPut (string instanceKey, StructsWebhookPayload data);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyWebhookPut (string instanceKey, WebhookPayload data);
 
         /// <summary>
         /// Change Webhook url.
@@ -172,8 +172,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyWebhookPutWithHttpInfo (string instanceKey, StructsWebhookPayload data);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyWebhookPutWithHttpInfo (string instanceKey, WebhookPayload data);
         /// <summary>
         /// Get all instances.
         /// </summary>
@@ -181,8 +181,8 @@ namespace WhatsAPI.whatsapi
         /// Fetches the list of all Instances with login status.
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesListGet ();
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesListGet ();
 
         /// <summary>
         /// Get all instances.
@@ -191,8 +191,8 @@ namespace WhatsAPI.whatsapi
         /// Fetches the list of all Instances with login status.
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesListGetWithHttpInfo ();
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesListGetWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -204,8 +204,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesCreateGetAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesCreateGetAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Creates a new instance key.
@@ -216,8 +216,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesCreateGetWithHttpInfoAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesCreateGetWithHttpInfoAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get contacts.
         /// </summary>
@@ -227,8 +227,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyContactsGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyContactsGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get contacts.
@@ -239,8 +239,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyContactsGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyContactsGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Delete Instance.
         /// </summary>
@@ -250,8 +250,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyDeleteDeleteAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyDeleteDeleteAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Delete Instance.
@@ -262,8 +262,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyDeleteDeleteWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyDeleteDeleteWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get Instance.
         /// </summary>
@@ -273,8 +273,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get Instance.
@@ -285,8 +285,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Logout Instance.
         /// </summary>
@@ -296,8 +296,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyLogoutDeleteAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyLogoutDeleteAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Logout Instance.
@@ -308,8 +308,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyLogoutDeleteWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyLogoutDeleteWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get QrCode.
         /// </summary>
@@ -319,8 +319,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyQrcodeGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyQrcodeGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get QrCode.
@@ -331,8 +331,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyQrcodeGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyQrcodeGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Change Webhook url.
         /// </summary>
@@ -343,8 +343,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyWebhookPutAsync (string instanceKey, StructsWebhookPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyWebhookPutAsync (string instanceKey, WebhookPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Change Webhook url.
@@ -356,8 +356,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyWebhookPutWithHttpInfoAsync (string instanceKey, StructsWebhookPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyWebhookPutWithHttpInfoAsync (string instanceKey, WebhookPayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get all instances.
         /// </summary>
@@ -366,8 +366,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesListGetAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesListGetAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get all instances.
@@ -377,8 +377,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesListGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesListGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -495,10 +495,10 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesCreateGet (string instanceKey = default(string))
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesCreateGet (string instanceKey = default(string))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesCreateGetWithHttpInfo(instanceKey);
+             ApiResponse<APIResponse> localVarResponse = InstancesCreateGetWithHttpInfo(instanceKey);
              return localVarResponse.Data;
         }
 
@@ -507,8 +507,8 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesCreateGetWithHttpInfo (string instanceKey = default(string))
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesCreateGetWithHttpInfo (string instanceKey = default(string))
         {
 
             var localVarPath = "/instances/create";
@@ -553,9 +553,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -564,10 +564,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesCreateGetAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesCreateGetAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesCreateGetWithHttpInfoAsync(instanceKey, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesCreateGetWithHttpInfoAsync(instanceKey, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -578,8 +578,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesCreateGetWithHttpInfoAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesCreateGetWithHttpInfoAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/instances/create";
@@ -624,9 +624,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -634,10 +634,10 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyContactsGet (string instanceKey)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyContactsGet (string instanceKey)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyContactsGetWithHttpInfo(instanceKey);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyContactsGetWithHttpInfo(instanceKey);
              return localVarResponse.Data;
         }
 
@@ -646,8 +646,8 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyContactsGetWithHttpInfo (string instanceKey)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyContactsGetWithHttpInfo (string instanceKey)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -695,9 +695,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -706,10 +706,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyContactsGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyContactsGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyContactsGetWithHttpInfoAsync(instanceKey, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyContactsGetWithHttpInfoAsync(instanceKey, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -720,8 +720,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyContactsGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyContactsGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -769,9 +769,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -779,10 +779,10 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyDeleteDelete (string instanceKey)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyDeleteDelete (string instanceKey)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyDeleteDeleteWithHttpInfo(instanceKey);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyDeleteDeleteWithHttpInfo(instanceKey);
              return localVarResponse.Data;
         }
 
@@ -791,8 +791,8 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyDeleteDeleteWithHttpInfo (string instanceKey)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyDeleteDeleteWithHttpInfo (string instanceKey)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -840,9 +840,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -851,10 +851,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyDeleteDeleteAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyDeleteDeleteAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyDeleteDeleteWithHttpInfoAsync(instanceKey, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyDeleteDeleteWithHttpInfoAsync(instanceKey, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -865,8 +865,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyDeleteDeleteWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyDeleteDeleteWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -914,9 +914,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -924,10 +924,10 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGet (string instanceKey)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGet (string instanceKey)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGetWithHttpInfo(instanceKey);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGetWithHttpInfo(instanceKey);
              return localVarResponse.Data;
         }
 
@@ -936,8 +936,8 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGetWithHttpInfo (string instanceKey)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGetWithHttpInfo (string instanceKey)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -985,9 +985,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -996,10 +996,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGetWithHttpInfoAsync(instanceKey, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGetWithHttpInfoAsync(instanceKey, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1010,8 +1010,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1059,9 +1059,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1069,10 +1069,10 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyLogoutDelete (string instanceKey)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyLogoutDelete (string instanceKey)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyLogoutDeleteWithHttpInfo(instanceKey);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyLogoutDeleteWithHttpInfo(instanceKey);
              return localVarResponse.Data;
         }
 
@@ -1081,8 +1081,8 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyLogoutDeleteWithHttpInfo (string instanceKey)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyLogoutDeleteWithHttpInfo (string instanceKey)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1130,9 +1130,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1141,10 +1141,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyLogoutDeleteAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyLogoutDeleteAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyLogoutDeleteWithHttpInfoAsync(instanceKey, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyLogoutDeleteWithHttpInfoAsync(instanceKey, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1155,8 +1155,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyLogoutDeleteWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyLogoutDeleteWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1204,9 +1204,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1214,10 +1214,10 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyQrcodeGet (string instanceKey)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyQrcodeGet (string instanceKey)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyQrcodeGetWithHttpInfo(instanceKey);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyQrcodeGetWithHttpInfo(instanceKey);
              return localVarResponse.Data;
         }
 
@@ -1226,8 +1226,8 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyQrcodeGetWithHttpInfo (string instanceKey)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyQrcodeGetWithHttpInfo (string instanceKey)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1275,9 +1275,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1286,10 +1286,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyQrcodeGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyQrcodeGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyQrcodeGetWithHttpInfoAsync(instanceKey, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyQrcodeGetWithHttpInfoAsync(instanceKey, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1300,8 +1300,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyQrcodeGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyQrcodeGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1349,9 +1349,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1360,10 +1360,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyWebhookPut (string instanceKey, StructsWebhookPayload data)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyWebhookPut (string instanceKey, WebhookPayload data)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyWebhookPutWithHttpInfo(instanceKey, data);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyWebhookPutWithHttpInfo(instanceKey, data);
              return localVarResponse.Data;
         }
 
@@ -1373,8 +1373,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyWebhookPutWithHttpInfo (string instanceKey, StructsWebhookPayload data)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyWebhookPutWithHttpInfo (string instanceKey, WebhookPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1434,9 +1434,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1446,10 +1446,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyWebhookPutAsync (string instanceKey, StructsWebhookPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyWebhookPutAsync (string instanceKey, WebhookPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyWebhookPutWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyWebhookPutWithHttpInfoAsync(instanceKey, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1461,8 +1461,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyWebhookPutWithHttpInfoAsync (string instanceKey, StructsWebhookPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyWebhookPutWithHttpInfoAsync (string instanceKey, WebhookPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1522,19 +1522,19 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
         /// Get all instances. Fetches the list of all Instances with login status.
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesListGet ()
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesListGet ()
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesListGetWithHttpInfo();
+             ApiResponse<APIResponse> localVarResponse = InstancesListGetWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -1542,8 +1542,8 @@ namespace WhatsAPI.whatsapi
         /// Get all instances. Fetches the list of all Instances with login status.
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesListGetWithHttpInfo ()
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesListGetWithHttpInfo ()
         {
 
             var localVarPath = "/instances/list";
@@ -1587,9 +1587,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1597,10 +1597,10 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesListGetAsync (CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesListGetAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesListGetWithHttpInfoAsync(cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesListGetWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1610,8 +1610,8 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesListGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesListGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/instances/list";
@@ -1655,9 +1655,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
     }

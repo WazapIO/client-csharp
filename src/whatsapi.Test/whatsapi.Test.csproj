@@ -81,7 +81,7 @@ Contact: manjit@sponsorbook.io
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\WhatsAPI\WhatsAPI.csproj">
-          <Project>{BE6CBD9F-4435-483F-BC87-4F7CDB0F9354}</Project>
+          <Project>{CE4278C7-69F5-44B5-9DF7-1DF3B2DF86F6}</Project>
           <Name>WhatsAPI</Name>
       </ProjectReference>
   </ItemGroup>

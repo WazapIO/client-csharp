@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 ## InstancesInstanceKeyGroupsAdminGet
 
-> MainAPIResponse InstancesInstanceKeyGroupsAdminGet (string instanceKey)
+> APIResponse InstancesInstanceKeyGroupsAdminGet (string instanceKey)
 
 Get admin groupss.
 
@@ -58,7 +58,7 @@ namespace Example
             try
             {
                 // Get admin groupss.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsAdminGet(instanceKey);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsAdminGet(instanceKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsCreatePost
 
-> MainAPIResponse InstancesInstanceKeyGroupsCreatePost (string instanceKey, StructsGroupCreatePayload data)
+> APIResponse InstancesInstanceKeyGroupsCreatePost (string instanceKey, GroupCreatePayload data)
 
 Create group.
 
@@ -139,12 +139,12 @@ namespace Example
 
             var apiInstance = new GroupManagementApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new StructsGroupCreatePayload(); // StructsGroupCreatePayload | Group create payload
+            var data = new GroupCreatePayload(); // GroupCreatePayload | Group create payload
 
             try
             {
                 // Create group.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsCreatePost(instanceKey, data);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsCreatePost(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -164,11 +164,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **data** | [**StructsGroupCreatePayload**](StructsGroupCreatePayload.md)| Group create payload | 
+ **data** | [**GroupCreatePayload**](GroupCreatePayload.md)| Group create payload | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsGet
 
-> MainAPIResponse InstancesInstanceKeyGroupsGet (string instanceKey, string includeParticipants = null)
+> APIResponse InstancesInstanceKeyGroupsGet (string instanceKey, string includeParticipants = null)
 
 Get all groups.
 
@@ -231,7 +231,7 @@ namespace Example
             try
             {
                 // Get all groups.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsGet(instanceKey, includeParticipants);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsGet(instanceKey, includeParticipants);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -255,7 +255,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsGroupIdAnnouncePut
 
-> MainAPIResponse InstancesInstanceKeyGroupsGroupIdAnnouncePut (string instanceKey, bool announce, string groupId)
+> APIResponse InstancesInstanceKeyGroupsGroupIdAnnouncePut (string instanceKey, bool announce, string groupId)
 
 Set group announce.
 
@@ -319,7 +319,7 @@ namespace Example
             try
             {
                 // Set group announce.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdAnnouncePut(instanceKey, announce, groupId);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdAnnouncePut(instanceKey, announce, groupId);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsGroupIdDelete
 
-> MainAPIResponse InstancesInstanceKeyGroupsGroupIdDelete (string instanceKey, string groupId)
+> APIResponse InstancesInstanceKeyGroupsGroupIdDelete (string instanceKey, string groupId)
 
 Leaves the group.
 
@@ -407,7 +407,7 @@ namespace Example
             try
             {
                 // Leaves the group.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdDelete(instanceKey, groupId);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdDelete(instanceKey, groupId);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsGroupIdDescriptionPut
 
-> MainAPIResponse InstancesInstanceKeyGroupsGroupIdDescriptionPut (string instanceKey, string groupId, StructsGroupUpdateDescriptionPayload data)
+> APIResponse InstancesInstanceKeyGroupsGroupIdDescriptionPut (string instanceKey, string groupId, GroupUpdateDescriptionPayload data)
 
 Set group description.
 
@@ -490,12 +490,12 @@ namespace Example
             var apiInstance = new GroupManagementApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
             var groupId = "groupId_example";  // string | Group id of the group
-            var data = new StructsGroupUpdateDescriptionPayload(); // StructsGroupUpdateDescriptionPayload | Group description data
+            var data = new GroupUpdateDescriptionPayload(); // GroupUpdateDescriptionPayload | Group description data
 
             try
             {
                 // Set group description.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdDescriptionPut(instanceKey, groupId, data);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdDescriptionPut(instanceKey, groupId, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -516,11 +516,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
  **groupId** | **string**| Group id of the group | 
- **data** | [**StructsGroupUpdateDescriptionPayload**](StructsGroupUpdateDescriptionPayload.md)| Group description data | 
+ **data** | [**GroupUpdateDescriptionPayload**](GroupUpdateDescriptionPayload.md)| Group description data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -549,7 +549,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsGroupIdGet
 
-> MainAPIResponse InstancesInstanceKeyGroupsGroupIdGet (string instanceKey, string groupId)
+> APIResponse InstancesInstanceKeyGroupsGroupIdGet (string instanceKey, string groupId)
 
 Get group.
 
@@ -583,7 +583,7 @@ namespace Example
             try
             {
                 // Get group.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdGet(instanceKey, groupId);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdGet(instanceKey, groupId);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -607,7 +607,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -636,7 +636,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsGroupIdInviteCodeGet
 
-> MainAPIResponse InstancesInstanceKeyGroupsGroupIdInviteCodeGet (string instanceKey, string groupId)
+> APIResponse InstancesInstanceKeyGroupsGroupIdInviteCodeGet (string instanceKey, string groupId)
 
 Get group invite code.
 
@@ -670,7 +670,7 @@ namespace Example
             try
             {
                 // Get group invite code.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdInviteCodeGet(instanceKey, groupId);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdInviteCodeGet(instanceKey, groupId);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -694,7 +694,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -723,7 +723,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsGroupIdLockPut
 
-> MainAPIResponse InstancesInstanceKeyGroupsGroupIdLockPut (string instanceKey, bool locked, string groupId)
+> APIResponse InstancesInstanceKeyGroupsGroupIdLockPut (string instanceKey, bool locked, string groupId)
 
 Set group locked.
 
@@ -758,7 +758,7 @@ namespace Example
             try
             {
                 // Set group locked.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdLockPut(instanceKey, locked, groupId);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdLockPut(instanceKey, locked, groupId);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -783,7 +783,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -812,7 +812,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsGroupIdNamePut
 
-> MainAPIResponse InstancesInstanceKeyGroupsGroupIdNamePut (string instanceKey, string groupId, StructsGroupUpdateNamePayload data)
+> APIResponse InstancesInstanceKeyGroupsGroupIdNamePut (string instanceKey, string groupId, GroupUpdateNamePayload data)
 
 Set group name.
 
@@ -842,12 +842,12 @@ namespace Example
             var apiInstance = new GroupManagementApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
             var groupId = "groupId_example";  // string | Group id of the group
-            var data = new StructsGroupUpdateNamePayload(); // StructsGroupUpdateNamePayload | Group name data
+            var data = new GroupUpdateNamePayload(); // GroupUpdateNamePayload | Group name data
 
             try
             {
                 // Set group name.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdNamePut(instanceKey, groupId, data);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdNamePut(instanceKey, groupId, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -868,11 +868,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
  **groupId** | **string**| Group id of the group | 
- **data** | [**StructsGroupUpdateNamePayload**](StructsGroupUpdateNamePayload.md)| Group name data | 
+ **data** | [**GroupUpdateNamePayload**](GroupUpdateNamePayload.md)| Group name data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -901,7 +901,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsGroupIdParticipantsAddPost
 
-> MainAPIResponse InstancesInstanceKeyGroupsGroupIdParticipantsAddPost (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data)
+> APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsAddPost (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
 
 Add participant.
 
@@ -931,12 +931,12 @@ namespace Example
             var apiInstance = new GroupManagementApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
             var groupId = "groupId_example";  // string | Group id of the group
-            var data = new StructsGroupUpdateParticipantsPayload(); // StructsGroupUpdateParticipantsPayload | Group update payload
+            var data = new GroupUpdateParticipantsPayload(); // GroupUpdateParticipantsPayload | Group update payload
 
             try
             {
                 // Add participant.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdParticipantsAddPost(instanceKey, groupId, data);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdParticipantsAddPost(instanceKey, groupId, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -957,11 +957,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
  **groupId** | **string**| Group id of the group | 
- **data** | [**StructsGroupUpdateParticipantsPayload**](StructsGroupUpdateParticipantsPayload.md)| Group update payload | 
+ **data** | [**GroupUpdateParticipantsPayload**](GroupUpdateParticipantsPayload.md)| Group update payload | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -990,7 +990,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut
 
-> MainAPIResponse InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data)
+> APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
 
 Demote participant.
 
@@ -1020,12 +1020,12 @@ namespace Example
             var apiInstance = new GroupManagementApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
             var groupId = "groupId_example";  // string | Group id of the group
-            var data = new StructsGroupUpdateParticipantsPayload(); // StructsGroupUpdateParticipantsPayload | Group update payload
+            var data = new GroupUpdateParticipantsPayload(); // GroupUpdateParticipantsPayload | Group update payload
 
             try
             {
                 // Demote participant.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut(instanceKey, groupId, data);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut(instanceKey, groupId, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1046,11 +1046,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
  **groupId** | **string**| Group id of the group | 
- **data** | [**StructsGroupUpdateParticipantsPayload**](StructsGroupUpdateParticipantsPayload.md)| Group update payload | 
+ **data** | [**GroupUpdateParticipantsPayload**](GroupUpdateParticipantsPayload.md)| Group update payload | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -1079,7 +1079,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut
 
-> MainAPIResponse InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data)
+> APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
 
 Promote participant.
 
@@ -1109,12 +1109,12 @@ namespace Example
             var apiInstance = new GroupManagementApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
             var groupId = "groupId_example";  // string | Group id of the group
-            var data = new StructsGroupUpdateParticipantsPayload(); // StructsGroupUpdateParticipantsPayload | Group update payload
+            var data = new GroupUpdateParticipantsPayload(); // GroupUpdateParticipantsPayload | Group update payload
 
             try
             {
                 // Promote participant.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut(instanceKey, groupId, data);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut(instanceKey, groupId, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1135,11 +1135,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
  **groupId** | **string**| Group id of the group | 
- **data** | [**StructsGroupUpdateParticipantsPayload**](StructsGroupUpdateParticipantsPayload.md)| Group update payload | 
+ **data** | [**GroupUpdateParticipantsPayload**](GroupUpdateParticipantsPayload.md)| Group update payload | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -1168,7 +1168,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete
 
-> MainAPIResponse InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data)
+> APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
 
 Remove participant.
 
@@ -1198,12 +1198,12 @@ namespace Example
             var apiInstance = new GroupManagementApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
             var groupId = "groupId_example";  // string | Group id of the group
-            var data = new StructsGroupUpdateParticipantsPayload(); // StructsGroupUpdateParticipantsPayload | Group update payload
+            var data = new GroupUpdateParticipantsPayload(); // GroupUpdateParticipantsPayload | Group update payload
 
             try
             {
                 // Remove participant.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete(instanceKey, groupId, data);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete(instanceKey, groupId, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1224,11 +1224,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
  **groupId** | **string**| Group id of the group | 
- **data** | [**StructsGroupUpdateParticipantsPayload**](StructsGroupUpdateParticipantsPayload.md)| Group update payload | 
+ **data** | [**GroupUpdateParticipantsPayload**](GroupUpdateParticipantsPayload.md)| Group update payload | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -1257,7 +1257,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsGroupIdProfilePicPut
 
-> MainAPIResponse InstancesInstanceKeyGroupsGroupIdProfilePicPut (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest)
+> APIResponse InstancesInstanceKeyGroupsGroupIdProfilePicPut (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest)
 
 Set group picture.
 
@@ -1292,7 +1292,7 @@ namespace Example
             try
             {
                 // Set group picture.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdProfilePicPut(instanceKey, groupId, instancesInstanceKeyGroupsGroupIdProfilePicPutRequest);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsGroupIdProfilePicPut(instanceKey, groupId, instancesInstanceKeyGroupsGroupIdProfilePicPutRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1317,7 +1317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -1346,7 +1346,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGroupsInviteInfoGet
 
-> MainAPIResponse InstancesInstanceKeyGroupsInviteInfoGet (string instanceKey, string inviteLink)
+> APIResponse InstancesInstanceKeyGroupsInviteInfoGet (string instanceKey, string inviteLink)
 
 Get group from invite link.
 
@@ -1380,7 +1380,7 @@ namespace Example
             try
             {
                 // Get group from invite link.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGroupsInviteInfoGet(instanceKey, inviteLink);
+                APIResponse result = apiInstance.InstancesInstanceKeyGroupsInviteInfoGet(instanceKey, inviteLink);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1404,7 +1404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 

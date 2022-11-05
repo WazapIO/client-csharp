@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## InstancesCreateGet
 
-> MainAPIResponse InstancesCreateGet (string instanceKey = null)
+> APIResponse InstancesCreateGet (string instanceKey = null)
 
 Creates a new instance key.
 
@@ -50,7 +50,7 @@ namespace Example
             try
             {
                 // Creates a new instance key.
-                MainAPIResponse result = apiInstance.InstancesCreateGet(instanceKey);
+                APIResponse result = apiInstance.InstancesCreateGet(instanceKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyContactsGet
 
-> MainAPIResponse InstancesInstanceKeyContactsGet (string instanceKey)
+> APIResponse InstancesInstanceKeyContactsGet (string instanceKey)
 
 Get contacts.
 
@@ -135,7 +135,7 @@ namespace Example
             try
             {
                 // Get contacts.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyContactsGet(instanceKey);
+                APIResponse result = apiInstance.InstancesInstanceKeyContactsGet(instanceKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyDeleteDelete
 
-> MainAPIResponse InstancesInstanceKeyDeleteDelete (string instanceKey)
+> APIResponse InstancesInstanceKeyDeleteDelete (string instanceKey)
 
 Delete Instance.
 
@@ -220,7 +220,7 @@ namespace Example
             try
             {
                 // Delete Instance.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyDeleteDelete(instanceKey);
+                APIResponse result = apiInstance.InstancesInstanceKeyDeleteDelete(instanceKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyGet
 
-> MainAPIResponse InstancesInstanceKeyGet (string instanceKey)
+> APIResponse InstancesInstanceKeyGet (string instanceKey)
 
 Get Instance.
 
@@ -305,7 +305,7 @@ namespace Example
             try
             {
                 // Get Instance.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyGet(instanceKey);
+                APIResponse result = apiInstance.InstancesInstanceKeyGet(instanceKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyLogoutDelete
 
-> MainAPIResponse InstancesInstanceKeyLogoutDelete (string instanceKey)
+> APIResponse InstancesInstanceKeyLogoutDelete (string instanceKey)
 
 Logout Instance.
 
@@ -390,7 +390,7 @@ namespace Example
             try
             {
                 // Logout Instance.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyLogoutDelete(instanceKey);
+                APIResponse result = apiInstance.InstancesInstanceKeyLogoutDelete(instanceKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -413,7 +413,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyQrcodeGet
 
-> MainAPIResponse InstancesInstanceKeyQrcodeGet (string instanceKey)
+> APIResponse InstancesInstanceKeyQrcodeGet (string instanceKey)
 
 Get QrCode.
 
@@ -475,7 +475,7 @@ namespace Example
             try
             {
                 // Get QrCode.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyQrcodeGet(instanceKey);
+                APIResponse result = apiInstance.InstancesInstanceKeyQrcodeGet(instanceKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -527,7 +527,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyWebhookPut
 
-> MainAPIResponse InstancesInstanceKeyWebhookPut (string instanceKey, StructsWebhookPayload data)
+> APIResponse InstancesInstanceKeyWebhookPut (string instanceKey, WebhookPayload data)
 
 Change Webhook url.
 
@@ -556,12 +556,12 @@ namespace Example
 
             var apiInstance = new InstanceApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new StructsWebhookPayload(); // StructsWebhookPayload | Message data
+            var data = new WebhookPayload(); // WebhookPayload | Message data
 
             try
             {
                 // Change Webhook url.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyWebhookPut(instanceKey, data);
+                APIResponse result = apiInstance.InstancesInstanceKeyWebhookPut(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -581,11 +581,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **data** | [**StructsWebhookPayload**](StructsWebhookPayload.md)| Message data | 
+ **data** | [**WebhookPayload**](WebhookPayload.md)| Message data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -614,7 +614,7 @@ Name | Type | Description  | Notes
 
 ## InstancesListGet
 
-> MainAPIResponse InstancesListGet ()
+> APIResponse InstancesListGet ()
 
 Get all instances.
 
@@ -646,7 +646,7 @@ namespace Example
             try
             {
                 // Get all instances.
-                MainAPIResponse result = apiInstance.InstancesListGet();
+                APIResponse result = apiInstance.InstancesListGet();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -666,7 +666,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 

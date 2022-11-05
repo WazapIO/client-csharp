@@ -33,8 +33,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsAdminGet (string instanceKey);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsAdminGet (string instanceKey);
 
         /// <summary>
         /// Get admin groupss.
@@ -44,8 +44,8 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsAdminGetWithHttpInfo (string instanceKey);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsAdminGetWithHttpInfo (string instanceKey);
         /// <summary>
         /// Create group.
         /// </summary>
@@ -55,8 +55,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Group create payload</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsCreatePost (string instanceKey, StructsGroupCreatePayload data);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsCreatePost (string instanceKey, GroupCreatePayload data);
 
         /// <summary>
         /// Create group.
@@ -67,8 +67,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Group create payload</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsCreatePostWithHttpInfo (string instanceKey, StructsGroupCreatePayload data);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsCreatePostWithHttpInfo (string instanceKey, GroupCreatePayload data);
         /// <summary>
         /// Get all groups.
         /// </summary>
@@ -78,8 +78,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsGet (string instanceKey, string includeParticipants = default(string));
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsGet (string instanceKey, string includeParticipants = default(string));
 
         /// <summary>
         /// Get all groups.
@@ -90,8 +90,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGetWithHttpInfo (string instanceKey, string includeParticipants = default(string));
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGetWithHttpInfo (string instanceKey, string includeParticipants = default(string));
         /// <summary>
         /// Set group announce.
         /// </summary>
@@ -102,8 +102,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="announce">Announce status</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsGroupIdAnnouncePut (string instanceKey, bool announce, string groupId);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsGroupIdAnnouncePut (string instanceKey, bool announce, string groupId);
 
         /// <summary>
         /// Set group announce.
@@ -115,8 +115,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="announce">Announce status</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfo (string instanceKey, bool announce, string groupId);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfo (string instanceKey, bool announce, string groupId);
         /// <summary>
         /// Leaves the group.
         /// </summary>
@@ -126,8 +126,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsGroupIdDelete (string instanceKey, string groupId);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsGroupIdDelete (string instanceKey, string groupId);
 
         /// <summary>
         /// Leaves the group.
@@ -138,8 +138,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfo (string instanceKey, string groupId);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfo (string instanceKey, string groupId);
         /// <summary>
         /// Set group description.
         /// </summary>
@@ -150,8 +150,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group description data</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsGroupIdDescriptionPut (string instanceKey, string groupId, StructsGroupUpdateDescriptionPayload data);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsGroupIdDescriptionPut (string instanceKey, string groupId, GroupUpdateDescriptionPayload data);
 
         /// <summary>
         /// Set group description.
@@ -163,8 +163,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group description data</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfo (string instanceKey, string groupId, StructsGroupUpdateDescriptionPayload data);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfo (string instanceKey, string groupId, GroupUpdateDescriptionPayload data);
         /// <summary>
         /// Get group.
         /// </summary>
@@ -174,8 +174,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsGroupIdGet (string instanceKey, string groupId);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsGroupIdGet (string instanceKey, string groupId);
 
         /// <summary>
         /// Get group.
@@ -186,8 +186,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdGetWithHttpInfo (string instanceKey, string groupId);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdGetWithHttpInfo (string instanceKey, string groupId);
         /// <summary>
         /// Get group invite code.
         /// </summary>
@@ -197,8 +197,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsGroupIdInviteCodeGet (string instanceKey, string groupId);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsGroupIdInviteCodeGet (string instanceKey, string groupId);
 
         /// <summary>
         /// Get group invite code.
@@ -209,8 +209,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfo (string instanceKey, string groupId);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfo (string instanceKey, string groupId);
         /// <summary>
         /// Set group locked.
         /// </summary>
@@ -221,8 +221,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="locked">Locked status</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsGroupIdLockPut (string instanceKey, bool locked, string groupId);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsGroupIdLockPut (string instanceKey, bool locked, string groupId);
 
         /// <summary>
         /// Set group locked.
@@ -234,8 +234,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="locked">Locked status</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfo (string instanceKey, bool locked, string groupId);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfo (string instanceKey, bool locked, string groupId);
         /// <summary>
         /// Set group name.
         /// </summary>
@@ -246,8 +246,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group name data</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsGroupIdNamePut (string instanceKey, string groupId, StructsGroupUpdateNamePayload data);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsGroupIdNamePut (string instanceKey, string groupId, GroupUpdateNamePayload data);
 
         /// <summary>
         /// Set group name.
@@ -259,8 +259,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group name data</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfo (string instanceKey, string groupId, StructsGroupUpdateNamePayload data);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfo (string instanceKey, string groupId, GroupUpdateNamePayload data);
         /// <summary>
         /// Add participant.
         /// </summary>
@@ -271,8 +271,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsGroupIdParticipantsAddPost (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsAddPost (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
 
         /// <summary>
         /// Add participant.
@@ -284,8 +284,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfo (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
         /// <summary>
         /// Demote participant.
         /// </summary>
@@ -296,8 +296,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
 
         /// <summary>
         /// Demote participant.
@@ -309,8 +309,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfo (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
         /// <summary>
         /// Promote participant.
         /// </summary>
@@ -321,8 +321,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
 
         /// <summary>
         /// Promote participant.
@@ -334,8 +334,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfo (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
         /// <summary>
         /// Remove participant.
         /// </summary>
@@ -346,8 +346,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
 
         /// <summary>
         /// Remove participant.
@@ -359,8 +359,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfo (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
         /// <summary>
         /// Set group picture.
         /// </summary>
@@ -371,8 +371,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsGroupIdProfilePicPut (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsGroupIdProfilePicPut (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest);
 
         /// <summary>
         /// Set group picture.
@@ -384,8 +384,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfo (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfo (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest);
         /// <summary>
         /// Get group from invite link.
         /// </summary>
@@ -395,8 +395,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="inviteLink">The invite link to check</param>
-        /// <returns>MainAPIResponse</returns>
-        MainAPIResponse InstancesInstanceKeyGroupsInviteInfoGet (string instanceKey, string inviteLink);
+        /// <returns>APIResponse</returns>
+        APIResponse InstancesInstanceKeyGroupsInviteInfoGet (string instanceKey, string inviteLink);
 
         /// <summary>
         /// Get group from invite link.
@@ -407,8 +407,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="inviteLink">The invite link to check</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfo (string instanceKey, string inviteLink);
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfo (string instanceKey, string inviteLink);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -420,8 +420,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsAdminGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsAdminGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get admin groupss.
@@ -432,8 +432,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsAdminGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsAdminGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Create group.
         /// </summary>
@@ -444,8 +444,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Group create payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsCreatePostAsync (string instanceKey, StructsGroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsCreatePostAsync (string instanceKey, GroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Create group.
@@ -457,8 +457,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Group create payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsCreatePostWithHttpInfoAsync (string instanceKey, StructsGroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsCreatePostWithHttpInfoAsync (string instanceKey, GroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get all groups.
         /// </summary>
@@ -469,8 +469,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGetAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGetAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get all groups.
@@ -482,8 +482,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGetWithHttpInfoAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGetWithHttpInfoAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Set group announce.
         /// </summary>
@@ -495,8 +495,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="announce">Announce status</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdAnnouncePutAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdAnnouncePutAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Set group announce.
@@ -509,8 +509,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="announce">Announce status</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfoAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfoAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Leaves the group.
         /// </summary>
@@ -521,8 +521,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdDeleteAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdDeleteAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Leaves the group.
@@ -534,8 +534,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Set group description.
         /// </summary>
@@ -547,8 +547,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group description data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdDescriptionPutAsync (string instanceKey, string groupId, StructsGroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdDescriptionPutAsync (string instanceKey, string groupId, GroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Set group description.
@@ -561,8 +561,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group description data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfoAsync (string instanceKey, string groupId, StructsGroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get group.
         /// </summary>
@@ -573,8 +573,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdGetAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdGetAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get group.
@@ -586,8 +586,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdGetWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdGetWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get group invite code.
         /// </summary>
@@ -598,8 +598,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdInviteCodeGetAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdInviteCodeGetAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get group invite code.
@@ -611,8 +611,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Set group locked.
         /// </summary>
@@ -624,8 +624,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="locked">Locked status</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdLockPutAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdLockPutAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Set group locked.
@@ -638,8 +638,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="locked">Locked status</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfoAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfoAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Set group name.
         /// </summary>
@@ -651,8 +651,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group name data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdNamePutAsync (string instanceKey, string groupId, StructsGroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdNamePutAsync (string instanceKey, string groupId, GroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Set group name.
@@ -665,8 +665,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group name data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfoAsync (string instanceKey, string groupId, StructsGroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Add participant.
         /// </summary>
@@ -678,8 +678,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Add participant.
@@ -692,8 +692,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfoAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Demote participant.
         /// </summary>
@@ -705,8 +705,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Demote participant.
@@ -719,8 +719,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfoAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Promote participant.
         /// </summary>
@@ -732,8 +732,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Promote participant.
@@ -746,8 +746,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfoAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Remove participant.
         /// </summary>
@@ -759,8 +759,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Remove participant.
@@ -773,8 +773,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfoAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Set group picture.
         /// </summary>
@@ -786,8 +786,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdProfilePicPutAsync (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdProfilePicPutAsync (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Set group picture.
@@ -800,8 +800,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfoAsync (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfoAsync (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get group from invite link.
         /// </summary>
@@ -812,8 +812,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="inviteLink">The invite link to check</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsInviteInfoGetAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsInviteInfoGetAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get group from invite link.
@@ -825,8 +825,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="inviteLink">The invite link to check</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfoAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken));
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfoAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -943,10 +943,10 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsAdminGet (string instanceKey)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsAdminGet (string instanceKey)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsAdminGetWithHttpInfo(instanceKey);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsAdminGetWithHttpInfo(instanceKey);
              return localVarResponse.Data;
         }
 
@@ -955,8 +955,8 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsAdminGetWithHttpInfo (string instanceKey)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsAdminGetWithHttpInfo (string instanceKey)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1004,9 +1004,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1015,10 +1015,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsAdminGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsAdminGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsAdminGetWithHttpInfoAsync(instanceKey, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsAdminGetWithHttpInfoAsync(instanceKey, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1029,8 +1029,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsAdminGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsAdminGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1078,9 +1078,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1089,10 +1089,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Group create payload</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsCreatePost (string instanceKey, StructsGroupCreatePayload data)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsCreatePost (string instanceKey, GroupCreatePayload data)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsCreatePostWithHttpInfo(instanceKey, data);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsCreatePostWithHttpInfo(instanceKey, data);
              return localVarResponse.Data;
         }
 
@@ -1102,8 +1102,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Group create payload</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsCreatePostWithHttpInfo (string instanceKey, StructsGroupCreatePayload data)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsCreatePostWithHttpInfo (string instanceKey, GroupCreatePayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1163,9 +1163,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1175,10 +1175,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Group create payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsCreatePostAsync (string instanceKey, StructsGroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsCreatePostAsync (string instanceKey, GroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsCreatePostWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsCreatePostWithHttpInfoAsync(instanceKey, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1190,8 +1190,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Group create payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsCreatePostWithHttpInfoAsync (string instanceKey, StructsGroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsCreatePostWithHttpInfoAsync (string instanceKey, GroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1251,9 +1251,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1262,10 +1262,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsGet (string instanceKey, string includeParticipants = default(string))
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsGet (string instanceKey, string includeParticipants = default(string))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsGetWithHttpInfo(instanceKey, includeParticipants);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGetWithHttpInfo(instanceKey, includeParticipants);
              return localVarResponse.Data;
         }
 
@@ -1275,8 +1275,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGetWithHttpInfo (string instanceKey, string includeParticipants = default(string))
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGetWithHttpInfo (string instanceKey, string includeParticipants = default(string))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1325,9 +1325,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1337,10 +1337,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGetAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGetAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsGetWithHttpInfoAsync(instanceKey, includeParticipants, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGetWithHttpInfoAsync(instanceKey, includeParticipants, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1352,8 +1352,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGetWithHttpInfoAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGetWithHttpInfoAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1402,9 +1402,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1414,10 +1414,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="announce">Announce status</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsGroupIdAnnouncePut (string instanceKey, bool announce, string groupId)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsGroupIdAnnouncePut (string instanceKey, bool announce, string groupId)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfo(instanceKey, announce, groupId);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfo(instanceKey, announce, groupId);
              return localVarResponse.Data;
         }
 
@@ -1428,8 +1428,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="announce">Announce status</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfo (string instanceKey, bool announce, string groupId)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfo (string instanceKey, bool announce, string groupId)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1485,9 +1485,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1498,10 +1498,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="announce">Announce status</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdAnnouncePutAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdAnnouncePutAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfoAsync(instanceKey, announce, groupId, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfoAsync(instanceKey, announce, groupId, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1514,8 +1514,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="announce">Announce status</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfoAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfoAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1571,9 +1571,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1582,10 +1582,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsGroupIdDelete (string instanceKey, string groupId)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsGroupIdDelete (string instanceKey, string groupId)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfo(instanceKey, groupId);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfo(instanceKey, groupId);
              return localVarResponse.Data;
         }
 
@@ -1595,8 +1595,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfo (string instanceKey, string groupId)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfo (string instanceKey, string groupId)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1648,9 +1648,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1660,10 +1660,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdDeleteAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdDeleteAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfoAsync(instanceKey, groupId, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfoAsync(instanceKey, groupId, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1675,8 +1675,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1728,9 +1728,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1740,10 +1740,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group description data</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsGroupIdDescriptionPut (string instanceKey, string groupId, StructsGroupUpdateDescriptionPayload data)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsGroupIdDescriptionPut (string instanceKey, string groupId, GroupUpdateDescriptionPayload data)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfo(instanceKey, groupId, data);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfo(instanceKey, groupId, data);
              return localVarResponse.Data;
         }
 
@@ -1754,8 +1754,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group description data</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfo (string instanceKey, string groupId, StructsGroupUpdateDescriptionPayload data)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfo (string instanceKey, string groupId, GroupUpdateDescriptionPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1819,9 +1819,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1832,10 +1832,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group description data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdDescriptionPutAsync (string instanceKey, string groupId, StructsGroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdDescriptionPutAsync (string instanceKey, string groupId, GroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1848,8 +1848,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group description data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfoAsync (string instanceKey, string groupId, StructsGroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1913,9 +1913,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -1924,10 +1924,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsGroupIdGet (string instanceKey, string groupId)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsGroupIdGet (string instanceKey, string groupId)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdGetWithHttpInfo(instanceKey, groupId);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdGetWithHttpInfo(instanceKey, groupId);
              return localVarResponse.Data;
         }
 
@@ -1937,8 +1937,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdGetWithHttpInfo (string instanceKey, string groupId)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdGetWithHttpInfo (string instanceKey, string groupId)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1990,9 +1990,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -2002,10 +2002,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdGetAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdGetAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdGetWithHttpInfoAsync(instanceKey, groupId, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdGetWithHttpInfoAsync(instanceKey, groupId, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2017,8 +2017,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdGetWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdGetWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -2070,9 +2070,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -2081,10 +2081,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsGroupIdInviteCodeGet (string instanceKey, string groupId)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsGroupIdInviteCodeGet (string instanceKey, string groupId)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfo(instanceKey, groupId);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfo(instanceKey, groupId);
              return localVarResponse.Data;
         }
 
@@ -2094,8 +2094,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfo (string instanceKey, string groupId)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfo (string instanceKey, string groupId)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -2147,9 +2147,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -2159,10 +2159,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdInviteCodeGetAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdInviteCodeGetAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfoAsync(instanceKey, groupId, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfoAsync(instanceKey, groupId, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2174,8 +2174,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -2227,9 +2227,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -2239,10 +2239,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="locked">Locked status</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsGroupIdLockPut (string instanceKey, bool locked, string groupId)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsGroupIdLockPut (string instanceKey, bool locked, string groupId)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfo(instanceKey, locked, groupId);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfo(instanceKey, locked, groupId);
              return localVarResponse.Data;
         }
 
@@ -2253,8 +2253,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="locked">Locked status</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfo (string instanceKey, bool locked, string groupId)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfo (string instanceKey, bool locked, string groupId)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -2310,9 +2310,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -2323,10 +2323,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="locked">Locked status</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdLockPutAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdLockPutAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfoAsync(instanceKey, locked, groupId, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfoAsync(instanceKey, locked, groupId, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2339,8 +2339,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="locked">Locked status</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfoAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfoAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -2396,9 +2396,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -2408,10 +2408,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group name data</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsGroupIdNamePut (string instanceKey, string groupId, StructsGroupUpdateNamePayload data)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsGroupIdNamePut (string instanceKey, string groupId, GroupUpdateNamePayload data)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfo(instanceKey, groupId, data);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfo(instanceKey, groupId, data);
              return localVarResponse.Data;
         }
 
@@ -2422,8 +2422,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group name data</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfo (string instanceKey, string groupId, StructsGroupUpdateNamePayload data)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfo (string instanceKey, string groupId, GroupUpdateNamePayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -2487,9 +2487,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -2500,10 +2500,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group name data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdNamePutAsync (string instanceKey, string groupId, StructsGroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdNamePutAsync (string instanceKey, string groupId, GroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2516,8 +2516,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group name data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfoAsync (string instanceKey, string groupId, StructsGroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -2581,9 +2581,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -2593,10 +2593,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsGroupIdParticipantsAddPost (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsAddPost (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfo(instanceKey, groupId, data);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfo(instanceKey, groupId, data);
              return localVarResponse.Data;
         }
 
@@ -2607,8 +2607,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfo (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -2672,9 +2672,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -2685,10 +2685,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2701,8 +2701,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfoAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -2766,9 +2766,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -2778,10 +2778,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfo(instanceKey, groupId, data);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfo(instanceKey, groupId, data);
              return localVarResponse.Data;
         }
 
@@ -2792,8 +2792,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfo (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -2857,9 +2857,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -2870,10 +2870,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2886,8 +2886,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfoAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -2951,9 +2951,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -2963,10 +2963,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfo(instanceKey, groupId, data);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfo(instanceKey, groupId, data);
              return localVarResponse.Data;
         }
 
@@ -2977,8 +2977,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfo (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -3042,9 +3042,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -3055,10 +3055,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -3071,8 +3071,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfoAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -3136,9 +3136,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -3148,10 +3148,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfo(instanceKey, groupId, data);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfo(instanceKey, groupId, data);
              return localVarResponse.Data;
         }
 
@@ -3162,8 +3162,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfo (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -3227,9 +3227,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -3240,10 +3240,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -3256,8 +3256,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfoAsync (string instanceKey, string groupId, StructsGroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -3321,9 +3321,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -3333,10 +3333,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsGroupIdProfilePicPut (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsGroupIdProfilePicPut (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfo(instanceKey, groupId, instancesInstanceKeyGroupsGroupIdProfilePicPutRequest);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfo(instanceKey, groupId, instancesInstanceKeyGroupsGroupIdProfilePicPutRequest);
              return localVarResponse.Data;
         }
 
@@ -3347,8 +3347,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
         /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfo (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfo (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -3412,9 +3412,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -3425,10 +3425,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsGroupIdProfilePicPutAsync (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdProfilePicPutAsync (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfoAsync(instanceKey, groupId, instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfoAsync(instanceKey, groupId, instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -3441,8 +3441,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfoAsync (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfoAsync (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -3506,9 +3506,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -3517,10 +3517,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="inviteLink">The invite link to check</param>
-        /// <returns>MainAPIResponse</returns>
-        public MainAPIResponse InstancesInstanceKeyGroupsInviteInfoGet (string instanceKey, string inviteLink)
+        /// <returns>APIResponse</returns>
+        public APIResponse InstancesInstanceKeyGroupsInviteInfoGet (string instanceKey, string inviteLink)
         {
-             ApiResponse<MainAPIResponse> localVarResponse = InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfo(instanceKey, inviteLink);
+             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfo(instanceKey, inviteLink);
              return localVarResponse.Data;
         }
 
@@ -3530,8 +3530,8 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="inviteLink">The invite link to check</param>
-        /// <returns>ApiResponse of MainAPIResponse</returns>
-        public ApiResponse<MainAPIResponse> InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfo (string instanceKey, string inviteLink)
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfo (string instanceKey, string inviteLink)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -3583,9 +3583,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -3595,10 +3595,10 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="inviteLink">The invite link to check</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of MainAPIResponse</returns>
-        public async System.Threading.Tasks.Task<MainAPIResponse> InstancesInstanceKeyGroupsInviteInfoGetAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsInviteInfoGetAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<MainAPIResponse> localVarResponse = await InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfoAsync(instanceKey, inviteLink, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfoAsync(instanceKey, inviteLink, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -3610,8 +3610,8 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="inviteLink">The invite link to check</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (MainAPIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MainAPIResponse>> InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfoAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken))
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfoAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -3663,9 +3663,9 @@ namespace WhatsAPI.whatsapi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<MainAPIResponse>(localVarStatusCode,
+            return new ApiResponse<APIResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (MainAPIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MainAPIResponse)));
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
     }

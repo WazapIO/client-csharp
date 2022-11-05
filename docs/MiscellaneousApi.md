@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## InstancesInstanceKeyMiscProfilePicGet
 
-> MainAPIResponse InstancesInstanceKeyMiscProfilePicGet (string instanceKey, string jid)
+> APIResponse InstancesInstanceKeyMiscProfilePicGet (string instanceKey, string jid)
 
 Get profile pic.
 
@@ -45,7 +45,7 @@ namespace Example
             try
             {
                 // Get profile pic.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyMiscProfilePicGet(instanceKey, jid);
+                APIResponse result = apiInstance.InstancesInstanceKeyMiscProfilePicGet(instanceKey, jid);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeyMiscUserInfoPost
 
-> MainAPIResponse InstancesInstanceKeyMiscUserInfoPost (string instanceKey, StructsUserInfoPayload data)
+> APIResponse InstancesInstanceKeyMiscUserInfoPost (string instanceKey, UserInfoPayload data)
 
 Fetches the users info.
 
@@ -127,12 +127,12 @@ namespace Example
 
             var apiInstance = new MiscellaneousApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new StructsUserInfoPayload(); // StructsUserInfoPayload | Data
+            var data = new UserInfoPayload(); // UserInfoPayload | Data
 
             try
             {
                 // Fetches the users info.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyMiscUserInfoPost(instanceKey, data);
+                APIResponse result = apiInstance.InstancesInstanceKeyMiscUserInfoPost(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -152,11 +152,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **data** | [**StructsUserInfoPayload**](StructsUserInfoPayload.md)| Data | 
+ **data** | [**UserInfoPayload**](UserInfoPayload.md)| Data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 

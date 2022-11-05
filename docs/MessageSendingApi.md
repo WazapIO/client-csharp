@@ -4,7 +4,6 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**InstancesInstanceKeyBusinessCatalogGet**](MessageSendingApi.md#instancesinstancekeybusinesscatalogget) | **GET** /instances/{instance_key}/business/catalog | Fetches the catlog.
 [**InstancesInstanceKeySendAudioPost**](MessageSendingApi.md#instancesinstancekeysendaudiopost) | **POST** /instances/{instance_key}/send/audio | Send raw audio.
 [**InstancesInstanceKeySendButtonMediaPost**](MessageSendingApi.md#instancesinstancekeysendbuttonmediapost) | **POST** /instances/{instance_key}/send/button-media | Send a button message with a media header.
 [**InstancesInstanceKeySendButtonsPost**](MessageSendingApi.md#instancesinstancekeysendbuttonspost) | **POST** /instances/{instance_key}/send/buttons | Send a button message.
@@ -14,7 +13,7 @@ Method | HTTP request | Description
 [**InstancesInstanceKeySendListPost**](MessageSendingApi.md#instancesinstancekeysendlistpost) | **POST** /instances/{instance_key}/send/list | Send a List message.
 [**InstancesInstanceKeySendLocationPost**](MessageSendingApi.md#instancesinstancekeysendlocationpost) | **POST** /instances/{instance_key}/send/location | Send a location message.
 [**InstancesInstanceKeySendMediaPost**](MessageSendingApi.md#instancesinstancekeysendmediapost) | **POST** /instances/{instance_key}/send/media | Send a media message.
-[**InstancesInstanceKeySendPollPost**](MessageSendingApi.md#instancesinstancekeysendpollpost) | **POST** /instances/{instance_key}/send/poll | Send a Poll message with media.
+[**InstancesInstanceKeySendPollPost**](MessageSendingApi.md#instancesinstancekeysendpollpost) | **POST** /instances/{instance_key}/send/poll | Send a Poll message.
 [**InstancesInstanceKeySendTemplateMediaPost**](MessageSendingApi.md#instancesinstancekeysendtemplatemediapost) | **POST** /instances/{instance_key}/send/template-media | Send a template message with media.
 [**InstancesInstanceKeySendTemplatePost**](MessageSendingApi.md#instancesinstancekeysendtemplatepost) | **POST** /instances/{instance_key}/send/template | Send a template message.
 [**InstancesInstanceKeySendTextPost**](MessageSendingApi.md#instancesinstancekeysendtextpost) | **POST** /instances/{instance_key}/send/text | Send a text message.
@@ -23,94 +22,9 @@ Method | HTTP request | Description
 
 
 
-## InstancesInstanceKeyBusinessCatalogGet
-
-> MainAPIResponse InstancesInstanceKeyBusinessCatalogGet (string instanceKey)
-
-Fetches the catlog.
-
-Gets list of all products registered by you.
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using WhatsAPI.whatsapi;
-using WhatsAPI.Client;
-using WhatsAPI.models;
-
-namespace Example
-{
-    public class InstancesInstanceKeyBusinessCatalogGetExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "/api";
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new MessageSendingApi(Configuration.Default);
-            var instanceKey = "instanceKey_example";  // string | Instance key
-
-            try
-            {
-                // Fetches the catlog.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeyBusinessCatalogGet(instanceKey);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeyBusinessCatalogGet: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **instanceKey** | **string**| Instance key | 
-
-### Return type
-
-[**MainAPIResponse**](MainAPIResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: */*
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad Request |  -  |
-| **401** | Unauthorized |  -  |
-| **404** | Instance not found |  -  |
-| **500** | Internal Server Error |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
 ## InstancesInstanceKeySendAudioPost
 
-> MainAPIResponse InstancesInstanceKeySendAudioPost (string instanceKey, string to, InstancesInstanceKeySendAudioPostRequest instancesInstanceKeySendAudioPostRequest, string caption = null)
+> APIResponse InstancesInstanceKeySendAudioPost (string instanceKey, string to, InstancesInstanceKeySendAudioPostRequest instancesInstanceKeySendAudioPostRequest, string caption = null)
 
 Send raw audio.
 
@@ -146,7 +60,7 @@ namespace Example
             try
             {
                 // Send raw audio.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendAudioPost(instanceKey, to, instancesInstanceKeySendAudioPostRequest, caption);
+                APIResponse result = apiInstance.InstancesInstanceKeySendAudioPost(instanceKey, to, instancesInstanceKeySendAudioPostRequest, caption);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -172,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -201,7 +115,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendButtonMediaPost
 
-> MainAPIResponse InstancesInstanceKeySendButtonMediaPost (string instanceKey, StructsButtonMessageWithMediaPayload data)
+> APIResponse InstancesInstanceKeySendButtonMediaPost (string instanceKey, ButtonMessageWithMediaPayload data)
 
 Send a button message with a media header.
 
@@ -230,12 +144,12 @@ namespace Example
 
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new StructsButtonMessageWithMediaPayload(); // StructsButtonMessageWithMediaPayload | Message data
+            var data = new ButtonMessageWithMediaPayload(); // ButtonMessageWithMediaPayload | Message data
 
             try
             {
                 // Send a button message with a media header.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendButtonMediaPost(instanceKey, data);
+                APIResponse result = apiInstance.InstancesInstanceKeySendButtonMediaPost(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -255,11 +169,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **data** | [**StructsButtonMessageWithMediaPayload**](StructsButtonMessageWithMediaPayload.md)| Message data | 
+ **data** | [**ButtonMessageWithMediaPayload**](ButtonMessageWithMediaPayload.md)| Message data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -288,7 +202,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendButtonsPost
 
-> MainAPIResponse InstancesInstanceKeySendButtonsPost (string instanceKey, StructsButtonMessagePayload data)
+> APIResponse InstancesInstanceKeySendButtonsPost (string instanceKey, ButtonMessagePayload data)
 
 Send a button message.
 
@@ -317,12 +231,12 @@ namespace Example
 
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new StructsButtonMessagePayload(); // StructsButtonMessagePayload | Message data
+            var data = new ButtonMessagePayload(); // ButtonMessagePayload | Message data
 
             try
             {
                 // Send a button message.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendButtonsPost(instanceKey, data);
+                APIResponse result = apiInstance.InstancesInstanceKeySendButtonsPost(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -342,11 +256,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **data** | [**StructsButtonMessagePayload**](StructsButtonMessagePayload.md)| Message data | 
+ **data** | [**ButtonMessagePayload**](ButtonMessagePayload.md)| Message data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -375,7 +289,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendContactPost
 
-> MainAPIResponse InstancesInstanceKeySendContactPost (string instanceKey, StructsContactMessagePayload data)
+> APIResponse InstancesInstanceKeySendContactPost (string instanceKey, ContactMessagePayload data)
 
 Send a contact message.
 
@@ -404,12 +318,12 @@ namespace Example
 
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new StructsContactMessagePayload(); // StructsContactMessagePayload | Message data
+            var data = new ContactMessagePayload(); // ContactMessagePayload | Message data
 
             try
             {
                 // Send a contact message.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendContactPost(instanceKey, data);
+                APIResponse result = apiInstance.InstancesInstanceKeySendContactPost(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -429,11 +343,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **data** | [**StructsContactMessagePayload**](StructsContactMessagePayload.md)| Message data | 
+ **data** | [**ContactMessagePayload**](ContactMessagePayload.md)| Message data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -462,7 +376,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendDocumentPost
 
-> MainAPIResponse InstancesInstanceKeySendDocumentPost (string instanceKey, string to, InstancesInstanceKeySendDocumentPostRequest instancesInstanceKeySendDocumentPostRequest, string caption = null)
+> APIResponse InstancesInstanceKeySendDocumentPost (string instanceKey, string to, InstancesInstanceKeySendDocumentPostRequest instancesInstanceKeySendDocumentPostRequest, string caption = null)
 
 Send raw document.
 
@@ -498,7 +412,7 @@ namespace Example
             try
             {
                 // Send raw document.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendDocumentPost(instanceKey, to, instancesInstanceKeySendDocumentPostRequest, caption);
+                APIResponse result = apiInstance.InstancesInstanceKeySendDocumentPost(instanceKey, to, instancesInstanceKeySendDocumentPostRequest, caption);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -524,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -553,7 +467,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendImagePost
 
-> MainAPIResponse InstancesInstanceKeySendImagePost (string instanceKey, string to, InstancesInstanceKeySendImagePostRequest instancesInstanceKeySendImagePostRequest, string caption = null)
+> APIResponse InstancesInstanceKeySendImagePost (string instanceKey, string to, InstancesInstanceKeySendImagePostRequest instancesInstanceKeySendImagePostRequest, string caption = null)
 
 Send raw image.
 
@@ -589,7 +503,7 @@ namespace Example
             try
             {
                 // Send raw image.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendImagePost(instanceKey, to, instancesInstanceKeySendImagePostRequest, caption);
+                APIResponse result = apiInstance.InstancesInstanceKeySendImagePost(instanceKey, to, instancesInstanceKeySendImagePostRequest, caption);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -615,7 +529,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -644,7 +558,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendListPost
 
-> MainAPIResponse InstancesInstanceKeySendListPost (string instanceKey, StructsListMessagePayload data)
+> APIResponse InstancesInstanceKeySendListPost (string instanceKey, ListMessagePayload data)
 
 Send a List message.
 
@@ -673,12 +587,12 @@ namespace Example
 
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new StructsListMessagePayload(); // StructsListMessagePayload | Message data
+            var data = new ListMessagePayload(); // ListMessagePayload | Message data
 
             try
             {
                 // Send a List message.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendListPost(instanceKey, data);
+                APIResponse result = apiInstance.InstancesInstanceKeySendListPost(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -698,11 +612,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **data** | [**StructsListMessagePayload**](StructsListMessagePayload.md)| Message data | 
+ **data** | [**ListMessagePayload**](ListMessagePayload.md)| Message data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -731,7 +645,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendLocationPost
 
-> MainAPIResponse InstancesInstanceKeySendLocationPost (string instanceKey, StructsLocationMessagePayload data)
+> APIResponse InstancesInstanceKeySendLocationPost (string instanceKey, LocationMessagePayload data)
 
 Send a location message.
 
@@ -760,12 +674,12 @@ namespace Example
 
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new StructsLocationMessagePayload(); // StructsLocationMessagePayload | Message data
+            var data = new LocationMessagePayload(); // LocationMessagePayload | Message data
 
             try
             {
                 // Send a location message.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendLocationPost(instanceKey, data);
+                APIResponse result = apiInstance.InstancesInstanceKeySendLocationPost(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -785,11 +699,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **data** | [**StructsLocationMessagePayload**](StructsLocationMessagePayload.md)| Message data | 
+ **data** | [**LocationMessagePayload**](LocationMessagePayload.md)| Message data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -818,7 +732,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendMediaPost
 
-> MainAPIResponse InstancesInstanceKeySendMediaPost (string instanceKey, StructsSendMediaPayload data)
+> APIResponse InstancesInstanceKeySendMediaPost (string instanceKey, SendMediaPayload data)
 
 Send a media message.
 
@@ -847,12 +761,12 @@ namespace Example
 
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new StructsSendMediaPayload(); // StructsSendMediaPayload | Message data
+            var data = new SendMediaPayload(); // SendMediaPayload | Message data
 
             try
             {
                 // Send a media message.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendMediaPost(instanceKey, data);
+                APIResponse result = apiInstance.InstancesInstanceKeySendMediaPost(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -872,11 +786,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **data** | [**StructsSendMediaPayload**](StructsSendMediaPayload.md)| Message data | 
+ **data** | [**SendMediaPayload**](SendMediaPayload.md)| Message data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -905,11 +819,11 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendPollPost
 
-> MainAPIResponse InstancesInstanceKeySendPollPost (string instanceKey, StructsPollMessagePayload data)
+> APIResponse InstancesInstanceKeySendPollPost (string instanceKey, PollMessagePayload data)
 
-Send a Poll message with media.
+Send a Poll message.
 
-Sends an interactive poll message with a media header to the given user. The poll message is a new feature that is currently in beta.
+Sends an interactive poll message to the given user. The poll message is a new feature that is currently in beta.
 
 ### Example
 
@@ -934,12 +848,12 @@ namespace Example
 
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new StructsPollMessagePayload(); // StructsPollMessagePayload | Message data
+            var data = new PollMessagePayload(); // PollMessagePayload | Message data
 
             try
             {
-                // Send a Poll message with media.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendPollPost(instanceKey, data);
+                // Send a Poll message.
+                APIResponse result = apiInstance.InstancesInstanceKeySendPollPost(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -959,11 +873,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **data** | [**StructsPollMessagePayload**](StructsPollMessagePayload.md)| Message data | 
+ **data** | [**PollMessagePayload**](PollMessagePayload.md)| Message data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -992,7 +906,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendTemplateMediaPost
 
-> MainAPIResponse InstancesInstanceKeySendTemplateMediaPost (string instanceKey, StructsTemplateButtonWithMediaPayload data)
+> APIResponse InstancesInstanceKeySendTemplateMediaPost (string instanceKey, TemplateButtonWithMediaPayload data)
 
 Send a template message with media.
 
@@ -1021,12 +935,12 @@ namespace Example
 
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new StructsTemplateButtonWithMediaPayload(); // StructsTemplateButtonWithMediaPayload | Message data
+            var data = new TemplateButtonWithMediaPayload(); // TemplateButtonWithMediaPayload | Message data
 
             try
             {
                 // Send a template message with media.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendTemplateMediaPost(instanceKey, data);
+                APIResponse result = apiInstance.InstancesInstanceKeySendTemplateMediaPost(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1046,11 +960,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **data** | [**StructsTemplateButtonWithMediaPayload**](StructsTemplateButtonWithMediaPayload.md)| Message data | 
+ **data** | [**TemplateButtonWithMediaPayload**](TemplateButtonWithMediaPayload.md)| Message data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -1079,7 +993,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendTemplatePost
 
-> MainAPIResponse InstancesInstanceKeySendTemplatePost (string instanceKey, StructsTemplateButtonPayload data)
+> APIResponse InstancesInstanceKeySendTemplatePost (string instanceKey, TemplateButtonPayload data)
 
 Send a template message.
 
@@ -1108,12 +1022,12 @@ namespace Example
 
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new StructsTemplateButtonPayload(); // StructsTemplateButtonPayload | Message data
+            var data = new TemplateButtonPayload(); // TemplateButtonPayload | Message data
 
             try
             {
                 // Send a template message.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendTemplatePost(instanceKey, data);
+                APIResponse result = apiInstance.InstancesInstanceKeySendTemplatePost(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1133,11 +1047,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **data** | [**StructsTemplateButtonPayload**](StructsTemplateButtonPayload.md)| Message data | 
+ **data** | [**TemplateButtonPayload**](TemplateButtonPayload.md)| Message data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -1166,7 +1080,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendTextPost
 
-> MainAPIResponse InstancesInstanceKeySendTextPost (string instanceKey, StructsTextMessage data)
+> APIResponse InstancesInstanceKeySendTextPost (string instanceKey, TextMessage data)
 
 Send a text message.
 
@@ -1195,12 +1109,12 @@ namespace Example
 
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new StructsTextMessage(); // StructsTextMessage | Message data
+            var data = new TextMessage(); // TextMessage | Message data
 
             try
             {
                 // Send a text message.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendTextPost(instanceKey, data);
+                APIResponse result = apiInstance.InstancesInstanceKeySendTextPost(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1220,11 +1134,11 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **data** | [**StructsTextMessage**](StructsTextMessage.md)| Message data | 
+ **data** | [**TextMessage**](TextMessage.md)| Message data | 
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -1253,7 +1167,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendUploadPost
 
-> MainAPIResponse InstancesInstanceKeySendUploadPost (string instanceKey, string type, InstancesInstanceKeySendUploadPostRequest instancesInstanceKeySendUploadPostRequest)
+> APIResponse InstancesInstanceKeySendUploadPost (string instanceKey, string type, InstancesInstanceKeySendUploadPostRequest instancesInstanceKeySendUploadPostRequest)
 
 Upload media.
 
@@ -1288,7 +1202,7 @@ namespace Example
             try
             {
                 // Upload media.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendUploadPost(instanceKey, type, instancesInstanceKeySendUploadPostRequest);
+                APIResponse result = apiInstance.InstancesInstanceKeySendUploadPost(instanceKey, type, instancesInstanceKeySendUploadPostRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1313,7 +1227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -1342,7 +1256,7 @@ Name | Type | Description  | Notes
 
 ## InstancesInstanceKeySendVideoPost
 
-> MainAPIResponse InstancesInstanceKeySendVideoPost (string instanceKey, string to, InstancesInstanceKeySendVideoPostRequest instancesInstanceKeySendVideoPostRequest, string caption = null)
+> APIResponse InstancesInstanceKeySendVideoPost (string instanceKey, string to, InstancesInstanceKeySendVideoPostRequest instancesInstanceKeySendVideoPostRequest, string caption = null)
 
 Send raw video.
 
@@ -1378,7 +1292,7 @@ namespace Example
             try
             {
                 // Send raw video.
-                MainAPIResponse result = apiInstance.InstancesInstanceKeySendVideoPost(instanceKey, to, instancesInstanceKeySendVideoPostRequest, caption);
+                APIResponse result = apiInstance.InstancesInstanceKeySendVideoPost(instanceKey, to, instancesInstanceKeySendVideoPostRequest, caption);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -1404,7 +1318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MainAPIResponse**](MainAPIResponse.md)
+[**APIResponse**](APIResponse.md)
 
 ### Authorization
 
