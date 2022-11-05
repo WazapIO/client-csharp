@@ -12,7 +12,7 @@ Contact: manjit@sponsorbook.io
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CE4278C7-69F5-44B5-9DF7-1DF3B2DF86F6}</ProjectGuid>
+    <ProjectGuid>{14F7E641-0CBE-486A-AC37-BC8DEA298A15}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WhatsAPI</RootNamespace>

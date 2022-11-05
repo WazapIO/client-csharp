@@ -26,242 +26,6 @@ namespace WhatsAPI.whatsapi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get admin groupss.
-        /// </summary>
-        /// <remarks>
-        /// Returns list of all groups in which you are admin.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsAdminGet (string instanceKey);
-
-        /// <summary>
-        /// Get admin groupss.
-        /// </summary>
-        /// <remarks>
-        /// Returns list of all groups in which you are admin.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsAdminGetWithHttpInfo (string instanceKey);
-        /// <summary>
-        /// Create group.
-        /// </summary>
-        /// <remarks>
-        /// Creates a group with the participant data. The creator is automatically added to the group.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Group create payload</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsCreatePost (string instanceKey, GroupCreatePayload data);
-
-        /// <summary>
-        /// Create group.
-        /// </summary>
-        /// <remarks>
-        /// Creates a group with the participant data. The creator is automatically added to the group.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Group create payload</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsCreatePostWithHttpInfo (string instanceKey, GroupCreatePayload data);
-        /// <summary>
-        /// Get all groups.
-        /// </summary>
-        /// <remarks>
-        /// Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsGet (string instanceKey, string includeParticipants = default(string));
-
-        /// <summary>
-        /// Get all groups.
-        /// </summary>
-        /// <remarks>
-        /// Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGetWithHttpInfo (string instanceKey, string includeParticipants = default(string));
-        /// <summary>
-        /// Set group announce.
-        /// </summary>
-        /// <remarks>
-        /// Set if non-admins are allowed to send messages in groups
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="announce">Announce status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsGroupIdAnnouncePut (string instanceKey, bool announce, string groupId);
-
-        /// <summary>
-        /// Set group announce.
-        /// </summary>
-        /// <remarks>
-        /// Set if non-admins are allowed to send messages in groups
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="announce">Announce status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfo (string instanceKey, bool announce, string groupId);
-        /// <summary>
-        /// Leaves the group.
-        /// </summary>
-        /// <remarks>
-        /// Leaves the specified group.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsGroupIdDelete (string instanceKey, string groupId);
-
-        /// <summary>
-        /// Leaves the group.
-        /// </summary>
-        /// <remarks>
-        /// Leaves the specified group.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfo (string instanceKey, string groupId);
-        /// <summary>
-        /// Set group description.
-        /// </summary>
-        /// <remarks>
-        /// Changes the group description
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group description data</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsGroupIdDescriptionPut (string instanceKey, string groupId, GroupUpdateDescriptionPayload data);
-
-        /// <summary>
-        /// Set group description.
-        /// </summary>
-        /// <remarks>
-        /// Changes the group description
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group description data</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfo (string instanceKey, string groupId, GroupUpdateDescriptionPayload data);
-        /// <summary>
-        /// Get group.
-        /// </summary>
-        /// <remarks>
-        /// Fetches the group data.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsGroupIdGet (string instanceKey, string groupId);
-
-        /// <summary>
-        /// Get group.
-        /// </summary>
-        /// <remarks>
-        /// Fetches the group data.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdGetWithHttpInfo (string instanceKey, string groupId);
-        /// <summary>
-        /// Get group invite code.
-        /// </summary>
-        /// <remarks>
-        /// Gets the invite code of the group.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsGroupIdInviteCodeGet (string instanceKey, string groupId);
-
-        /// <summary>
-        /// Get group invite code.
-        /// </summary>
-        /// <remarks>
-        /// Gets the invite code of the group.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfo (string instanceKey, string groupId);
-        /// <summary>
-        /// Set group locked.
-        /// </summary>
-        /// <remarks>
-        /// Set if non-admins are allowed to change the group dp and other stuff
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="locked">Locked status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsGroupIdLockPut (string instanceKey, bool locked, string groupId);
-
-        /// <summary>
-        /// Set group locked.
-        /// </summary>
-        /// <remarks>
-        /// Set if non-admins are allowed to change the group dp and other stuff
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="locked">Locked status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfo (string instanceKey, bool locked, string groupId);
-        /// <summary>
-        /// Set group name.
-        /// </summary>
-        /// <remarks>
-        /// Changes the group name. The max limit is 22 chars
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group name data</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsGroupIdNamePut (string instanceKey, string groupId, GroupUpdateNamePayload data);
-
-        /// <summary>
-        /// Set group name.
-        /// </summary>
-        /// <remarks>
-        /// Changes the group name. The max limit is 22 chars
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group name data</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfo (string instanceKey, string groupId, GroupUpdateNamePayload data);
-        /// <summary>
         /// Add participant.
         /// </summary>
         /// <remarks>
@@ -272,7 +36,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsAddPost (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
+        APIResponse AddParticipant (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
 
         /// <summary>
         /// Add participant.
@@ -285,7 +49,30 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
+        ApiResponse<APIResponse> AddParticipantWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
+        /// <summary>
+        /// Create group.
+        /// </summary>
+        /// <remarks>
+        /// Creates a group with the participant data. The creator is automatically added to the group.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Group create payload</param>
+        /// <returns>APIResponse</returns>
+        APIResponse CreateGroup (string instanceKey, GroupCreatePayload data);
+
+        /// <summary>
+        /// Create group.
+        /// </summary>
+        /// <remarks>
+        /// Creates a group with the participant data. The creator is automatically added to the group.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Group create payload</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> CreateGroupWithHttpInfo (string instanceKey, GroupCreatePayload data);
         /// <summary>
         /// Demote participant.
         /// </summary>
@@ -297,7 +84,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
+        APIResponse DemoteParticipant (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
 
         /// <summary>
         /// Demote participant.
@@ -310,7 +97,143 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
+        ApiResponse<APIResponse> DemoteParticipantWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
+        /// <summary>
+        /// Get admin groups.
+        /// </summary>
+        /// <remarks>
+        /// Returns list of all groups in which you are admin.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>APIResponse</returns>
+        APIResponse GetAdminGroups (string instanceKey);
+
+        /// <summary>
+        /// Get admin groups.
+        /// </summary>
+        /// <remarks>
+        /// Returns list of all groups in which you are admin.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> GetAdminGroupsWithHttpInfo (string instanceKey);
+        /// <summary>
+        /// Get all groups.
+        /// </summary>
+        /// <remarks>
+        /// Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
+        /// <returns>APIResponse</returns>
+        APIResponse GetAllGroups (string instanceKey, string includeParticipants = default(string));
+
+        /// <summary>
+        /// Get all groups.
+        /// </summary>
+        /// <remarks>
+        /// Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> GetAllGroupsWithHttpInfo (string instanceKey, string includeParticipants = default(string));
+        /// <summary>
+        /// Get group.
+        /// </summary>
+        /// <remarks>
+        /// Fetches the group data.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>APIResponse</returns>
+        APIResponse GetGroup (string instanceKey, string groupId);
+
+        /// <summary>
+        /// Get group.
+        /// </summary>
+        /// <remarks>
+        /// Fetches the group data.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> GetGroupWithHttpInfo (string instanceKey, string groupId);
+        /// <summary>
+        /// Get group from invite link.
+        /// </summary>
+        /// <remarks>
+        /// Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="inviteLink">The invite link to check</param>
+        /// <returns>APIResponse</returns>
+        APIResponse GetGroupFromInviteLink (string instanceKey, string inviteLink);
+
+        /// <summary>
+        /// Get group from invite link.
+        /// </summary>
+        /// <remarks>
+        /// Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="inviteLink">The invite link to check</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> GetGroupFromInviteLinkWithHttpInfo (string instanceKey, string inviteLink);
+        /// <summary>
+        /// Get group invite code.
+        /// </summary>
+        /// <remarks>
+        /// Gets the invite code of the group.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>APIResponse</returns>
+        APIResponse GetGroupInviteCode (string instanceKey, string groupId);
+
+        /// <summary>
+        /// Get group invite code.
+        /// </summary>
+        /// <remarks>
+        /// Gets the invite code of the group.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> GetGroupInviteCodeWithHttpInfo (string instanceKey, string groupId);
+        /// <summary>
+        /// Leaves the group.
+        /// </summary>
+        /// <remarks>
+        /// Leaves the specified group.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>APIResponse</returns>
+        APIResponse LeaveGroup (string instanceKey, string groupId);
+
+        /// <summary>
+        /// Leaves the group.
+        /// </summary>
+        /// <remarks>
+        /// Leaves the specified group.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> LeaveGroupWithHttpInfo (string instanceKey, string groupId);
         /// <summary>
         /// Promote participant.
         /// </summary>
@@ -322,7 +245,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
+        APIResponse PromoteParticipant (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
 
         /// <summary>
         /// Promote participant.
@@ -335,7 +258,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
+        ApiResponse<APIResponse> PromoteParticipantWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
         /// <summary>
         /// Remove participant.
         /// </summary>
@@ -347,7 +270,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
+        APIResponse RemoveParticipant (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
 
         /// <summary>
         /// Remove participant.
@@ -360,7 +283,107 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
+        ApiResponse<APIResponse> RemoveParticipantWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data);
+        /// <summary>
+        /// Set group announce.
+        /// </summary>
+        /// <remarks>
+        /// Set if non-admins are allowed to send messages in groups
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="announce">Announce status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>APIResponse</returns>
+        APIResponse SetGroupAnnounce (string instanceKey, bool announce, string groupId);
+
+        /// <summary>
+        /// Set group announce.
+        /// </summary>
+        /// <remarks>
+        /// Set if non-admins are allowed to send messages in groups
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="announce">Announce status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> SetGroupAnnounceWithHttpInfo (string instanceKey, bool announce, string groupId);
+        /// <summary>
+        /// Set group description.
+        /// </summary>
+        /// <remarks>
+        /// Changes the group description
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group description data</param>
+        /// <returns>APIResponse</returns>
+        APIResponse SetGroupDescription (string instanceKey, string groupId, GroupUpdateDescriptionPayload data);
+
+        /// <summary>
+        /// Set group description.
+        /// </summary>
+        /// <remarks>
+        /// Changes the group description
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group description data</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> SetGroupDescriptionWithHttpInfo (string instanceKey, string groupId, GroupUpdateDescriptionPayload data);
+        /// <summary>
+        /// Set group locked.
+        /// </summary>
+        /// <remarks>
+        /// Set if non-admins are allowed to change the group dp and other stuff
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="locked">Locked status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>APIResponse</returns>
+        APIResponse SetGroupLocked (string instanceKey, bool locked, string groupId);
+
+        /// <summary>
+        /// Set group locked.
+        /// </summary>
+        /// <remarks>
+        /// Set if non-admins are allowed to change the group dp and other stuff
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="locked">Locked status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> SetGroupLockedWithHttpInfo (string instanceKey, bool locked, string groupId);
+        /// <summary>
+        /// Set group name.
+        /// </summary>
+        /// <remarks>
+        /// Changes the group name. The max limit is 22 chars
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group name data</param>
+        /// <returns>APIResponse</returns>
+        APIResponse SetGroupName (string instanceKey, string groupId, GroupUpdateNamePayload data);
+
+        /// <summary>
+        /// Set group name.
+        /// </summary>
+        /// <remarks>
+        /// Changes the group name. The max limit is 22 chars
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group name data</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> SetGroupNameWithHttpInfo (string instanceKey, string groupId, GroupUpdateNamePayload data);
         /// <summary>
         /// Set group picture.
         /// </summary>
@@ -370,9 +393,9 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
+        /// <param name="setGroupPictureRequest"></param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsGroupIdProfilePicPut (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest);
+        APIResponse SetGroupPicture (string instanceKey, string groupId, SetGroupPictureRequest setGroupPictureRequest);
 
         /// <summary>
         /// Set group picture.
@@ -383,291 +406,12 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
+        /// <param name="setGroupPictureRequest"></param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfo (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest);
-        /// <summary>
-        /// Get group from invite link.
-        /// </summary>
-        /// <remarks>
-        /// Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="inviteLink">The invite link to check</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGroupsInviteInfoGet (string instanceKey, string inviteLink);
-
-        /// <summary>
-        /// Get group from invite link.
-        /// </summary>
-        /// <remarks>
-        /// Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="inviteLink">The invite link to check</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfo (string instanceKey, string inviteLink);
+        ApiResponse<APIResponse> SetGroupPictureWithHttpInfo (string instanceKey, string groupId, SetGroupPictureRequest setGroupPictureRequest);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get admin groupss.
-        /// </summary>
-        /// <remarks>
-        /// Returns list of all groups in which you are admin.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsAdminGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Get admin groupss.
-        /// </summary>
-        /// <remarks>
-        /// Returns list of all groups in which you are admin.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsAdminGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Create group.
-        /// </summary>
-        /// <remarks>
-        /// Creates a group with the participant data. The creator is automatically added to the group.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Group create payload</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsCreatePostAsync (string instanceKey, GroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Create group.
-        /// </summary>
-        /// <remarks>
-        /// Creates a group with the participant data. The creator is automatically added to the group.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Group create payload</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsCreatePostWithHttpInfoAsync (string instanceKey, GroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Get all groups.
-        /// </summary>
-        /// <remarks>
-        /// Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGetAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Get all groups.
-        /// </summary>
-        /// <remarks>
-        /// Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGetWithHttpInfoAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Set group announce.
-        /// </summary>
-        /// <remarks>
-        /// Set if non-admins are allowed to send messages in groups
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="announce">Announce status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdAnnouncePutAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Set group announce.
-        /// </summary>
-        /// <remarks>
-        /// Set if non-admins are allowed to send messages in groups
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="announce">Announce status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfoAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Leaves the group.
-        /// </summary>
-        /// <remarks>
-        /// Leaves the specified group.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdDeleteAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Leaves the group.
-        /// </summary>
-        /// <remarks>
-        /// Leaves the specified group.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Set group description.
-        /// </summary>
-        /// <remarks>
-        /// Changes the group description
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group description data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdDescriptionPutAsync (string instanceKey, string groupId, GroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Set group description.
-        /// </summary>
-        /// <remarks>
-        /// Changes the group description
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group description data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Get group.
-        /// </summary>
-        /// <remarks>
-        /// Fetches the group data.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdGetAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Get group.
-        /// </summary>
-        /// <remarks>
-        /// Fetches the group data.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdGetWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Get group invite code.
-        /// </summary>
-        /// <remarks>
-        /// Gets the invite code of the group.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdInviteCodeGetAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Get group invite code.
-        /// </summary>
-        /// <remarks>
-        /// Gets the invite code of the group.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Set group locked.
-        /// </summary>
-        /// <remarks>
-        /// Set if non-admins are allowed to change the group dp and other stuff
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="locked">Locked status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdLockPutAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Set group locked.
-        /// </summary>
-        /// <remarks>
-        /// Set if non-admins are allowed to change the group dp and other stuff
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="locked">Locked status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfoAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Set group name.
-        /// </summary>
-        /// <remarks>
-        /// Changes the group name. The max limit is 22 chars
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group name data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdNamePutAsync (string instanceKey, string groupId, GroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Set group name.
-        /// </summary>
-        /// <remarks>
-        /// Changes the group name. The max limit is 22 chars
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group name data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
         /// Add participant.
         /// </summary>
         /// <remarks>
@@ -679,7 +423,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> AddParticipantAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Add participant.
@@ -693,7 +437,32 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> AddParticipantWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Create group.
+        /// </summary>
+        /// <remarks>
+        /// Creates a group with the participant data. The creator is automatically added to the group.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Group create payload</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> CreateGroupAsync (string instanceKey, GroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Create group.
+        /// </summary>
+        /// <remarks>
+        /// Creates a group with the participant data. The creator is automatically added to the group.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Group create payload</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> CreateGroupWithHttpInfoAsync (string instanceKey, GroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Demote participant.
         /// </summary>
@@ -706,7 +475,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> DemoteParticipantAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Demote participant.
@@ -720,7 +489,155 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> DemoteParticipantWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Get admin groups.
+        /// </summary>
+        /// <remarks>
+        /// Returns list of all groups in which you are admin.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> GetAdminGroupsAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Get admin groups.
+        /// </summary>
+        /// <remarks>
+        /// Returns list of all groups in which you are admin.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetAdminGroupsWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Get all groups.
+        /// </summary>
+        /// <remarks>
+        /// Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> GetAllGroupsAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Get all groups.
+        /// </summary>
+        /// <remarks>
+        /// Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetAllGroupsWithHttpInfoAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Get group.
+        /// </summary>
+        /// <remarks>
+        /// Fetches the group data.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> GetGroupAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Get group.
+        /// </summary>
+        /// <remarks>
+        /// Fetches the group data.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetGroupWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Get group from invite link.
+        /// </summary>
+        /// <remarks>
+        /// Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="inviteLink">The invite link to check</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> GetGroupFromInviteLinkAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Get group from invite link.
+        /// </summary>
+        /// <remarks>
+        /// Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="inviteLink">The invite link to check</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetGroupFromInviteLinkWithHttpInfoAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Get group invite code.
+        /// </summary>
+        /// <remarks>
+        /// Gets the invite code of the group.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> GetGroupInviteCodeAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Get group invite code.
+        /// </summary>
+        /// <remarks>
+        /// Gets the invite code of the group.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetGroupInviteCodeWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Leaves the group.
+        /// </summary>
+        /// <remarks>
+        /// Leaves the specified group.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> LeaveGroupAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Leaves the group.
+        /// </summary>
+        /// <remarks>
+        /// Leaves the specified group.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> LeaveGroupWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Promote participant.
         /// </summary>
@@ -733,7 +650,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> PromoteParticipantAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Promote participant.
@@ -747,7 +664,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> PromoteParticipantWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Remove participant.
         /// </summary>
@@ -760,7 +677,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> RemoveParticipantAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Remove participant.
@@ -774,7 +691,115 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> RemoveParticipantWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Set group announce.
+        /// </summary>
+        /// <remarks>
+        /// Set if non-admins are allowed to send messages in groups
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="announce">Announce status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> SetGroupAnnounceAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Set group announce.
+        /// </summary>
+        /// <remarks>
+        /// Set if non-admins are allowed to send messages in groups
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="announce">Announce status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SetGroupAnnounceWithHttpInfoAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Set group description.
+        /// </summary>
+        /// <remarks>
+        /// Changes the group description
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group description data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> SetGroupDescriptionAsync (string instanceKey, string groupId, GroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Set group description.
+        /// </summary>
+        /// <remarks>
+        /// Changes the group description
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group description data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SetGroupDescriptionWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Set group locked.
+        /// </summary>
+        /// <remarks>
+        /// Set if non-admins are allowed to change the group dp and other stuff
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="locked">Locked status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> SetGroupLockedAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Set group locked.
+        /// </summary>
+        /// <remarks>
+        /// Set if non-admins are allowed to change the group dp and other stuff
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="locked">Locked status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SetGroupLockedWithHttpInfoAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Set group name.
+        /// </summary>
+        /// <remarks>
+        /// Changes the group name. The max limit is 22 chars
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group name data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> SetGroupNameAsync (string instanceKey, string groupId, GroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Set group name.
+        /// </summary>
+        /// <remarks>
+        /// Changes the group name. The max limit is 22 chars
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group name data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SetGroupNameWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Set group picture.
         /// </summary>
@@ -784,10 +809,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
+        /// <param name="setGroupPictureRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdProfilePicPutAsync (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SetGroupPictureAsync (string instanceKey, string groupId, SetGroupPictureRequest setGroupPictureRequest, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Set group picture.
@@ -798,35 +823,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
+        /// <param name="setGroupPictureRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfoAsync (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Get group from invite link.
-        /// </summary>
-        /// <remarks>
-        /// Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="inviteLink">The invite link to check</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsInviteInfoGetAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Get group from invite link.
-        /// </summary>
-        /// <remarks>
-        /// Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="inviteLink">The invite link to check</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfoAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SetGroupPictureWithHttpInfoAsync (string instanceKey, string groupId, SetGroupPictureRequest setGroupPictureRequest, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -939,1654 +939,6 @@ namespace WhatsAPI.whatsapi
         }
 
         /// <summary>
-        /// Get admin groupss. Returns list of all groups in which you are admin.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsAdminGet (string instanceKey)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsAdminGetWithHttpInfo(instanceKey);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get admin groupss. Returns list of all groups in which you are admin.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsAdminGetWithHttpInfo (string instanceKey)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsAdminGet");
-
-            var localVarPath = "/instances/{instance_key}/groups/admin";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsAdminGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get admin groupss. Returns list of all groups in which you are admin.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsAdminGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsAdminGetWithHttpInfoAsync(instanceKey, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get admin groupss. Returns list of all groups in which you are admin.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsAdminGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsAdminGet");
-
-            var localVarPath = "/instances/{instance_key}/groups/admin";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsAdminGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Create group. Creates a group with the participant data. The creator is automatically added to the group.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Group create payload</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsCreatePost (string instanceKey, GroupCreatePayload data)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsCreatePostWithHttpInfo(instanceKey, data);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Create group. Creates a group with the participant data. The creator is automatically added to the group.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Group create payload</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsCreatePostWithHttpInfo (string instanceKey, GroupCreatePayload data)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsCreatePost");
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsCreatePost");
-
-            var localVarPath = "/instances/{instance_key}/groups/create";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (data != null && data.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = data; // byte array
-            }
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsCreatePost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Create group. Creates a group with the participant data. The creator is automatically added to the group.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Group create payload</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsCreatePostAsync (string instanceKey, GroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsCreatePostWithHttpInfoAsync(instanceKey, data, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Create group. Creates a group with the participant data. The creator is automatically added to the group.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Group create payload</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsCreatePostWithHttpInfoAsync (string instanceKey, GroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsCreatePost");
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsCreatePost");
-
-            var localVarPath = "/instances/{instance_key}/groups/create";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (data != null && data.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = data; // byte array
-            }
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsCreatePost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get all groups. Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsGet (string instanceKey, string includeParticipants = default(string))
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGetWithHttpInfo(instanceKey, includeParticipants);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get all groups. Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGetWithHttpInfo (string instanceKey, string includeParticipants = default(string))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGet");
-
-            var localVarPath = "/instances/{instance_key}/groups/";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (includeParticipants != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "include_participants", includeParticipants)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get all groups. Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGetAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGetWithHttpInfoAsync(instanceKey, includeParticipants, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get all groups. Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGetWithHttpInfoAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGet");
-
-            var localVarPath = "/instances/{instance_key}/groups/";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (includeParticipants != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "include_participants", includeParticipants)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Set group announce. Set if non-admins are allowed to send messages in groups
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="announce">Announce status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsGroupIdAnnouncePut (string instanceKey, bool announce, string groupId)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfo(instanceKey, announce, groupId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Set group announce. Set if non-admins are allowed to send messages in groups
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="announce">Announce status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfo (string instanceKey, bool announce, string groupId)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdAnnouncePut");
-            // verify the required parameter 'announce' is set
-            if (announce == null)
-                throw new ApiException(400, "Missing required parameter 'announce' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdAnnouncePut");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdAnnouncePut");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}/announce";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (announce != null) localVarPathParams.Add("announce", this.Configuration.ApiClient.ParameterToString(announce)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdAnnouncePut", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Set group announce. Set if non-admins are allowed to send messages in groups
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="announce">Announce status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdAnnouncePutAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfoAsync(instanceKey, announce, groupId, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Set group announce. Set if non-admins are allowed to send messages in groups
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="announce">Announce status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdAnnouncePutWithHttpInfoAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdAnnouncePut");
-            // verify the required parameter 'announce' is set
-            if (announce == null)
-                throw new ApiException(400, "Missing required parameter 'announce' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdAnnouncePut");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdAnnouncePut");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}/announce";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (announce != null) localVarPathParams.Add("announce", this.Configuration.ApiClient.ParameterToString(announce)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdAnnouncePut", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Leaves the group. Leaves the specified group.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsGroupIdDelete (string instanceKey, string groupId)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfo(instanceKey, groupId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Leaves the group. Leaves the specified group.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfo (string instanceKey, string groupId)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdDelete");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdDelete");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}/";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Leaves the group. Leaves the specified group.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdDeleteAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfoAsync(instanceKey, groupId, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Leaves the group. Leaves the specified group.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdDeleteWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdDelete");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdDelete");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}/";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Set group description. Changes the group description
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group description data</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsGroupIdDescriptionPut (string instanceKey, string groupId, GroupUpdateDescriptionPayload data)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfo(instanceKey, groupId, data);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Set group description. Changes the group description
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group description data</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfo (string instanceKey, string groupId, GroupUpdateDescriptionPayload data)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdDescriptionPut");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdDescriptionPut");
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdDescriptionPut");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}/description";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-            if (data != null && data.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = data; // byte array
-            }
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdDescriptionPut", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Set group description. Changes the group description
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group description data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdDescriptionPutAsync (string instanceKey, string groupId, GroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Set group description. Changes the group description
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group description data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdDescriptionPutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdDescriptionPut");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdDescriptionPut");
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdDescriptionPut");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}/description";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-            if (data != null && data.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = data; // byte array
-            }
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdDescriptionPut", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get group. Fetches the group data.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsGroupIdGet (string instanceKey, string groupId)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdGetWithHttpInfo(instanceKey, groupId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get group. Fetches the group data.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdGetWithHttpInfo (string instanceKey, string groupId)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdGet");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdGet");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get group. Fetches the group data.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdGetAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdGetWithHttpInfoAsync(instanceKey, groupId, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get group. Fetches the group data.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdGetWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdGet");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdGet");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get group invite code. Gets the invite code of the group.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsGroupIdInviteCodeGet (string instanceKey, string groupId)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfo(instanceKey, groupId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get group invite code. Gets the invite code of the group.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfo (string instanceKey, string groupId)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdInviteCodeGet");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdInviteCodeGet");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}/invite-code";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdInviteCodeGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get group invite code. Gets the invite code of the group.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdInviteCodeGetAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfoAsync(instanceKey, groupId, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get group invite code. Gets the invite code of the group.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdInviteCodeGetWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdInviteCodeGet");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdInviteCodeGet");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}/invite-code";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdInviteCodeGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Set group locked. Set if non-admins are allowed to change the group dp and other stuff
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="locked">Locked status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsGroupIdLockPut (string instanceKey, bool locked, string groupId)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfo(instanceKey, locked, groupId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Set group locked. Set if non-admins are allowed to change the group dp and other stuff
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="locked">Locked status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfo (string instanceKey, bool locked, string groupId)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdLockPut");
-            // verify the required parameter 'locked' is set
-            if (locked == null)
-                throw new ApiException(400, "Missing required parameter 'locked' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdLockPut");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdLockPut");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}/lock";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (locked != null) localVarPathParams.Add("locked", this.Configuration.ApiClient.ParameterToString(locked)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdLockPut", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Set group locked. Set if non-admins are allowed to change the group dp and other stuff
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="locked">Locked status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdLockPutAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfoAsync(instanceKey, locked, groupId, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Set group locked. Set if non-admins are allowed to change the group dp and other stuff
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="locked">Locked status</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdLockPutWithHttpInfoAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdLockPut");
-            // verify the required parameter 'locked' is set
-            if (locked == null)
-                throw new ApiException(400, "Missing required parameter 'locked' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdLockPut");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdLockPut");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}/lock";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (locked != null) localVarPathParams.Add("locked", this.Configuration.ApiClient.ParameterToString(locked)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdLockPut", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Set group name. Changes the group name. The max limit is 22 chars
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group name data</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsGroupIdNamePut (string instanceKey, string groupId, GroupUpdateNamePayload data)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfo(instanceKey, groupId, data);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Set group name. Changes the group name. The max limit is 22 chars
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group name data</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfo (string instanceKey, string groupId, GroupUpdateNamePayload data)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdNamePut");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdNamePut");
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdNamePut");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}/name";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-            if (data != null && data.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = data; // byte array
-            }
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdNamePut", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Set group name. Changes the group name. The max limit is 22 chars
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group name data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdNamePutAsync (string instanceKey, string groupId, GroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Set group name. Changes the group name. The max limit is 22 chars
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="groupId">Group id of the group</param>
-        /// <param name="data">Group name data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdNamePutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdNamePut");
-            // verify the required parameter 'groupId' is set
-            if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdNamePut");
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdNamePut");
-
-            var localVarPath = "/instances/{instance_key}/groups/{group_id}/name";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-            if (data != null && data.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = data; // byte array
-            }
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdNamePut", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
         /// Add participant. Handles adding participants to a group. You must be admin in the group or the query will fail.
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
@@ -2594,9 +946,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsAddPost (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
+        public APIResponse AddParticipant (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfo(instanceKey, groupId, data);
+             ApiResponse<APIResponse> localVarResponse = AddParticipantWithHttpInfo(instanceKey, groupId, data);
              return localVarResponse.Data;
         }
 
@@ -2608,17 +960,17 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
+        public ApiResponse<APIResponse> AddParticipantWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsAddPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->AddParticipant");
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsAddPost");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->AddParticipant");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsAddPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->AddParticipant");
 
             var localVarPath = "/instances/{instance_key}/groups/{group_id}/participants/add";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2668,7 +1020,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdParticipantsAddPost", localVarResponse);
+                Exception exception = ExceptionFactory("AddParticipant", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2686,9 +1038,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> AddParticipantAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await AddParticipantWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2702,17 +1054,17 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsAddPostWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> AddParticipantWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsAddPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->AddParticipant");
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsAddPost");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->AddParticipant");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsAddPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->AddParticipant");
 
             var localVarPath = "/instances/{instance_key}/groups/{group_id}/participants/add";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2762,7 +1114,180 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdParticipantsAddPost", localVarResponse);
+                Exception exception = ExceptionFactory("AddParticipant", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Create group. Creates a group with the participant data. The creator is automatically added to the group.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Group create payload</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse CreateGroup (string instanceKey, GroupCreatePayload data)
+        {
+             ApiResponse<APIResponse> localVarResponse = CreateGroupWithHttpInfo(instanceKey, data);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create group. Creates a group with the participant data. The creator is automatically added to the group.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Group create payload</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> CreateGroupWithHttpInfo (string instanceKey, GroupCreatePayload data)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->CreateGroup");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->CreateGroup");
+
+            var localVarPath = "/instances/{instance_key}/groups/create";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateGroup", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Create group. Creates a group with the participant data. The creator is automatically added to the group.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Group create payload</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> CreateGroupAsync (string instanceKey, GroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await CreateGroupWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create group. Creates a group with the participant data. The creator is automatically added to the group.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Group create payload</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> CreateGroupWithHttpInfoAsync (string instanceKey, GroupCreatePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->CreateGroup");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->CreateGroup");
+
+            var localVarPath = "/instances/{instance_key}/groups/create";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateGroup", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2779,9 +1304,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
+        public APIResponse DemoteParticipant (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfo(instanceKey, groupId, data);
+             ApiResponse<APIResponse> localVarResponse = DemoteParticipantWithHttpInfo(instanceKey, groupId, data);
              return localVarResponse.Data;
         }
 
@@ -2793,17 +1318,17 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
+        public ApiResponse<APIResponse> DemoteParticipantWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->DemoteParticipant");
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->DemoteParticipant");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut");
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->DemoteParticipant");
 
             var localVarPath = "/instances/{instance_key}/groups/{group_id}/participants/demote";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2853,7 +1378,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut", localVarResponse);
+                Exception exception = ExceptionFactory("DemoteParticipant", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2871,9 +1396,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> DemoteParticipantAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await DemoteParticipantWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2887,17 +1412,17 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> DemoteParticipantWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->DemoteParticipant");
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->DemoteParticipant");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut");
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->DemoteParticipant");
 
             var localVarPath = "/instances/{instance_key}/groups/{group_id}/participants/demote";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2947,7 +1472,931 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdParticipantsDemotePut", localVarResponse);
+                Exception exception = ExceptionFactory("DemoteParticipant", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get admin groups. Returns list of all groups in which you are admin.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse GetAdminGroups (string instanceKey)
+        {
+             ApiResponse<APIResponse> localVarResponse = GetAdminGroupsWithHttpInfo(instanceKey);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get admin groups. Returns list of all groups in which you are admin.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> GetAdminGroupsWithHttpInfo (string instanceKey)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->GetAdminGroups");
+
+            var localVarPath = "/instances/{instance_key}/groups/admin";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAdminGroups", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get admin groups. Returns list of all groups in which you are admin.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> GetAdminGroupsAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await GetAdminGroupsWithHttpInfoAsync(instanceKey, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get admin groups. Returns list of all groups in which you are admin.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetAdminGroupsWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->GetAdminGroups");
+
+            var localVarPath = "/instances/{instance_key}/groups/admin";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAdminGroups", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get all groups. Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse GetAllGroups (string instanceKey, string includeParticipants = default(string))
+        {
+             ApiResponse<APIResponse> localVarResponse = GetAllGroupsWithHttpInfo(instanceKey, includeParticipants);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all groups. Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> GetAllGroupsWithHttpInfo (string instanceKey, string includeParticipants = default(string))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->GetAllGroups");
+
+            var localVarPath = "/instances/{instance_key}/groups/";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (includeParticipants != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "include_participants", includeParticipants)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllGroups", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get all groups. Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> GetAllGroupsAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await GetAllGroupsWithHttpInfoAsync(instanceKey, includeParticipants, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all groups. Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="includeParticipants">Include participants data (optional, default to true)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetAllGroupsWithHttpInfoAsync (string instanceKey, string includeParticipants = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->GetAllGroups");
+
+            var localVarPath = "/instances/{instance_key}/groups/";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (includeParticipants != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "include_participants", includeParticipants)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetAllGroups", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get group. Fetches the group data.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse GetGroup (string instanceKey, string groupId)
+        {
+             ApiResponse<APIResponse> localVarResponse = GetGroupWithHttpInfo(instanceKey, groupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get group. Fetches the group data.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> GetGroupWithHttpInfo (string instanceKey, string groupId)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->GetGroup");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->GetGroup");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetGroup", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get group. Fetches the group data.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> GetGroupAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await GetGroupWithHttpInfoAsync(instanceKey, groupId, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get group. Fetches the group data.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetGroupWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->GetGroup");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->GetGroup");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetGroup", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get group from invite link. Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="inviteLink">The invite link to check</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse GetGroupFromInviteLink (string instanceKey, string inviteLink)
+        {
+             ApiResponse<APIResponse> localVarResponse = GetGroupFromInviteLinkWithHttpInfo(instanceKey, inviteLink);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get group from invite link. Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="inviteLink">The invite link to check</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> GetGroupFromInviteLinkWithHttpInfo (string instanceKey, string inviteLink)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->GetGroupFromInviteLink");
+            // verify the required parameter 'inviteLink' is set
+            if (inviteLink == null)
+                throw new ApiException(400, "Missing required parameter 'inviteLink' when calling GroupManagementApi->GetGroupFromInviteLink");
+
+            var localVarPath = "/instances/{instance_key}/groups/invite-info";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (inviteLink != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "invite_link", inviteLink)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetGroupFromInviteLink", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get group from invite link. Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="inviteLink">The invite link to check</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> GetGroupFromInviteLinkAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await GetGroupFromInviteLinkWithHttpInfoAsync(instanceKey, inviteLink, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get group from invite link. Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="inviteLink">The invite link to check</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetGroupFromInviteLinkWithHttpInfoAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->GetGroupFromInviteLink");
+            // verify the required parameter 'inviteLink' is set
+            if (inviteLink == null)
+                throw new ApiException(400, "Missing required parameter 'inviteLink' when calling GroupManagementApi->GetGroupFromInviteLink");
+
+            var localVarPath = "/instances/{instance_key}/groups/invite-info";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (inviteLink != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "invite_link", inviteLink)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetGroupFromInviteLink", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get group invite code. Gets the invite code of the group.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse GetGroupInviteCode (string instanceKey, string groupId)
+        {
+             ApiResponse<APIResponse> localVarResponse = GetGroupInviteCodeWithHttpInfo(instanceKey, groupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get group invite code. Gets the invite code of the group.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> GetGroupInviteCodeWithHttpInfo (string instanceKey, string groupId)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->GetGroupInviteCode");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->GetGroupInviteCode");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}/invite-code";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetGroupInviteCode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get group invite code. Gets the invite code of the group.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> GetGroupInviteCodeAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await GetGroupInviteCodeWithHttpInfoAsync(instanceKey, groupId, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get group invite code. Gets the invite code of the group.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetGroupInviteCodeWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->GetGroupInviteCode");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->GetGroupInviteCode");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}/invite-code";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetGroupInviteCode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Leaves the group. Leaves the specified group.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse LeaveGroup (string instanceKey, string groupId)
+        {
+             ApiResponse<APIResponse> localVarResponse = LeaveGroupWithHttpInfo(instanceKey, groupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Leaves the group. Leaves the specified group.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> LeaveGroupWithHttpInfo (string instanceKey, string groupId)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->LeaveGroup");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->LeaveGroup");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}/";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LeaveGroup", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Leaves the group. Leaves the specified group.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> LeaveGroupAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await LeaveGroupWithHttpInfoAsync(instanceKey, groupId, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Leaves the group. Leaves the specified group.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> LeaveGroupWithHttpInfoAsync (string instanceKey, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->LeaveGroup");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->LeaveGroup");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}/";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LeaveGroup", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2964,9 +2413,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
+        public APIResponse PromoteParticipant (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfo(instanceKey, groupId, data);
+             ApiResponse<APIResponse> localVarResponse = PromoteParticipantWithHttpInfo(instanceKey, groupId, data);
              return localVarResponse.Data;
         }
 
@@ -2978,17 +2427,17 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
+        public ApiResponse<APIResponse> PromoteParticipantWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->PromoteParticipant");
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->PromoteParticipant");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut");
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->PromoteParticipant");
 
             var localVarPath = "/instances/{instance_key}/groups/{group_id}/participants/promote";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3038,7 +2487,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut", localVarResponse);
+                Exception exception = ExceptionFactory("PromoteParticipant", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3056,9 +2505,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> PromoteParticipantAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await PromoteParticipantWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -3072,17 +2521,17 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> PromoteParticipantWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->PromoteParticipant");
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->PromoteParticipant");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut");
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->PromoteParticipant");
 
             var localVarPath = "/instances/{instance_key}/groups/{group_id}/participants/promote";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3132,7 +2581,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdParticipantsPromotePut", localVarResponse);
+                Exception exception = ExceptionFactory("PromoteParticipant", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3149,9 +2598,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
+        public APIResponse RemoveParticipant (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfo(instanceKey, groupId, data);
+             ApiResponse<APIResponse> localVarResponse = RemoveParticipantWithHttpInfo(instanceKey, groupId, data);
              return localVarResponse.Data;
         }
 
@@ -3163,17 +2612,17 @@ namespace WhatsAPI.whatsapi
         /// <param name="groupId">Group id of the group</param>
         /// <param name="data">Group update payload</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
+        public ApiResponse<APIResponse> RemoveParticipantWithHttpInfo (string instanceKey, string groupId, GroupUpdateParticipantsPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->RemoveParticipant");
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->RemoveParticipant");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete");
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->RemoveParticipant");
 
             var localVarPath = "/instances/{instance_key}/groups/{group_id}/participants/remove";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3223,7 +2672,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete", localVarResponse);
+                Exception exception = ExceptionFactory("RemoveParticipant", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3241,9 +2690,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> RemoveParticipantAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await RemoveParticipantWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -3257,17 +2706,17 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Group update payload</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> RemoveParticipantWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateParticipantsPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->RemoveParticipant");
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->RemoveParticipant");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete");
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->RemoveParticipant");
 
             var localVarPath = "/instances/{instance_key}/groups/{group_id}/participants/remove";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3317,7 +2766,715 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDelete", localVarResponse);
+                Exception exception = ExceptionFactory("RemoveParticipant", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Set group announce. Set if non-admins are allowed to send messages in groups
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="announce">Announce status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse SetGroupAnnounce (string instanceKey, bool announce, string groupId)
+        {
+             ApiResponse<APIResponse> localVarResponse = SetGroupAnnounceWithHttpInfo(instanceKey, announce, groupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set group announce. Set if non-admins are allowed to send messages in groups
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="announce">Announce status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> SetGroupAnnounceWithHttpInfo (string instanceKey, bool announce, string groupId)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->SetGroupAnnounce");
+            // verify the required parameter 'announce' is set
+            if (announce == null)
+                throw new ApiException(400, "Missing required parameter 'announce' when calling GroupManagementApi->SetGroupAnnounce");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->SetGroupAnnounce");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}/announce";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (announce != null) localVarPathParams.Add("announce", this.Configuration.ApiClient.ParameterToString(announce)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetGroupAnnounce", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Set group announce. Set if non-admins are allowed to send messages in groups
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="announce">Announce status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> SetGroupAnnounceAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await SetGroupAnnounceWithHttpInfoAsync(instanceKey, announce, groupId, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set group announce. Set if non-admins are allowed to send messages in groups
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="announce">Announce status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SetGroupAnnounceWithHttpInfoAsync (string instanceKey, bool announce, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->SetGroupAnnounce");
+            // verify the required parameter 'announce' is set
+            if (announce == null)
+                throw new ApiException(400, "Missing required parameter 'announce' when calling GroupManagementApi->SetGroupAnnounce");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->SetGroupAnnounce");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}/announce";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (announce != null) localVarPathParams.Add("announce", this.Configuration.ApiClient.ParameterToString(announce)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetGroupAnnounce", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Set group description. Changes the group description
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group description data</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse SetGroupDescription (string instanceKey, string groupId, GroupUpdateDescriptionPayload data)
+        {
+             ApiResponse<APIResponse> localVarResponse = SetGroupDescriptionWithHttpInfo(instanceKey, groupId, data);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set group description. Changes the group description
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group description data</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> SetGroupDescriptionWithHttpInfo (string instanceKey, string groupId, GroupUpdateDescriptionPayload data)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->SetGroupDescription");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->SetGroupDescription");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->SetGroupDescription");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}/description";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetGroupDescription", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Set group description. Changes the group description
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group description data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> SetGroupDescriptionAsync (string instanceKey, string groupId, GroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await SetGroupDescriptionWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set group description. Changes the group description
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group description data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SetGroupDescriptionWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateDescriptionPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->SetGroupDescription");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->SetGroupDescription");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->SetGroupDescription");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}/description";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetGroupDescription", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Set group locked. Set if non-admins are allowed to change the group dp and other stuff
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="locked">Locked status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse SetGroupLocked (string instanceKey, bool locked, string groupId)
+        {
+             ApiResponse<APIResponse> localVarResponse = SetGroupLockedWithHttpInfo(instanceKey, locked, groupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set group locked. Set if non-admins are allowed to change the group dp and other stuff
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="locked">Locked status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> SetGroupLockedWithHttpInfo (string instanceKey, bool locked, string groupId)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->SetGroupLocked");
+            // verify the required parameter 'locked' is set
+            if (locked == null)
+                throw new ApiException(400, "Missing required parameter 'locked' when calling GroupManagementApi->SetGroupLocked");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->SetGroupLocked");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}/lock";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (locked != null) localVarPathParams.Add("locked", this.Configuration.ApiClient.ParameterToString(locked)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetGroupLocked", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Set group locked. Set if non-admins are allowed to change the group dp and other stuff
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="locked">Locked status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> SetGroupLockedAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await SetGroupLockedWithHttpInfoAsync(instanceKey, locked, groupId, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set group locked. Set if non-admins are allowed to change the group dp and other stuff
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="locked">Locked status</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SetGroupLockedWithHttpInfoAsync (string instanceKey, bool locked, string groupId, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->SetGroupLocked");
+            // verify the required parameter 'locked' is set
+            if (locked == null)
+                throw new ApiException(400, "Missing required parameter 'locked' when calling GroupManagementApi->SetGroupLocked");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->SetGroupLocked");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}/lock";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (locked != null) localVarPathParams.Add("locked", this.Configuration.ApiClient.ParameterToString(locked)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetGroupLocked", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Set group name. Changes the group name. The max limit is 22 chars
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group name data</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse SetGroupName (string instanceKey, string groupId, GroupUpdateNamePayload data)
+        {
+             ApiResponse<APIResponse> localVarResponse = SetGroupNameWithHttpInfo(instanceKey, groupId, data);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set group name. Changes the group name. The max limit is 22 chars
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group name data</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> SetGroupNameWithHttpInfo (string instanceKey, string groupId, GroupUpdateNamePayload data)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->SetGroupName");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->SetGroupName");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->SetGroupName");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}/name";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetGroupName", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Set group name. Changes the group name. The max limit is 22 chars
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group name data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> SetGroupNameAsync (string instanceKey, string groupId, GroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await SetGroupNameWithHttpInfoAsync(instanceKey, groupId, data, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set group name. Changes the group name. The max limit is 22 chars
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="groupId">Group id of the group</param>
+        /// <param name="data">Group name data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SetGroupNameWithHttpInfoAsync (string instanceKey, string groupId, GroupUpdateNamePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->SetGroupName");
+            // verify the required parameter 'groupId' is set
+            if (groupId == null)
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->SetGroupName");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling GroupManagementApi->SetGroupName");
+
+            var localVarPath = "/instances/{instance_key}/groups/{group_id}/name";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetGroupName", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3332,11 +3489,11 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
+        /// <param name="setGroupPictureRequest"></param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsGroupIdProfilePicPut (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest)
+        public APIResponse SetGroupPicture (string instanceKey, string groupId, SetGroupPictureRequest setGroupPictureRequest)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfo(instanceKey, groupId, instancesInstanceKeyGroupsGroupIdProfilePicPutRequest);
+             ApiResponse<APIResponse> localVarResponse = SetGroupPictureWithHttpInfo(instanceKey, groupId, setGroupPictureRequest);
              return localVarResponse.Data;
         }
 
@@ -3346,19 +3503,19 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
+        /// <param name="setGroupPictureRequest"></param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfo (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest)
+        public ApiResponse<APIResponse> SetGroupPictureWithHttpInfo (string instanceKey, string groupId, SetGroupPictureRequest setGroupPictureRequest)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdProfilePicPut");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->SetGroupPicture");
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdProfilePicPut");
-            // verify the required parameter 'instancesInstanceKeyGroupsGroupIdProfilePicPutRequest' is set
-            if (instancesInstanceKeyGroupsGroupIdProfilePicPutRequest == null)
-                throw new ApiException(400, "Missing required parameter 'instancesInstanceKeyGroupsGroupIdProfilePicPutRequest' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdProfilePicPut");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->SetGroupPicture");
+            // verify the required parameter 'setGroupPictureRequest' is set
+            if (setGroupPictureRequest == null)
+                throw new ApiException(400, "Missing required parameter 'setGroupPictureRequest' when calling GroupManagementApi->SetGroupPicture");
 
             var localVarPath = "/instances/{instance_key}/groups/{group_id}/profile-pic";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3384,13 +3541,13 @@ namespace WhatsAPI.whatsapi
 
             if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
             if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-            if (instancesInstanceKeyGroupsGroupIdProfilePicPutRequest != null && instancesInstanceKeyGroupsGroupIdProfilePicPutRequest.GetType() != typeof(byte[]))
+            if (setGroupPictureRequest != null && setGroupPictureRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(instancesInstanceKeyGroupsGroupIdProfilePicPutRequest); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(setGroupPictureRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = instancesInstanceKeyGroupsGroupIdProfilePicPutRequest; // byte array
+                localVarPostBody = setGroupPictureRequest; // byte array
             }
 
             // authentication (ApiKeyAuth) required
@@ -3408,7 +3565,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdProfilePicPut", localVarResponse);
+                Exception exception = ExceptionFactory("SetGroupPicture", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3423,12 +3580,12 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
+        /// <param name="setGroupPictureRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsGroupIdProfilePicPutAsync (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SetGroupPictureAsync (string instanceKey, string groupId, SetGroupPictureRequest setGroupPictureRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfoAsync(instanceKey, groupId, instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SetGroupPictureWithHttpInfoAsync(instanceKey, groupId, setGroupPictureRequest, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -3439,20 +3596,20 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="groupId">Group id of the group</param>
-        /// <param name="instancesInstanceKeyGroupsGroupIdProfilePicPutRequest"></param>
+        /// <param name="setGroupPictureRequest"></param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsGroupIdProfilePicPutWithHttpInfoAsync (string instanceKey, string groupId, InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest instancesInstanceKeyGroupsGroupIdProfilePicPutRequest, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SetGroupPictureWithHttpInfoAsync (string instanceKey, string groupId, SetGroupPictureRequest setGroupPictureRequest, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdProfilePicPut");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->SetGroupPicture");
             // verify the required parameter 'groupId' is set
             if (groupId == null)
-                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdProfilePicPut");
-            // verify the required parameter 'instancesInstanceKeyGroupsGroupIdProfilePicPutRequest' is set
-            if (instancesInstanceKeyGroupsGroupIdProfilePicPutRequest == null)
-                throw new ApiException(400, "Missing required parameter 'instancesInstanceKeyGroupsGroupIdProfilePicPutRequest' when calling GroupManagementApi->InstancesInstanceKeyGroupsGroupIdProfilePicPut");
+                throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupManagementApi->SetGroupPicture");
+            // verify the required parameter 'setGroupPictureRequest' is set
+            if (setGroupPictureRequest == null)
+                throw new ApiException(400, "Missing required parameter 'setGroupPictureRequest' when calling GroupManagementApi->SetGroupPicture");
 
             var localVarPath = "/instances/{instance_key}/groups/{group_id}/profile-pic";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3478,13 +3635,13 @@ namespace WhatsAPI.whatsapi
 
             if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
             if (groupId != null) localVarPathParams.Add("group_id", this.Configuration.ApiClient.ParameterToString(groupId)); // path parameter
-            if (instancesInstanceKeyGroupsGroupIdProfilePicPutRequest != null && instancesInstanceKeyGroupsGroupIdProfilePicPutRequest.GetType() != typeof(byte[]))
+            if (setGroupPictureRequest != null && setGroupPictureRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(instancesInstanceKeyGroupsGroupIdProfilePicPutRequest); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(setGroupPictureRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = instancesInstanceKeyGroupsGroupIdProfilePicPutRequest; // byte array
+                localVarPostBody = setGroupPictureRequest; // byte array
             }
 
             // authentication (ApiKeyAuth) required
@@ -3502,164 +3659,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsGroupIdProfilePicPut", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get group from invite link. Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="inviteLink">The invite link to check</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGroupsInviteInfoGet (string instanceKey, string inviteLink)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfo(instanceKey, inviteLink);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get group from invite link. Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="inviteLink">The invite link to check</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfo (string instanceKey, string inviteLink)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsInviteInfoGet");
-            // verify the required parameter 'inviteLink' is set
-            if (inviteLink == null)
-                throw new ApiException(400, "Missing required parameter 'inviteLink' when calling GroupManagementApi->InstancesInstanceKeyGroupsInviteInfoGet");
-
-            var localVarPath = "/instances/{instance_key}/groups/invite-info";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (inviteLink != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "invite_link", inviteLink)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsInviteInfoGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get group from invite link. Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="inviteLink">The invite link to check</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGroupsInviteInfoGetAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfoAsync(instanceKey, inviteLink, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get group from invite link. Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="inviteLink">The invite link to check</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGroupsInviteInfoGetWithHttpInfoAsync (string instanceKey, string inviteLink, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling GroupManagementApi->InstancesInstanceKeyGroupsInviteInfoGet");
-            // verify the required parameter 'inviteLink' is set
-            if (inviteLink == null)
-                throw new ApiException(400, "Missing required parameter 'inviteLink' when calling GroupManagementApi->InstancesInstanceKeyGroupsInviteInfoGet");
-
-            var localVarPath = "/instances/{instance_key}/groups/invite-info";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (inviteLink != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "invite_link", inviteLink)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGroupsInviteInfoGet", localVarResponse);
+                Exception exception = ExceptionFactory("SetGroupPicture", localVarResponse);
                 if (exception != null) throw exception;
             }
 

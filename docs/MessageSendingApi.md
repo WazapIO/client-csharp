@@ -4,27 +4,27 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**InstancesInstanceKeySendAudioPost**](MessageSendingApi.md#instancesinstancekeysendaudiopost) | **POST** /instances/{instance_key}/send/audio | Send raw audio.
-[**InstancesInstanceKeySendButtonMediaPost**](MessageSendingApi.md#instancesinstancekeysendbuttonmediapost) | **POST** /instances/{instance_key}/send/button-media | Send a button message with a media header.
-[**InstancesInstanceKeySendButtonsPost**](MessageSendingApi.md#instancesinstancekeysendbuttonspost) | **POST** /instances/{instance_key}/send/buttons | Send a button message.
-[**InstancesInstanceKeySendContactPost**](MessageSendingApi.md#instancesinstancekeysendcontactpost) | **POST** /instances/{instance_key}/send/contact | Send a contact message.
-[**InstancesInstanceKeySendDocumentPost**](MessageSendingApi.md#instancesinstancekeysenddocumentpost) | **POST** /instances/{instance_key}/send/document | Send raw document.
-[**InstancesInstanceKeySendImagePost**](MessageSendingApi.md#instancesinstancekeysendimagepost) | **POST** /instances/{instance_key}/send/image | Send raw image.
-[**InstancesInstanceKeySendListPost**](MessageSendingApi.md#instancesinstancekeysendlistpost) | **POST** /instances/{instance_key}/send/list | Send a List message.
-[**InstancesInstanceKeySendLocationPost**](MessageSendingApi.md#instancesinstancekeysendlocationpost) | **POST** /instances/{instance_key}/send/location | Send a location message.
-[**InstancesInstanceKeySendMediaPost**](MessageSendingApi.md#instancesinstancekeysendmediapost) | **POST** /instances/{instance_key}/send/media | Send a media message.
-[**InstancesInstanceKeySendPollPost**](MessageSendingApi.md#instancesinstancekeysendpollpost) | **POST** /instances/{instance_key}/send/poll | Send a Poll message.
-[**InstancesInstanceKeySendTemplateMediaPost**](MessageSendingApi.md#instancesinstancekeysendtemplatemediapost) | **POST** /instances/{instance_key}/send/template-media | Send a template message with media.
-[**InstancesInstanceKeySendTemplatePost**](MessageSendingApi.md#instancesinstancekeysendtemplatepost) | **POST** /instances/{instance_key}/send/template | Send a template message.
-[**InstancesInstanceKeySendTextPost**](MessageSendingApi.md#instancesinstancekeysendtextpost) | **POST** /instances/{instance_key}/send/text | Send a text message.
-[**InstancesInstanceKeySendUploadPost**](MessageSendingApi.md#instancesinstancekeysenduploadpost) | **POST** /instances/{instance_key}/send/upload | Upload media.
-[**InstancesInstanceKeySendVideoPost**](MessageSendingApi.md#instancesinstancekeysendvideopost) | **POST** /instances/{instance_key}/send/video | Send raw video.
+[**SendAudio**](MessageSendingApi.md#sendaudio) | **POST** /instances/{instance_key}/send/audio | Send raw audio.
+[**SendButtonMessage**](MessageSendingApi.md#sendbuttonmessage) | **POST** /instances/{instance_key}/send/buttons | Send a button message.
+[**SendButtonWithMedia**](MessageSendingApi.md#sendbuttonwithmedia) | **POST** /instances/{instance_key}/send/button-media | Send a button message with a media header.
+[**SendContact**](MessageSendingApi.md#sendcontact) | **POST** /instances/{instance_key}/send/contact | Send a contact message.
+[**SendDocument**](MessageSendingApi.md#senddocument) | **POST** /instances/{instance_key}/send/document | Send raw document.
+[**SendImage**](MessageSendingApi.md#sendimage) | **POST** /instances/{instance_key}/send/image | Send raw image.
+[**SendListMessage**](MessageSendingApi.md#sendlistmessage) | **POST** /instances/{instance_key}/send/list | Send a List message.
+[**SendLocation**](MessageSendingApi.md#sendlocation) | **POST** /instances/{instance_key}/send/location | Send a location message.
+[**SendMediaMessage**](MessageSendingApi.md#sendmediamessage) | **POST** /instances/{instance_key}/send/media | Send a media message.
+[**SendPollMessage**](MessageSendingApi.md#sendpollmessage) | **POST** /instances/{instance_key}/send/poll | Send a Poll message.
+[**SendTemplate**](MessageSendingApi.md#sendtemplate) | **POST** /instances/{instance_key}/send/template | Send a template message.
+[**SendTemplateWithMedia**](MessageSendingApi.md#sendtemplatewithmedia) | **POST** /instances/{instance_key}/send/template-media | Send a template message with media.
+[**SendTextMessage**](MessageSendingApi.md#sendtextmessage) | **POST** /instances/{instance_key}/send/text | Send a text message.
+[**SendVideo**](MessageSendingApi.md#sendvideo) | **POST** /instances/{instance_key}/send/video | Send raw video.
+[**UploadMedia**](MessageSendingApi.md#uploadmedia) | **POST** /instances/{instance_key}/send/upload | Upload media.
 
 
 
-## InstancesInstanceKeySendAudioPost
+## SendAudio
 
-> APIResponse InstancesInstanceKeySendAudioPost (string instanceKey, string to, InstancesInstanceKeySendAudioPostRequest instancesInstanceKeySendAudioPostRequest, string caption = null)
+> APIResponse SendAudio (string instanceKey, string to, SendAudioRequest sendAudioRequest, string caption = null)
 
 Send raw audio.
 
@@ -41,7 +41,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeySendAudioPostExample
+    public class SendAudioExample
     {
         public static void Main()
         {
@@ -54,18 +54,18 @@ namespace Example
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
             var to = "to_example";  // string | The recipient's number
-            var instancesInstanceKeySendAudioPostRequest = new InstancesInstanceKeySendAudioPostRequest(); // InstancesInstanceKeySendAudioPostRequest | 
+            var sendAudioRequest = new SendAudioRequest(); // SendAudioRequest | 
             var caption = "caption_example";  // string | Attached caption (optional) 
 
             try
             {
                 // Send raw audio.
-                APIResponse result = apiInstance.InstancesInstanceKeySendAudioPost(instanceKey, to, instancesInstanceKeySendAudioPostRequest, caption);
+                APIResponse result = apiInstance.SendAudio(instanceKey, to, sendAudioRequest, caption);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendAudioPost: " + e.Message );
+                Debug.Print("Exception when calling MessageSendingApi.SendAudio: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
  **to** | **string**| The recipient&#39;s number | 
- **instancesInstanceKeySendAudioPostRequest** | [**InstancesInstanceKeySendAudioPostRequest**](InstancesInstanceKeySendAudioPostRequest.md)|  | 
+ **sendAudioRequest** | [**SendAudioRequest**](SendAudioRequest.md)|  | 
  **caption** | **string**| Attached caption | [optional] 
 
 ### Return type
@@ -113,96 +113,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## InstancesInstanceKeySendButtonMediaPost
+## SendButtonMessage
 
-> APIResponse InstancesInstanceKeySendButtonMediaPost (string instanceKey, ButtonMessageWithMediaPayload data)
-
-Send a button message with a media header.
-
-Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using WhatsAPI.whatsapi;
-using WhatsAPI.Client;
-using WhatsAPI.models;
-
-namespace Example
-{
-    public class InstancesInstanceKeySendButtonMediaPostExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "/api";
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new MessageSendingApi(Configuration.Default);
-            var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new ButtonMessageWithMediaPayload(); // ButtonMessageWithMediaPayload | Message data
-
-            try
-            {
-                // Send a button message with a media header.
-                APIResponse result = apiInstance.InstancesInstanceKeySendButtonMediaPost(instanceKey, data);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendButtonMediaPost: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **instanceKey** | **string**| Instance key | 
- **data** | [**ButtonMessageWithMediaPayload**](ButtonMessageWithMediaPayload.md)| Message data | 
-
-### Return type
-
-[**APIResponse**](APIResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: */*
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad Request |  -  |
-| **401** | Unauthorized |  -  |
-| **404** | Instance not found |  -  |
-| **500** | Internal Server Error |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## InstancesInstanceKeySendButtonsPost
-
-> APIResponse InstancesInstanceKeySendButtonsPost (string instanceKey, ButtonMessagePayload data)
+> APIResponse SendButtonMessage (string instanceKey, ButtonMessagePayload data)
 
 Send a button message.
 
@@ -219,7 +132,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeySendButtonsPostExample
+    public class SendButtonMessageExample
     {
         public static void Main()
         {
@@ -236,12 +149,12 @@ namespace Example
             try
             {
                 // Send a button message.
-                APIResponse result = apiInstance.InstancesInstanceKeySendButtonsPost(instanceKey, data);
+                APIResponse result = apiInstance.SendButtonMessage(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendButtonsPost: " + e.Message );
+                Debug.Print("Exception when calling MessageSendingApi.SendButtonMessage: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -287,9 +200,96 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## InstancesInstanceKeySendContactPost
+## SendButtonWithMedia
 
-> APIResponse InstancesInstanceKeySendContactPost (string instanceKey, ContactMessagePayload data)
+> APIResponse SendButtonWithMedia (string instanceKey, ButtonMessageWithMediaPayload data)
+
+Send a button message with a media header.
+
+Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
+
+namespace Example
+{
+    public class SendButtonWithMediaExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "/api";
+            // Configure API key authorization: ApiKeyAuth
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new MessageSendingApi(Configuration.Default);
+            var instanceKey = "instanceKey_example";  // string | Instance key
+            var data = new ButtonMessageWithMediaPayload(); // ButtonMessageWithMediaPayload | Message data
+
+            try
+            {
+                // Send a button message with a media header.
+                APIResponse result = apiInstance.SendButtonWithMedia(instanceKey, data);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling MessageSendingApi.SendButtonWithMedia: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **instanceKey** | **string**| Instance key | 
+ **data** | [**ButtonMessageWithMediaPayload**](ButtonMessageWithMediaPayload.md)| Message data | 
+
+### Return type
+
+[**APIResponse**](APIResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **401** | Unauthorized |  -  |
+| **404** | Instance not found |  -  |
+| **500** | Internal Server Error |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SendContact
+
+> APIResponse SendContact (string instanceKey, ContactMessagePayload data)
 
 Send a contact message.
 
@@ -306,7 +306,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeySendContactPostExample
+    public class SendContactExample
     {
         public static void Main()
         {
@@ -323,12 +323,12 @@ namespace Example
             try
             {
                 // Send a contact message.
-                APIResponse result = apiInstance.InstancesInstanceKeySendContactPost(instanceKey, data);
+                APIResponse result = apiInstance.SendContact(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendContactPost: " + e.Message );
+                Debug.Print("Exception when calling MessageSendingApi.SendContact: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -374,9 +374,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## InstancesInstanceKeySendDocumentPost
+## SendDocument
 
-> APIResponse InstancesInstanceKeySendDocumentPost (string instanceKey, string to, InstancesInstanceKeySendDocumentPostRequest instancesInstanceKeySendDocumentPostRequest, string caption = null)
+> APIResponse SendDocument (string instanceKey, string to, SendDocumentRequest sendDocumentRequest, string caption = null)
 
 Send raw document.
 
@@ -393,7 +393,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeySendDocumentPostExample
+    public class SendDocumentExample
     {
         public static void Main()
         {
@@ -406,18 +406,18 @@ namespace Example
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
             var to = "to_example";  // string | The recipient's number
-            var instancesInstanceKeySendDocumentPostRequest = new InstancesInstanceKeySendDocumentPostRequest(); // InstancesInstanceKeySendDocumentPostRequest | 
+            var sendDocumentRequest = new SendDocumentRequest(); // SendDocumentRequest | 
             var caption = "caption_example";  // string | Attached caption (optional) 
 
             try
             {
                 // Send raw document.
-                APIResponse result = apiInstance.InstancesInstanceKeySendDocumentPost(instanceKey, to, instancesInstanceKeySendDocumentPostRequest, caption);
+                APIResponse result = apiInstance.SendDocument(instanceKey, to, sendDocumentRequest, caption);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendDocumentPost: " + e.Message );
+                Debug.Print("Exception when calling MessageSendingApi.SendDocument: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
  **to** | **string**| The recipient&#39;s number | 
- **instancesInstanceKeySendDocumentPostRequest** | [**InstancesInstanceKeySendDocumentPostRequest**](InstancesInstanceKeySendDocumentPostRequest.md)|  | 
+ **sendDocumentRequest** | [**SendDocumentRequest**](SendDocumentRequest.md)|  | 
  **caption** | **string**| Attached caption | [optional] 
 
 ### Return type
@@ -465,9 +465,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## InstancesInstanceKeySendImagePost
+## SendImage
 
-> APIResponse InstancesInstanceKeySendImagePost (string instanceKey, string to, InstancesInstanceKeySendImagePostRequest instancesInstanceKeySendImagePostRequest, string caption = null)
+> APIResponse SendImage (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = null)
 
 Send raw image.
 
@@ -484,7 +484,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeySendImagePostExample
+    public class SendImageExample
     {
         public static void Main()
         {
@@ -497,18 +497,18 @@ namespace Example
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
             var to = "to_example";  // string | The recipient's number
-            var instancesInstanceKeySendImagePostRequest = new InstancesInstanceKeySendImagePostRequest(); // InstancesInstanceKeySendImagePostRequest | 
+            var sendImageRequest = new SendImageRequest(); // SendImageRequest | 
             var caption = "caption_example";  // string | Attached caption (optional) 
 
             try
             {
                 // Send raw image.
-                APIResponse result = apiInstance.InstancesInstanceKeySendImagePost(instanceKey, to, instancesInstanceKeySendImagePostRequest, caption);
+                APIResponse result = apiInstance.SendImage(instanceKey, to, sendImageRequest, caption);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendImagePost: " + e.Message );
+                Debug.Print("Exception when calling MessageSendingApi.SendImage: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -524,7 +524,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
  **to** | **string**| The recipient&#39;s number | 
- **instancesInstanceKeySendImagePostRequest** | [**InstancesInstanceKeySendImagePostRequest**](InstancesInstanceKeySendImagePostRequest.md)|  | 
+ **sendImageRequest** | [**SendImageRequest**](SendImageRequest.md)|  | 
  **caption** | **string**| Attached caption | [optional] 
 
 ### Return type
@@ -556,9 +556,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## InstancesInstanceKeySendListPost
+## SendListMessage
 
-> APIResponse InstancesInstanceKeySendListPost (string instanceKey, ListMessagePayload data)
+> APIResponse SendListMessage (string instanceKey, ListMessagePayload data)
 
 Send a List message.
 
@@ -575,7 +575,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeySendListPostExample
+    public class SendListMessageExample
     {
         public static void Main()
         {
@@ -592,12 +592,12 @@ namespace Example
             try
             {
                 // Send a List message.
-                APIResponse result = apiInstance.InstancesInstanceKeySendListPost(instanceKey, data);
+                APIResponse result = apiInstance.SendListMessage(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendListPost: " + e.Message );
+                Debug.Print("Exception when calling MessageSendingApi.SendListMessage: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -643,9 +643,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## InstancesInstanceKeySendLocationPost
+## SendLocation
 
-> APIResponse InstancesInstanceKeySendLocationPost (string instanceKey, LocationMessagePayload data)
+> APIResponse SendLocation (string instanceKey, LocationMessagePayload data)
 
 Send a location message.
 
@@ -662,7 +662,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeySendLocationPostExample
+    public class SendLocationExample
     {
         public static void Main()
         {
@@ -679,12 +679,12 @@ namespace Example
             try
             {
                 // Send a location message.
-                APIResponse result = apiInstance.InstancesInstanceKeySendLocationPost(instanceKey, data);
+                APIResponse result = apiInstance.SendLocation(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendLocationPost: " + e.Message );
+                Debug.Print("Exception when calling MessageSendingApi.SendLocation: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -730,9 +730,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## InstancesInstanceKeySendMediaPost
+## SendMediaMessage
 
-> APIResponse InstancesInstanceKeySendMediaPost (string instanceKey, SendMediaPayload data)
+> APIResponse SendMediaMessage (string instanceKey, SendMediaPayload data)
 
 Send a media message.
 
@@ -749,7 +749,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeySendMediaPostExample
+    public class SendMediaMessageExample
     {
         public static void Main()
         {
@@ -766,12 +766,12 @@ namespace Example
             try
             {
                 // Send a media message.
-                APIResponse result = apiInstance.InstancesInstanceKeySendMediaPost(instanceKey, data);
+                APIResponse result = apiInstance.SendMediaMessage(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendMediaPost: " + e.Message );
+                Debug.Print("Exception when calling MessageSendingApi.SendMediaMessage: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -817,9 +817,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## InstancesInstanceKeySendPollPost
+## SendPollMessage
 
-> APIResponse InstancesInstanceKeySendPollPost (string instanceKey, PollMessagePayload data)
+> APIResponse SendPollMessage (string instanceKey, PollMessagePayload data)
 
 Send a Poll message.
 
@@ -836,7 +836,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeySendPollPostExample
+    public class SendPollMessageExample
     {
         public static void Main()
         {
@@ -853,12 +853,12 @@ namespace Example
             try
             {
                 // Send a Poll message.
-                APIResponse result = apiInstance.InstancesInstanceKeySendPollPost(instanceKey, data);
+                APIResponse result = apiInstance.SendPollMessage(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendPollPost: " + e.Message );
+                Debug.Print("Exception when calling MessageSendingApi.SendPollMessage: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -904,96 +904,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## InstancesInstanceKeySendTemplateMediaPost
+## SendTemplate
 
-> APIResponse InstancesInstanceKeySendTemplateMediaPost (string instanceKey, TemplateButtonWithMediaPayload data)
-
-Send a template message with media.
-
-Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
-
-### Example
-
-```csharp
-using System.Collections.Generic;
-using System.Diagnostics;
-using WhatsAPI.whatsapi;
-using WhatsAPI.Client;
-using WhatsAPI.models;
-
-namespace Example
-{
-    public class InstancesInstanceKeySendTemplateMediaPostExample
-    {
-        public static void Main()
-        {
-            Configuration.Default.BasePath = "/api";
-            // Configure API key authorization: ApiKeyAuth
-            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
-
-            var apiInstance = new MessageSendingApi(Configuration.Default);
-            var instanceKey = "instanceKey_example";  // string | Instance key
-            var data = new TemplateButtonWithMediaPayload(); // TemplateButtonWithMediaPayload | Message data
-
-            try
-            {
-                // Send a template message with media.
-                APIResponse result = apiInstance.InstancesInstanceKeySendTemplateMediaPost(instanceKey, data);
-                Debug.WriteLine(result);
-            }
-            catch (ApiException e)
-            {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendTemplateMediaPost: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
-                Debug.Print(e.StackTrace);
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **instanceKey** | **string**| Instance key | 
- **data** | [**TemplateButtonWithMediaPayload**](TemplateButtonWithMediaPayload.md)| Message data | 
-
-### Return type
-
-[**APIResponse**](APIResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: */*
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | Success |  -  |
-| **400** | Bad Request |  -  |
-| **401** | Unauthorized |  -  |
-| **404** | Instance not found |  -  |
-| **500** | Internal Server Error |  -  |
-
-[[Back to top]](#)
-[[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## InstancesInstanceKeySendTemplatePost
-
-> APIResponse InstancesInstanceKeySendTemplatePost (string instanceKey, TemplateButtonPayload data)
+> APIResponse SendTemplate (string instanceKey, TemplateButtonPayload data)
 
 Send a template message.
 
@@ -1010,7 +923,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeySendTemplatePostExample
+    public class SendTemplateExample
     {
         public static void Main()
         {
@@ -1027,12 +940,12 @@ namespace Example
             try
             {
                 // Send a template message.
-                APIResponse result = apiInstance.InstancesInstanceKeySendTemplatePost(instanceKey, data);
+                APIResponse result = apiInstance.SendTemplate(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendTemplatePost: " + e.Message );
+                Debug.Print("Exception when calling MessageSendingApi.SendTemplate: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1078,9 +991,96 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## InstancesInstanceKeySendTextPost
+## SendTemplateWithMedia
 
-> APIResponse InstancesInstanceKeySendTextPost (string instanceKey, TextMessage data)
+> APIResponse SendTemplateWithMedia (string instanceKey, TemplateButtonWithMediaPayload data)
+
+Send a template message with media.
+
+Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
+
+namespace Example
+{
+    public class SendTemplateWithMediaExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "/api";
+            // Configure API key authorization: ApiKeyAuth
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new MessageSendingApi(Configuration.Default);
+            var instanceKey = "instanceKey_example";  // string | Instance key
+            var data = new TemplateButtonWithMediaPayload(); // TemplateButtonWithMediaPayload | Message data
+
+            try
+            {
+                // Send a template message with media.
+                APIResponse result = apiInstance.SendTemplateWithMedia(instanceKey, data);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling MessageSendingApi.SendTemplateWithMedia: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **instanceKey** | **string**| Instance key | 
+ **data** | [**TemplateButtonWithMediaPayload**](TemplateButtonWithMediaPayload.md)| Message data | 
+
+### Return type
+
+[**APIResponse**](APIResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **401** | Unauthorized |  -  |
+| **404** | Instance not found |  -  |
+| **500** | Internal Server Error |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## SendTextMessage
+
+> APIResponse SendTextMessage (string instanceKey, TextMessage data)
 
 Send a text message.
 
@@ -1097,7 +1097,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeySendTextPostExample
+    public class SendTextMessageExample
     {
         public static void Main()
         {
@@ -1114,12 +1114,12 @@ namespace Example
             try
             {
                 // Send a text message.
-                APIResponse result = apiInstance.InstancesInstanceKeySendTextPost(instanceKey, data);
+                APIResponse result = apiInstance.SendTextMessage(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendTextPost: " + e.Message );
+                Debug.Print("Exception when calling MessageSendingApi.SendTextMessage: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1165,13 +1165,13 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## InstancesInstanceKeySendUploadPost
+## SendVideo
 
-> APIResponse InstancesInstanceKeySendUploadPost (string instanceKey, string type, InstancesInstanceKeySendUploadPostRequest instancesInstanceKeySendUploadPostRequest)
+> APIResponse SendVideo (string instanceKey, string to, SendVideoRequest sendVideoRequest, string caption = null)
 
-Upload media.
+Send raw video.
 
-Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+Sends a video message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
 
 ### Example
 
@@ -1184,7 +1184,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeySendUploadPostExample
+    public class SendVideoExample
     {
         public static void Main()
         {
@@ -1196,18 +1196,19 @@ namespace Example
 
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var type = "image";  // string | Media type
-            var instancesInstanceKeySendUploadPostRequest = new InstancesInstanceKeySendUploadPostRequest(); // InstancesInstanceKeySendUploadPostRequest | 
+            var to = "to_example";  // string | The recipient's number
+            var sendVideoRequest = new SendVideoRequest(); // SendVideoRequest | 
+            var caption = "caption_example";  // string | Attached caption (optional) 
 
             try
             {
-                // Upload media.
-                APIResponse result = apiInstance.InstancesInstanceKeySendUploadPost(instanceKey, type, instancesInstanceKeySendUploadPostRequest);
+                // Send raw video.
+                APIResponse result = apiInstance.SendVideo(instanceKey, to, sendVideoRequest, caption);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendUploadPost: " + e.Message );
+                Debug.Print("Exception when calling MessageSendingApi.SendVideo: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1222,8 +1223,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **type** | **string**| Media type | 
- **instancesInstanceKeySendUploadPostRequest** | [**InstancesInstanceKeySendUploadPostRequest**](InstancesInstanceKeySendUploadPostRequest.md)|  | 
+ **to** | **string**| The recipient&#39;s number | 
+ **sendVideoRequest** | [**SendVideoRequest**](SendVideoRequest.md)|  | 
+ **caption** | **string**| Attached caption | [optional] 
 
 ### Return type
 
@@ -1254,13 +1256,13 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## InstancesInstanceKeySendVideoPost
+## UploadMedia
 
-> APIResponse InstancesInstanceKeySendVideoPost (string instanceKey, string to, InstancesInstanceKeySendVideoPostRequest instancesInstanceKeySendVideoPostRequest, string caption = null)
+> APIResponse UploadMedia (string instanceKey, string type, UploadMediaRequest uploadMediaRequest)
 
-Send raw video.
+Upload media.
 
-Sends a video message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
+Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
 
 ### Example
 
@@ -1273,7 +1275,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeySendVideoPostExample
+    public class UploadMediaExample
     {
         public static void Main()
         {
@@ -1285,19 +1287,18 @@ namespace Example
 
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
-            var to = "to_example";  // string | The recipient's number
-            var instancesInstanceKeySendVideoPostRequest = new InstancesInstanceKeySendVideoPostRequest(); // InstancesInstanceKeySendVideoPostRequest | 
-            var caption = "caption_example";  // string | Attached caption (optional) 
+            var type = "image";  // string | Media type
+            var uploadMediaRequest = new UploadMediaRequest(); // UploadMediaRequest | 
 
             try
             {
-                // Send raw video.
-                APIResponse result = apiInstance.InstancesInstanceKeySendVideoPost(instanceKey, to, instancesInstanceKeySendVideoPostRequest, caption);
+                // Upload media.
+                APIResponse result = apiInstance.UploadMedia(instanceKey, type, uploadMediaRequest);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MessageSendingApi.InstancesInstanceKeySendVideoPost: " + e.Message );
+                Debug.Print("Exception when calling MessageSendingApi.UploadMedia: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1312,9 +1313,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
- **to** | **string**| The recipient&#39;s number | 
- **instancesInstanceKeySendVideoPostRequest** | [**InstancesInstanceKeySendVideoPostRequest**](InstancesInstanceKeySendVideoPostRequest.md)|  | 
- **caption** | **string**| Attached caption | [optional] 
+ **type** | **string**| Media type | 
+ **uploadMediaRequest** | [**UploadMediaRequest**](UploadMediaRequest.md)|  | 
 
 ### Return type
 

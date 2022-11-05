@@ -4,13 +4,13 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**InstancesInstanceKeyBusinessCatalogGet**](BusinessManagementApi.md#instancesinstancekeybusinesscatalogget) | **GET** /instances/{instance_key}/business/catalog | Fetches the catlog.
+[**FetchCatlog**](BusinessManagementApi.md#fetchcatlog) | **GET** /instances/{instance_key}/business/catalog | Fetches the catlog.
 
 
 
-## InstancesInstanceKeyBusinessCatalogGet
+## FetchCatlog
 
-> APIResponse InstancesInstanceKeyBusinessCatalogGet (string instanceKey)
+> APIResponse FetchCatlog (string instanceKey)
 
 Fetches the catlog.
 
@@ -27,7 +27,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeyBusinessCatalogGetExample
+    public class FetchCatlogExample
     {
         public static void Main()
         {
@@ -43,12 +43,12 @@ namespace Example
             try
             {
                 // Fetches the catlog.
-                APIResponse result = apiInstance.InstancesInstanceKeyBusinessCatalogGet(instanceKey);
+                APIResponse result = apiInstance.FetchCatlog(instanceKey);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling BusinessManagementApi.InstancesInstanceKeyBusinessCatalogGet: " + e.Message );
+                Debug.Print("Exception when calling BusinessManagementApi.FetchCatlog: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

@@ -34,7 +34,7 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyBusinessCatalogGet (string instanceKey);
+        APIResponse FetchCatlog (string instanceKey);
 
         /// <summary>
         /// Fetches the catlog.
@@ -45,7 +45,7 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyBusinessCatalogGetWithHttpInfo (string instanceKey);
+        ApiResponse<APIResponse> FetchCatlogWithHttpInfo (string instanceKey);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -58,7 +58,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyBusinessCatalogGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> FetchCatlogAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Fetches the catlog.
@@ -70,7 +70,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyBusinessCatalogGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> FetchCatlogWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -188,9 +188,9 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyBusinessCatalogGet (string instanceKey)
+        public APIResponse FetchCatlog (string instanceKey)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyBusinessCatalogGetWithHttpInfo(instanceKey);
+             ApiResponse<APIResponse> localVarResponse = FetchCatlogWithHttpInfo(instanceKey);
              return localVarResponse.Data;
         }
 
@@ -200,11 +200,11 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyBusinessCatalogGetWithHttpInfo (string instanceKey)
+        public ApiResponse<APIResponse> FetchCatlogWithHttpInfo (string instanceKey)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling BusinessManagementApi->InstancesInstanceKeyBusinessCatalogGet");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling BusinessManagementApi->FetchCatlog");
 
             var localVarPath = "/instances/{instance_key}/business/catalog";
             var localVarPathParams = new Dictionary<String, String>();
@@ -244,7 +244,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyBusinessCatalogGet", localVarResponse);
+                Exception exception = ExceptionFactory("FetchCatlog", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -260,9 +260,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyBusinessCatalogGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> FetchCatlogAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyBusinessCatalogGetWithHttpInfoAsync(instanceKey, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await FetchCatlogWithHttpInfoAsync(instanceKey, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -274,11 +274,11 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyBusinessCatalogGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> FetchCatlogWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling BusinessManagementApi->InstancesInstanceKeyBusinessCatalogGet");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling BusinessManagementApi->FetchCatlog");
 
             var localVarPath = "/instances/{instance_key}/business/catalog";
             var localVarPathParams = new Dictionary<String, String>();
@@ -318,7 +318,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyBusinessCatalogGet", localVarResponse);
+                Exception exception = ExceptionFactory("FetchCatlog", localVarResponse);
                 if (exception != null) throw exception;
             }
 

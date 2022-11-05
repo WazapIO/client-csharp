@@ -26,132 +26,6 @@ namespace WhatsAPI.whatsapi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Creates a new instance key.
-        /// </summary>
-        /// <remarks>
-        /// This endpoint is used to create a new WhatsApp Web instance.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesCreateGet (string instanceKey = default(string));
-
-        /// <summary>
-        /// Creates a new instance key.
-        /// </summary>
-        /// <remarks>
-        /// This endpoint is used to create a new WhatsApp Web instance.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesCreateGetWithHttpInfo (string instanceKey = default(string));
-        /// <summary>
-        /// Get contacts.
-        /// </summary>
-        /// <remarks>
-        /// Fetches the list of contacts in the instance.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyContactsGet (string instanceKey);
-
-        /// <summary>
-        /// Get contacts.
-        /// </summary>
-        /// <remarks>
-        /// Fetches the list of contacts in the instance.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyContactsGetWithHttpInfo (string instanceKey);
-        /// <summary>
-        /// Delete Instance.
-        /// </summary>
-        /// <remarks>
-        /// Deletes the instance with the provided key.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyDeleteDelete (string instanceKey);
-
-        /// <summary>
-        /// Delete Instance.
-        /// </summary>
-        /// <remarks>
-        /// Deletes the instance with the provided key.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyDeleteDeleteWithHttpInfo (string instanceKey);
-        /// <summary>
-        /// Get Instance.
-        /// </summary>
-        /// <remarks>
-        /// Returns the instance data of single instance with connection status.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyGet (string instanceKey);
-
-        /// <summary>
-        /// Get Instance.
-        /// </summary>
-        /// <remarks>
-        /// Returns the instance data of single instance with connection status.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyGetWithHttpInfo (string instanceKey);
-        /// <summary>
-        /// Logout Instance.
-        /// </summary>
-        /// <remarks>
-        /// Logouts of the instance with the provided key.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyLogoutDelete (string instanceKey);
-
-        /// <summary>
-        /// Logout Instance.
-        /// </summary>
-        /// <remarks>
-        /// Logouts of the instance with the provided key.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyLogoutDeleteWithHttpInfo (string instanceKey);
-        /// <summary>
-        /// Get QrCode.
-        /// </summary>
-        /// <remarks>
-        /// Returns the qrcode in the base64 format.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyQrcodeGet (string instanceKey);
-
-        /// <summary>
-        /// Get QrCode.
-        /// </summary>
-        /// <remarks>
-        /// Returns the qrcode in the base64 format.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyQrcodeGetWithHttpInfo (string instanceKey);
-        /// <summary>
         /// Change Webhook url.
         /// </summary>
         /// <remarks>
@@ -161,7 +35,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyWebhookPut (string instanceKey, WebhookPayload data);
+        APIResponse ChangeWebhookUrl (string instanceKey, WebhookPayload data);
 
         /// <summary>
         /// Change Webhook url.
@@ -173,7 +47,112 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyWebhookPutWithHttpInfo (string instanceKey, WebhookPayload data);
+        ApiResponse<APIResponse> ChangeWebhookUrlWithHttpInfo (string instanceKey, WebhookPayload data);
+        /// <summary>
+        /// Creates a new instance key.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint is used to create a new WhatsApp Web instance.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <returns>APIResponse</returns>
+        APIResponse CreateInstance (string instanceKey = default(string));
+
+        /// <summary>
+        /// Creates a new instance key.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint is used to create a new WhatsApp Web instance.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> CreateInstanceWithHttpInfo (string instanceKey = default(string));
+        /// <summary>
+        /// Delete Instance.
+        /// </summary>
+        /// <remarks>
+        /// Deletes the instance with the provided key.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>APIResponse</returns>
+        APIResponse DeleteInstance (string instanceKey);
+
+        /// <summary>
+        /// Delete Instance.
+        /// </summary>
+        /// <remarks>
+        /// Deletes the instance with the provided key.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> DeleteInstanceWithHttpInfo (string instanceKey);
+        /// <summary>
+        /// Get contacts.
+        /// </summary>
+        /// <remarks>
+        /// Fetches the list of contacts in the instance.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>APIResponse</returns>
+        APIResponse GetContacts (string instanceKey);
+
+        /// <summary>
+        /// Get contacts.
+        /// </summary>
+        /// <remarks>
+        /// Fetches the list of contacts in the instance.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> GetContactsWithHttpInfo (string instanceKey);
+        /// <summary>
+        /// Get Instance.
+        /// </summary>
+        /// <remarks>
+        /// Returns the instance data of single instance with connection status.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>APIResponse</returns>
+        APIResponse GetInstance (string instanceKey);
+
+        /// <summary>
+        /// Get Instance.
+        /// </summary>
+        /// <remarks>
+        /// Returns the instance data of single instance with connection status.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> GetInstanceWithHttpInfo (string instanceKey);
+        /// <summary>
+        /// Get QrCode.
+        /// </summary>
+        /// <remarks>
+        /// Returns the qrcode in the base64 format.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>APIResponse</returns>
+        APIResponse GetQrCode (string instanceKey);
+
+        /// <summary>
+        /// Get QrCode.
+        /// </summary>
+        /// <remarks>
+        /// Returns the qrcode in the base64 format.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> GetQrCodeWithHttpInfo (string instanceKey);
         /// <summary>
         /// Get all instances.
         /// </summary>
@@ -182,7 +161,7 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesListGet ();
+        APIResponse ListInstances ();
 
         /// <summary>
         /// Get all instances.
@@ -192,148 +171,31 @@ namespace WhatsAPI.whatsapi
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesListGetWithHttpInfo ();
+        ApiResponse<APIResponse> ListInstancesWithHttpInfo ();
+        /// <summary>
+        /// Logout Instance.
+        /// </summary>
+        /// <remarks>
+        /// Logouts of the instance with the provided key.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>APIResponse</returns>
+        APIResponse LogoutInstance (string instanceKey);
+
+        /// <summary>
+        /// Logout Instance.
+        /// </summary>
+        /// <remarks>
+        /// Logouts of the instance with the provided key.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> LogoutInstanceWithHttpInfo (string instanceKey);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Creates a new instance key.
-        /// </summary>
-        /// <remarks>
-        /// This endpoint is used to create a new WhatsApp Web instance.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesCreateGetAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Creates a new instance key.
-        /// </summary>
-        /// <remarks>
-        /// This endpoint is used to create a new WhatsApp Web instance.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesCreateGetWithHttpInfoAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Get contacts.
-        /// </summary>
-        /// <remarks>
-        /// Fetches the list of contacts in the instance.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyContactsGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Get contacts.
-        /// </summary>
-        /// <remarks>
-        /// Fetches the list of contacts in the instance.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyContactsGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Delete Instance.
-        /// </summary>
-        /// <remarks>
-        /// Deletes the instance with the provided key.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyDeleteDeleteAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Delete Instance.
-        /// </summary>
-        /// <remarks>
-        /// Deletes the instance with the provided key.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyDeleteDeleteWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Get Instance.
-        /// </summary>
-        /// <remarks>
-        /// Returns the instance data of single instance with connection status.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Get Instance.
-        /// </summary>
-        /// <remarks>
-        /// Returns the instance data of single instance with connection status.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Logout Instance.
-        /// </summary>
-        /// <remarks>
-        /// Logouts of the instance with the provided key.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyLogoutDeleteAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Logout Instance.
-        /// </summary>
-        /// <remarks>
-        /// Logouts of the instance with the provided key.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyLogoutDeleteWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Get QrCode.
-        /// </summary>
-        /// <remarks>
-        /// Returns the qrcode in the base64 format.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyQrcodeGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Get QrCode.
-        /// </summary>
-        /// <remarks>
-        /// Returns the qrcode in the base64 format.
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyQrcodeGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
         /// Change Webhook url.
         /// </summary>
         /// <remarks>
@@ -344,7 +206,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyWebhookPutAsync (string instanceKey, WebhookPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> ChangeWebhookUrlAsync (string instanceKey, WebhookPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Change Webhook url.
@@ -357,7 +219,122 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyWebhookPutWithHttpInfoAsync (string instanceKey, WebhookPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> ChangeWebhookUrlWithHttpInfoAsync (string instanceKey, WebhookPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Creates a new instance key.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint is used to create a new WhatsApp Web instance.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> CreateInstanceAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Creates a new instance key.
+        /// </summary>
+        /// <remarks>
+        /// This endpoint is used to create a new WhatsApp Web instance.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> CreateInstanceWithHttpInfoAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Delete Instance.
+        /// </summary>
+        /// <remarks>
+        /// Deletes the instance with the provided key.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> DeleteInstanceAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Delete Instance.
+        /// </summary>
+        /// <remarks>
+        /// Deletes the instance with the provided key.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> DeleteInstanceWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Get contacts.
+        /// </summary>
+        /// <remarks>
+        /// Fetches the list of contacts in the instance.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> GetContactsAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Get contacts.
+        /// </summary>
+        /// <remarks>
+        /// Fetches the list of contacts in the instance.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetContactsWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Get Instance.
+        /// </summary>
+        /// <remarks>
+        /// Returns the instance data of single instance with connection status.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> GetInstanceAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Get Instance.
+        /// </summary>
+        /// <remarks>
+        /// Returns the instance data of single instance with connection status.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetInstanceWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Get QrCode.
+        /// </summary>
+        /// <remarks>
+        /// Returns the qrcode in the base64 format.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> GetQrCodeAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Get QrCode.
+        /// </summary>
+        /// <remarks>
+        /// Returns the qrcode in the base64 format.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetQrCodeWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get all instances.
         /// </summary>
@@ -367,7 +344,7 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesListGetAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> ListInstancesAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get all instances.
@@ -378,7 +355,30 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesListGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> ListInstancesWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Logout Instance.
+        /// </summary>
+        /// <remarks>
+        /// Logouts of the instance with the provided key.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> LogoutInstanceAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Logout Instance.
+        /// </summary>
+        /// <remarks>
+        /// Logouts of the instance with the provided key.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> LogoutInstanceWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -491,879 +491,15 @@ namespace WhatsAPI.whatsapi
         }
 
         /// <summary>
-        /// Creates a new instance key. This endpoint is used to create a new WhatsApp Web instance.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesCreateGet (string instanceKey = default(string))
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesCreateGetWithHttpInfo(instanceKey);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Creates a new instance key. This endpoint is used to create a new WhatsApp Web instance.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesCreateGetWithHttpInfo (string instanceKey = default(string))
-        {
-
-            var localVarPath = "/instances/create";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "instance_key", instanceKey)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesCreateGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Creates a new instance key. This endpoint is used to create a new WhatsApp Web instance.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesCreateGetAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesCreateGetWithHttpInfoAsync(instanceKey, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Creates a new instance key. This endpoint is used to create a new WhatsApp Web instance.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesCreateGetWithHttpInfoAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken))
-        {
-
-            var localVarPath = "/instances/create";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "instance_key", instanceKey)); // query parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesCreateGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get contacts. Fetches the list of contacts in the instance.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyContactsGet (string instanceKey)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyContactsGetWithHttpInfo(instanceKey);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get contacts. Fetches the list of contacts in the instance.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyContactsGetWithHttpInfo (string instanceKey)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->InstancesInstanceKeyContactsGet");
-
-            var localVarPath = "/instances/{instance_key}/contacts";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyContactsGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get contacts. Fetches the list of contacts in the instance.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyContactsGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyContactsGetWithHttpInfoAsync(instanceKey, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get contacts. Fetches the list of contacts in the instance.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyContactsGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->InstancesInstanceKeyContactsGet");
-
-            var localVarPath = "/instances/{instance_key}/contacts";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyContactsGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Delete Instance. Deletes the instance with the provided key.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyDeleteDelete (string instanceKey)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyDeleteDeleteWithHttpInfo(instanceKey);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Delete Instance. Deletes the instance with the provided key.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyDeleteDeleteWithHttpInfo (string instanceKey)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->InstancesInstanceKeyDeleteDelete");
-
-            var localVarPath = "/instances/{instance_key}/delete";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyDeleteDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Delete Instance. Deletes the instance with the provided key.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyDeleteDeleteAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyDeleteDeleteWithHttpInfoAsync(instanceKey, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Delete Instance. Deletes the instance with the provided key.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyDeleteDeleteWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->InstancesInstanceKeyDeleteDelete");
-
-            var localVarPath = "/instances/{instance_key}/delete";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyDeleteDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get Instance. Returns the instance data of single instance with connection status.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyGet (string instanceKey)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyGetWithHttpInfo(instanceKey);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get Instance. Returns the instance data of single instance with connection status.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyGetWithHttpInfo (string instanceKey)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->InstancesInstanceKeyGet");
-
-            var localVarPath = "/instances/{instance_key}/";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get Instance. Returns the instance data of single instance with connection status.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyGetWithHttpInfoAsync(instanceKey, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get Instance. Returns the instance data of single instance with connection status.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->InstancesInstanceKeyGet");
-
-            var localVarPath = "/instances/{instance_key}/";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Logout Instance. Logouts of the instance with the provided key.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyLogoutDelete (string instanceKey)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyLogoutDeleteWithHttpInfo(instanceKey);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Logout Instance. Logouts of the instance with the provided key.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyLogoutDeleteWithHttpInfo (string instanceKey)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->InstancesInstanceKeyLogoutDelete");
-
-            var localVarPath = "/instances/{instance_key}/logout";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyLogoutDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Logout Instance. Logouts of the instance with the provided key.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyLogoutDeleteAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyLogoutDeleteWithHttpInfoAsync(instanceKey, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Logout Instance. Logouts of the instance with the provided key.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyLogoutDeleteWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->InstancesInstanceKeyLogoutDelete");
-
-            var localVarPath = "/instances/{instance_key}/logout";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyLogoutDelete", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get QrCode. Returns the qrcode in the base64 format.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyQrcodeGet (string instanceKey)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyQrcodeGetWithHttpInfo(instanceKey);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Get QrCode. Returns the qrcode in the base64 format.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyQrcodeGetWithHttpInfo (string instanceKey)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->InstancesInstanceKeyQrcodeGet");
-
-            var localVarPath = "/instances/{instance_key}/qrcode";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyQrcodeGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Get QrCode. Returns the qrcode in the base64 format.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyQrcodeGetAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyQrcodeGetWithHttpInfoAsync(instanceKey, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Get QrCode. Returns the qrcode in the base64 format.
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyQrcodeGetWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->InstancesInstanceKeyQrcodeGet");
-
-            var localVarPath = "/instances/{instance_key}/qrcode";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyQrcodeGet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
         /// Change Webhook url. Changes the webhook url of an instance.
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyWebhookPut (string instanceKey, WebhookPayload data)
+        public APIResponse ChangeWebhookUrl (string instanceKey, WebhookPayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyWebhookPutWithHttpInfo(instanceKey, data);
+             ApiResponse<APIResponse> localVarResponse = ChangeWebhookUrlWithHttpInfo(instanceKey, data);
              return localVarResponse.Data;
         }
 
@@ -1374,14 +510,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyWebhookPutWithHttpInfo (string instanceKey, WebhookPayload data)
+        public ApiResponse<APIResponse> ChangeWebhookUrlWithHttpInfo (string instanceKey, WebhookPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->InstancesInstanceKeyWebhookPut");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->ChangeWebhookUrl");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling InstanceApi->InstancesInstanceKeyWebhookPut");
+                throw new ApiException(400, "Missing required parameter 'data' when calling InstanceApi->ChangeWebhookUrl");
 
             var localVarPath = "/instances/{instance_key}/webhook";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1430,7 +566,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyWebhookPut", localVarResponse);
+                Exception exception = ExceptionFactory("ChangeWebhookUrl", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1447,9 +583,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyWebhookPutAsync (string instanceKey, WebhookPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> ChangeWebhookUrlAsync (string instanceKey, WebhookPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyWebhookPutWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await ChangeWebhookUrlWithHttpInfoAsync(instanceKey, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1462,14 +598,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyWebhookPutWithHttpInfoAsync (string instanceKey, WebhookPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> ChangeWebhookUrlWithHttpInfoAsync (string instanceKey, WebhookPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->InstancesInstanceKeyWebhookPut");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->ChangeWebhookUrl");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling InstanceApi->InstancesInstanceKeyWebhookPut");
+                throw new ApiException(400, "Missing required parameter 'data' when calling InstanceApi->ChangeWebhookUrl");
 
             var localVarPath = "/instances/{instance_key}/webhook";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1518,7 +654,726 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyWebhookPut", localVarResponse);
+                Exception exception = ExceptionFactory("ChangeWebhookUrl", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Creates a new instance key. This endpoint is used to create a new WhatsApp Web instance.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse CreateInstance (string instanceKey = default(string))
+        {
+             ApiResponse<APIResponse> localVarResponse = CreateInstanceWithHttpInfo(instanceKey);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a new instance key. This endpoint is used to create a new WhatsApp Web instance.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> CreateInstanceWithHttpInfo (string instanceKey = default(string))
+        {
+
+            var localVarPath = "/instances/create";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "instance_key", instanceKey)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateInstance", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Creates a new instance key. This endpoint is used to create a new WhatsApp Web instance.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> CreateInstanceAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await CreateInstanceWithHttpInfoAsync(instanceKey, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a new instance key. This endpoint is used to create a new WhatsApp Web instance.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> CreateInstanceWithHttpInfoAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+
+            var localVarPath = "/instances/create";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "instance_key", instanceKey)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateInstance", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Delete Instance. Deletes the instance with the provided key.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse DeleteInstance (string instanceKey)
+        {
+             ApiResponse<APIResponse> localVarResponse = DeleteInstanceWithHttpInfo(instanceKey);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete Instance. Deletes the instance with the provided key.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> DeleteInstanceWithHttpInfo (string instanceKey)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->DeleteInstance");
+
+            var localVarPath = "/instances/{instance_key}/delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteInstance", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Delete Instance. Deletes the instance with the provided key.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> DeleteInstanceAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await DeleteInstanceWithHttpInfoAsync(instanceKey, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete Instance. Deletes the instance with the provided key.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> DeleteInstanceWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->DeleteInstance");
+
+            var localVarPath = "/instances/{instance_key}/delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteInstance", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get contacts. Fetches the list of contacts in the instance.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse GetContacts (string instanceKey)
+        {
+             ApiResponse<APIResponse> localVarResponse = GetContactsWithHttpInfo(instanceKey);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get contacts. Fetches the list of contacts in the instance.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> GetContactsWithHttpInfo (string instanceKey)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->GetContacts");
+
+            var localVarPath = "/instances/{instance_key}/contacts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetContacts", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get contacts. Fetches the list of contacts in the instance.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> GetContactsAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await GetContactsWithHttpInfoAsync(instanceKey, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get contacts. Fetches the list of contacts in the instance.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetContactsWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->GetContacts");
+
+            var localVarPath = "/instances/{instance_key}/contacts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetContacts", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get Instance. Returns the instance data of single instance with connection status.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse GetInstance (string instanceKey)
+        {
+             ApiResponse<APIResponse> localVarResponse = GetInstanceWithHttpInfo(instanceKey);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Instance. Returns the instance data of single instance with connection status.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> GetInstanceWithHttpInfo (string instanceKey)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->GetInstance");
+
+            var localVarPath = "/instances/{instance_key}/";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetInstance", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get Instance. Returns the instance data of single instance with connection status.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> GetInstanceAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await GetInstanceWithHttpInfoAsync(instanceKey, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Instance. Returns the instance data of single instance with connection status.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetInstanceWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->GetInstance");
+
+            var localVarPath = "/instances/{instance_key}/";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetInstance", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get QrCode. Returns the qrcode in the base64 format.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse GetQrCode (string instanceKey)
+        {
+             ApiResponse<APIResponse> localVarResponse = GetQrCodeWithHttpInfo(instanceKey);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get QrCode. Returns the qrcode in the base64 format.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> GetQrCodeWithHttpInfo (string instanceKey)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->GetQrCode");
+
+            var localVarPath = "/instances/{instance_key}/qrcode";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetQrCode", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Get QrCode. Returns the qrcode in the base64 format.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> GetQrCodeAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await GetQrCodeWithHttpInfoAsync(instanceKey, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get QrCode. Returns the qrcode in the base64 format.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetQrCodeWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->GetQrCode");
+
+            var localVarPath = "/instances/{instance_key}/qrcode";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetQrCode", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1532,9 +1387,9 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesListGet ()
+        public APIResponse ListInstances ()
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesListGetWithHttpInfo();
+             ApiResponse<APIResponse> localVarResponse = ListInstancesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -1543,7 +1398,7 @@ namespace WhatsAPI.whatsapi
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesListGetWithHttpInfo ()
+        public ApiResponse<APIResponse> ListInstancesWithHttpInfo ()
         {
 
             var localVarPath = "/instances/list";
@@ -1583,7 +1438,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesListGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListInstances", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1598,9 +1453,9 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesListGetAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> ListInstancesAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesListGetWithHttpInfoAsync(cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await ListInstancesWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1611,7 +1466,7 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesListGetWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> ListInstancesWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
             var localVarPath = "/instances/list";
@@ -1651,7 +1506,152 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesListGet", localVarResponse);
+                Exception exception = ExceptionFactory("ListInstances", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Logout Instance. Logouts of the instance with the provided key.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse LogoutInstance (string instanceKey)
+        {
+             ApiResponse<APIResponse> localVarResponse = LogoutInstanceWithHttpInfo(instanceKey);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Logout Instance. Logouts of the instance with the provided key.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> LogoutInstanceWithHttpInfo (string instanceKey)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->LogoutInstance");
+
+            var localVarPath = "/instances/{instance_key}/logout";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LogoutInstance", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Logout Instance. Logouts of the instance with the provided key.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> LogoutInstanceAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await LogoutInstanceWithHttpInfoAsync(instanceKey, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Logout Instance. Logouts of the instance with the provided key.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> LogoutInstanceWithHttpInfoAsync (string instanceKey, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling InstanceApi->LogoutInstance");
+
+            var localVarPath = "/instances/{instance_key}/logout";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LogoutInstance", localVarResponse);
                 if (exception != null) throw exception;
             }
 

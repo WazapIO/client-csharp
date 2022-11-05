@@ -35,7 +35,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="jid">JID</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyMiscProfilePicGet (string instanceKey, string jid);
+        APIResponse GetProfilePic (string instanceKey, string jid);
 
         /// <summary>
         /// Get profile pic.
@@ -47,7 +47,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="jid">JID</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyMiscProfilePicGetWithHttpInfo (string instanceKey, string jid);
+        ApiResponse<APIResponse> GetProfilePicWithHttpInfo (string instanceKey, string jid);
         /// <summary>
         /// Fetches the users info.
         /// </summary>
@@ -58,7 +58,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Data</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeyMiscUserInfoPost (string instanceKey, UserInfoPayload data);
+        APIResponse GetUsersInfo (string instanceKey, UserInfoPayload data);
 
         /// <summary>
         /// Fetches the users info.
@@ -70,7 +70,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeyMiscUserInfoPostWithHttpInfo (string instanceKey, UserInfoPayload data);
+        ApiResponse<APIResponse> GetUsersInfoWithHttpInfo (string instanceKey, UserInfoPayload data);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -84,7 +84,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="jid">JID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyMiscProfilePicGetAsync (string instanceKey, string jid, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> GetProfilePicAsync (string instanceKey, string jid, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get profile pic.
@@ -97,7 +97,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="jid">JID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyMiscProfilePicGetWithHttpInfoAsync (string instanceKey, string jid, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetProfilePicWithHttpInfoAsync (string instanceKey, string jid, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Fetches the users info.
         /// </summary>
@@ -109,7 +109,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyMiscUserInfoPostAsync (string instanceKey, UserInfoPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> GetUsersInfoAsync (string instanceKey, UserInfoPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Fetches the users info.
@@ -122,7 +122,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyMiscUserInfoPostWithHttpInfoAsync (string instanceKey, UserInfoPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetUsersInfoWithHttpInfoAsync (string instanceKey, UserInfoPayload data, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -241,9 +241,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="jid">JID</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyMiscProfilePicGet (string instanceKey, string jid)
+        public APIResponse GetProfilePic (string instanceKey, string jid)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyMiscProfilePicGetWithHttpInfo(instanceKey, jid);
+             ApiResponse<APIResponse> localVarResponse = GetProfilePicWithHttpInfo(instanceKey, jid);
              return localVarResponse.Data;
         }
 
@@ -254,14 +254,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="jid">JID</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyMiscProfilePicGetWithHttpInfo (string instanceKey, string jid)
+        public ApiResponse<APIResponse> GetProfilePicWithHttpInfo (string instanceKey, string jid)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->InstancesInstanceKeyMiscProfilePicGet");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->GetProfilePic");
             // verify the required parameter 'jid' is set
             if (jid == null)
-                throw new ApiException(400, "Missing required parameter 'jid' when calling MiscellaneousApi->InstancesInstanceKeyMiscProfilePicGet");
+                throw new ApiException(400, "Missing required parameter 'jid' when calling MiscellaneousApi->GetProfilePic");
 
             var localVarPath = "/instances/{instance_key}/misc/profile-pic";
             var localVarPathParams = new Dictionary<String, String>();
@@ -302,7 +302,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyMiscProfilePicGet", localVarResponse);
+                Exception exception = ExceptionFactory("GetProfilePic", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -319,9 +319,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="jid">JID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyMiscProfilePicGetAsync (string instanceKey, string jid, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> GetProfilePicAsync (string instanceKey, string jid, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyMiscProfilePicGetWithHttpInfoAsync(instanceKey, jid, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await GetProfilePicWithHttpInfoAsync(instanceKey, jid, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -334,14 +334,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="jid">JID</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyMiscProfilePicGetWithHttpInfoAsync (string instanceKey, string jid, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetProfilePicWithHttpInfoAsync (string instanceKey, string jid, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->InstancesInstanceKeyMiscProfilePicGet");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->GetProfilePic");
             // verify the required parameter 'jid' is set
             if (jid == null)
-                throw new ApiException(400, "Missing required parameter 'jid' when calling MiscellaneousApi->InstancesInstanceKeyMiscProfilePicGet");
+                throw new ApiException(400, "Missing required parameter 'jid' when calling MiscellaneousApi->GetProfilePic");
 
             var localVarPath = "/instances/{instance_key}/misc/profile-pic";
             var localVarPathParams = new Dictionary<String, String>();
@@ -382,7 +382,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyMiscProfilePicGet", localVarResponse);
+                Exception exception = ExceptionFactory("GetProfilePic", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -398,9 +398,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Data</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeyMiscUserInfoPost (string instanceKey, UserInfoPayload data)
+        public APIResponse GetUsersInfo (string instanceKey, UserInfoPayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeyMiscUserInfoPostWithHttpInfo(instanceKey, data);
+             ApiResponse<APIResponse> localVarResponse = GetUsersInfoWithHttpInfo(instanceKey, data);
              return localVarResponse.Data;
         }
 
@@ -411,14 +411,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeyMiscUserInfoPostWithHttpInfo (string instanceKey, UserInfoPayload data)
+        public ApiResponse<APIResponse> GetUsersInfoWithHttpInfo (string instanceKey, UserInfoPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->InstancesInstanceKeyMiscUserInfoPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->GetUsersInfo");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MiscellaneousApi->InstancesInstanceKeyMiscUserInfoPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MiscellaneousApi->GetUsersInfo");
 
             var localVarPath = "/instances/{instance_key}/misc/user-info";
             var localVarPathParams = new Dictionary<String, String>();
@@ -467,7 +467,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyMiscUserInfoPost", localVarResponse);
+                Exception exception = ExceptionFactory("GetUsersInfo", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -484,9 +484,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeyMiscUserInfoPostAsync (string instanceKey, UserInfoPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> GetUsersInfoAsync (string instanceKey, UserInfoPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeyMiscUserInfoPostWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await GetUsersInfoWithHttpInfoAsync(instanceKey, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -499,14 +499,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeyMiscUserInfoPostWithHttpInfoAsync (string instanceKey, UserInfoPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetUsersInfoWithHttpInfoAsync (string instanceKey, UserInfoPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->InstancesInstanceKeyMiscUserInfoPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->GetUsersInfo");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MiscellaneousApi->InstancesInstanceKeyMiscUserInfoPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MiscellaneousApi->GetUsersInfo");
 
             var localVarPath = "/instances/{instance_key}/misc/user-info";
             var localVarPathParams = new Dictionary<String, String>();
@@ -555,7 +555,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeyMiscUserInfoPost", localVarResponse);
+                Exception exception = ExceptionFactory("GetUsersInfo", localVarResponse);
                 if (exception != null) throw exception;
             }
 

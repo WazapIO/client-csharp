@@ -34,10 +34,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendAudioPostRequest"></param>
+        /// <param name="sendAudioRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendAudioPost (string instanceKey, string to, InstancesInstanceKeySendAudioPostRequest instancesInstanceKeySendAudioPostRequest, string caption = default(string));
+        APIResponse SendAudio (string instanceKey, string to, SendAudioRequest sendAudioRequest, string caption = default(string));
 
         /// <summary>
         /// Send raw audio.
@@ -48,33 +48,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendAudioPostRequest"></param>
+        /// <param name="sendAudioRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendAudioPostWithHttpInfo (string instanceKey, string to, InstancesInstanceKeySendAudioPostRequest instancesInstanceKeySendAudioPostRequest, string caption = default(string));
-        /// <summary>
-        /// Send a button message with a media header.
-        /// </summary>
-        /// <remarks>
-        /// Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendButtonMediaPost (string instanceKey, ButtonMessageWithMediaPayload data);
-
-        /// <summary>
-        /// Send a button message with a media header.
-        /// </summary>
-        /// <remarks>
-        /// Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendButtonMediaPostWithHttpInfo (string instanceKey, ButtonMessageWithMediaPayload data);
+        ApiResponse<APIResponse> SendAudioWithHttpInfo (string instanceKey, string to, SendAudioRequest sendAudioRequest, string caption = default(string));
         /// <summary>
         /// Send a button message.
         /// </summary>
@@ -85,7 +62,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendButtonsPost (string instanceKey, ButtonMessagePayload data);
+        APIResponse SendButtonMessage (string instanceKey, ButtonMessagePayload data);
 
         /// <summary>
         /// Send a button message.
@@ -97,7 +74,30 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendButtonsPostWithHttpInfo (string instanceKey, ButtonMessagePayload data);
+        ApiResponse<APIResponse> SendButtonMessageWithHttpInfo (string instanceKey, ButtonMessagePayload data);
+        /// <summary>
+        /// Send a button message with a media header.
+        /// </summary>
+        /// <remarks>
+        /// Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <returns>APIResponse</returns>
+        APIResponse SendButtonWithMedia (string instanceKey, ButtonMessageWithMediaPayload data);
+
+        /// <summary>
+        /// Send a button message with a media header.
+        /// </summary>
+        /// <remarks>
+        /// Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> SendButtonWithMediaWithHttpInfo (string instanceKey, ButtonMessageWithMediaPayload data);
         /// <summary>
         /// Send a contact message.
         /// </summary>
@@ -108,7 +108,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendContactPost (string instanceKey, ContactMessagePayload data);
+        APIResponse SendContact (string instanceKey, ContactMessagePayload data);
 
         /// <summary>
         /// Send a contact message.
@@ -120,7 +120,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendContactPostWithHttpInfo (string instanceKey, ContactMessagePayload data);
+        ApiResponse<APIResponse> SendContactWithHttpInfo (string instanceKey, ContactMessagePayload data);
         /// <summary>
         /// Send raw document.
         /// </summary>
@@ -130,10 +130,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendDocumentPostRequest"></param>
+        /// <param name="sendDocumentRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendDocumentPost (string instanceKey, string to, InstancesInstanceKeySendDocumentPostRequest instancesInstanceKeySendDocumentPostRequest, string caption = default(string));
+        APIResponse SendDocument (string instanceKey, string to, SendDocumentRequest sendDocumentRequest, string caption = default(string));
 
         /// <summary>
         /// Send raw document.
@@ -144,10 +144,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendDocumentPostRequest"></param>
+        /// <param name="sendDocumentRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendDocumentPostWithHttpInfo (string instanceKey, string to, InstancesInstanceKeySendDocumentPostRequest instancesInstanceKeySendDocumentPostRequest, string caption = default(string));
+        ApiResponse<APIResponse> SendDocumentWithHttpInfo (string instanceKey, string to, SendDocumentRequest sendDocumentRequest, string caption = default(string));
         /// <summary>
         /// Send raw image.
         /// </summary>
@@ -157,10 +157,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendImagePostRequest"></param>
+        /// <param name="sendImageRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendImagePost (string instanceKey, string to, InstancesInstanceKeySendImagePostRequest instancesInstanceKeySendImagePostRequest, string caption = default(string));
+        APIResponse SendImage (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string));
 
         /// <summary>
         /// Send raw image.
@@ -171,10 +171,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendImagePostRequest"></param>
+        /// <param name="sendImageRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendImagePostWithHttpInfo (string instanceKey, string to, InstancesInstanceKeySendImagePostRequest instancesInstanceKeySendImagePostRequest, string caption = default(string));
+        ApiResponse<APIResponse> SendImageWithHttpInfo (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string));
         /// <summary>
         /// Send a List message.
         /// </summary>
@@ -185,7 +185,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendListPost (string instanceKey, ListMessagePayload data);
+        APIResponse SendListMessage (string instanceKey, ListMessagePayload data);
 
         /// <summary>
         /// Send a List message.
@@ -197,7 +197,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendListPostWithHttpInfo (string instanceKey, ListMessagePayload data);
+        ApiResponse<APIResponse> SendListMessageWithHttpInfo (string instanceKey, ListMessagePayload data);
         /// <summary>
         /// Send a location message.
         /// </summary>
@@ -208,7 +208,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendLocationPost (string instanceKey, LocationMessagePayload data);
+        APIResponse SendLocation (string instanceKey, LocationMessagePayload data);
 
         /// <summary>
         /// Send a location message.
@@ -220,7 +220,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendLocationPostWithHttpInfo (string instanceKey, LocationMessagePayload data);
+        ApiResponse<APIResponse> SendLocationWithHttpInfo (string instanceKey, LocationMessagePayload data);
         /// <summary>
         /// Send a media message.
         /// </summary>
@@ -231,7 +231,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendMediaPost (string instanceKey, SendMediaPayload data);
+        APIResponse SendMediaMessage (string instanceKey, SendMediaPayload data);
 
         /// <summary>
         /// Send a media message.
@@ -243,7 +243,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendMediaPostWithHttpInfo (string instanceKey, SendMediaPayload data);
+        ApiResponse<APIResponse> SendMediaMessageWithHttpInfo (string instanceKey, SendMediaPayload data);
         /// <summary>
         /// Send a Poll message.
         /// </summary>
@@ -254,7 +254,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendPollPost (string instanceKey, PollMessagePayload data);
+        APIResponse SendPollMessage (string instanceKey, PollMessagePayload data);
 
         /// <summary>
         /// Send a Poll message.
@@ -266,30 +266,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendPollPostWithHttpInfo (string instanceKey, PollMessagePayload data);
-        /// <summary>
-        /// Send a template message with media.
-        /// </summary>
-        /// <remarks>
-        /// Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendTemplateMediaPost (string instanceKey, TemplateButtonWithMediaPayload data);
-
-        /// <summary>
-        /// Send a template message with media.
-        /// </summary>
-        /// <remarks>
-        /// Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendTemplateMediaPostWithHttpInfo (string instanceKey, TemplateButtonWithMediaPayload data);
+        ApiResponse<APIResponse> SendPollMessageWithHttpInfo (string instanceKey, PollMessagePayload data);
         /// <summary>
         /// Send a template message.
         /// </summary>
@@ -300,7 +277,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendTemplatePost (string instanceKey, TemplateButtonPayload data);
+        APIResponse SendTemplate (string instanceKey, TemplateButtonPayload data);
 
         /// <summary>
         /// Send a template message.
@@ -312,7 +289,30 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendTemplatePostWithHttpInfo (string instanceKey, TemplateButtonPayload data);
+        ApiResponse<APIResponse> SendTemplateWithHttpInfo (string instanceKey, TemplateButtonPayload data);
+        /// <summary>
+        /// Send a template message with media.
+        /// </summary>
+        /// <remarks>
+        /// Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <returns>APIResponse</returns>
+        APIResponse SendTemplateWithMedia (string instanceKey, TemplateButtonWithMediaPayload data);
+
+        /// <summary>
+        /// Send a template message with media.
+        /// </summary>
+        /// <remarks>
+        /// Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> SendTemplateWithMediaWithHttpInfo (string instanceKey, TemplateButtonWithMediaPayload data);
         /// <summary>
         /// Send a text message.
         /// </summary>
@@ -323,7 +323,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendTextPost (string instanceKey, TextMessage data);
+        APIResponse SendTextMessage (string instanceKey, TextMessage data);
 
         /// <summary>
         /// Send a text message.
@@ -335,32 +335,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendTextPostWithHttpInfo (string instanceKey, TextMessage data);
-        /// <summary>
-        /// Upload media.
-        /// </summary>
-        /// <remarks>
-        /// Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="type">Media type</param>
-        /// <param name="instancesInstanceKeySendUploadPostRequest"></param>
-        /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendUploadPost (string instanceKey, string type, InstancesInstanceKeySendUploadPostRequest instancesInstanceKeySendUploadPostRequest);
-
-        /// <summary>
-        /// Upload media.
-        /// </summary>
-        /// <remarks>
-        /// Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="type">Media type</param>
-        /// <param name="instancesInstanceKeySendUploadPostRequest"></param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendUploadPostWithHttpInfo (string instanceKey, string type, InstancesInstanceKeySendUploadPostRequest instancesInstanceKeySendUploadPostRequest);
+        ApiResponse<APIResponse> SendTextMessageWithHttpInfo (string instanceKey, TextMessage data);
         /// <summary>
         /// Send raw video.
         /// </summary>
@@ -370,10 +345,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendVideoPostRequest"></param>
+        /// <param name="sendVideoRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>APIResponse</returns>
-        APIResponse InstancesInstanceKeySendVideoPost (string instanceKey, string to, InstancesInstanceKeySendVideoPostRequest instancesInstanceKeySendVideoPostRequest, string caption = default(string));
+        APIResponse SendVideo (string instanceKey, string to, SendVideoRequest sendVideoRequest, string caption = default(string));
 
         /// <summary>
         /// Send raw video.
@@ -384,10 +359,35 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendVideoPostRequest"></param>
+        /// <param name="sendVideoRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> InstancesInstanceKeySendVideoPostWithHttpInfo (string instanceKey, string to, InstancesInstanceKeySendVideoPostRequest instancesInstanceKeySendVideoPostRequest, string caption = default(string));
+        ApiResponse<APIResponse> SendVideoWithHttpInfo (string instanceKey, string to, SendVideoRequest sendVideoRequest, string caption = default(string));
+        /// <summary>
+        /// Upload media.
+        /// </summary>
+        /// <remarks>
+        /// Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="uploadMediaRequest"></param>
+        /// <returns>APIResponse</returns>
+        APIResponse UploadMedia (string instanceKey, string type, UploadMediaRequest uploadMediaRequest);
+
+        /// <summary>
+        /// Upload media.
+        /// </summary>
+        /// <remarks>
+        /// Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="uploadMediaRequest"></param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> UploadMediaWithHttpInfo (string instanceKey, string type, UploadMediaRequest uploadMediaRequest);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -399,11 +399,11 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendAudioPostRequest"></param>
+        /// <param name="sendAudioRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendAudioPostAsync (string instanceKey, string to, InstancesInstanceKeySendAudioPostRequest instancesInstanceKeySendAudioPostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SendAudioAsync (string instanceKey, string to, SendAudioRequest sendAudioRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Send raw audio.
@@ -414,36 +414,11 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendAudioPostRequest"></param>
+        /// <param name="sendAudioRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendAudioPostWithHttpInfoAsync (string instanceKey, string to, InstancesInstanceKeySendAudioPostRequest instancesInstanceKeySendAudioPostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Send a button message with a media header.
-        /// </summary>
-        /// <remarks>
-        /// Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendButtonMediaPostAsync (string instanceKey, ButtonMessageWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Send a button message with a media header.
-        /// </summary>
-        /// <remarks>
-        /// Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendButtonMediaPostWithHttpInfoAsync (string instanceKey, ButtonMessageWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendAudioWithHttpInfoAsync (string instanceKey, string to, SendAudioRequest sendAudioRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Send a button message.
         /// </summary>
@@ -455,7 +430,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendButtonsPostAsync (string instanceKey, ButtonMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SendButtonMessageAsync (string instanceKey, ButtonMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Send a button message.
@@ -468,7 +443,32 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendButtonsPostWithHttpInfoAsync (string instanceKey, ButtonMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendButtonMessageWithHttpInfoAsync (string instanceKey, ButtonMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Send a button message with a media header.
+        /// </summary>
+        /// <remarks>
+        /// Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> SendButtonWithMediaAsync (string instanceKey, ButtonMessageWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Send a button message with a media header.
+        /// </summary>
+        /// <remarks>
+        /// Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendButtonWithMediaWithHttpInfoAsync (string instanceKey, ButtonMessageWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Send a contact message.
         /// </summary>
@@ -480,7 +480,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendContactPostAsync (string instanceKey, ContactMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SendContactAsync (string instanceKey, ContactMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Send a contact message.
@@ -493,7 +493,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendContactPostWithHttpInfoAsync (string instanceKey, ContactMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendContactWithHttpInfoAsync (string instanceKey, ContactMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Send raw document.
         /// </summary>
@@ -503,11 +503,11 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendDocumentPostRequest"></param>
+        /// <param name="sendDocumentRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendDocumentPostAsync (string instanceKey, string to, InstancesInstanceKeySendDocumentPostRequest instancesInstanceKeySendDocumentPostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SendDocumentAsync (string instanceKey, string to, SendDocumentRequest sendDocumentRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Send raw document.
@@ -518,11 +518,11 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendDocumentPostRequest"></param>
+        /// <param name="sendDocumentRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendDocumentPostWithHttpInfoAsync (string instanceKey, string to, InstancesInstanceKeySendDocumentPostRequest instancesInstanceKeySendDocumentPostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendDocumentWithHttpInfoAsync (string instanceKey, string to, SendDocumentRequest sendDocumentRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Send raw image.
         /// </summary>
@@ -532,11 +532,11 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendImagePostRequest"></param>
+        /// <param name="sendImageRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendImagePostAsync (string instanceKey, string to, InstancesInstanceKeySendImagePostRequest instancesInstanceKeySendImagePostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SendImageAsync (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Send raw image.
@@ -547,11 +547,11 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendImagePostRequest"></param>
+        /// <param name="sendImageRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendImagePostWithHttpInfoAsync (string instanceKey, string to, InstancesInstanceKeySendImagePostRequest instancesInstanceKeySendImagePostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendImageWithHttpInfoAsync (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Send a List message.
         /// </summary>
@@ -563,7 +563,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendListPostAsync (string instanceKey, ListMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SendListMessageAsync (string instanceKey, ListMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Send a List message.
@@ -576,7 +576,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendListPostWithHttpInfoAsync (string instanceKey, ListMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendListMessageWithHttpInfoAsync (string instanceKey, ListMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Send a location message.
         /// </summary>
@@ -588,7 +588,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendLocationPostAsync (string instanceKey, LocationMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SendLocationAsync (string instanceKey, LocationMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Send a location message.
@@ -601,7 +601,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendLocationPostWithHttpInfoAsync (string instanceKey, LocationMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendLocationWithHttpInfoAsync (string instanceKey, LocationMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Send a media message.
         /// </summary>
@@ -613,7 +613,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendMediaPostAsync (string instanceKey, SendMediaPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SendMediaMessageAsync (string instanceKey, SendMediaPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Send a media message.
@@ -626,7 +626,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendMediaPostWithHttpInfoAsync (string instanceKey, SendMediaPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendMediaMessageWithHttpInfoAsync (string instanceKey, SendMediaPayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Send a Poll message.
         /// </summary>
@@ -638,7 +638,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendPollPostAsync (string instanceKey, PollMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SendPollMessageAsync (string instanceKey, PollMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Send a Poll message.
@@ -651,32 +651,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendPollPostWithHttpInfoAsync (string instanceKey, PollMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Send a template message with media.
-        /// </summary>
-        /// <remarks>
-        /// Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendTemplateMediaPostAsync (string instanceKey, TemplateButtonWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Send a template message with media.
-        /// </summary>
-        /// <remarks>
-        /// Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendTemplateMediaPostWithHttpInfoAsync (string instanceKey, TemplateButtonWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendPollMessageWithHttpInfoAsync (string instanceKey, PollMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Send a template message.
         /// </summary>
@@ -688,7 +663,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendTemplatePostAsync (string instanceKey, TemplateButtonPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SendTemplateAsync (string instanceKey, TemplateButtonPayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Send a template message.
@@ -701,7 +676,32 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendTemplatePostWithHttpInfoAsync (string instanceKey, TemplateButtonPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendTemplateWithHttpInfoAsync (string instanceKey, TemplateButtonPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Send a template message with media.
+        /// </summary>
+        /// <remarks>
+        /// Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> SendTemplateWithMediaAsync (string instanceKey, TemplateButtonWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Send a template message with media.
+        /// </summary>
+        /// <remarks>
+        /// Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendTemplateWithMediaWithHttpInfoAsync (string instanceKey, TemplateButtonWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Send a text message.
         /// </summary>
@@ -713,7 +713,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendTextPostAsync (string instanceKey, TextMessage data, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SendTextMessageAsync (string instanceKey, TextMessage data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Send a text message.
@@ -726,34 +726,7 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendTextPostWithHttpInfoAsync (string instanceKey, TextMessage data, CancellationToken cancellationToken = default(CancellationToken));
-        /// <summary>
-        /// Upload media.
-        /// </summary>
-        /// <remarks>
-        /// Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="type">Media type</param>
-        /// <param name="instancesInstanceKeySendUploadPostRequest"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendUploadPostAsync (string instanceKey, string type, InstancesInstanceKeySendUploadPostRequest instancesInstanceKeySendUploadPostRequest, CancellationToken cancellationToken = default(CancellationToken));
-
-        /// <summary>
-        /// Upload media.
-        /// </summary>
-        /// <remarks>
-        /// Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
-        /// </remarks>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="type">Media type</param>
-        /// <param name="instancesInstanceKeySendUploadPostRequest"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendUploadPostWithHttpInfoAsync (string instanceKey, string type, InstancesInstanceKeySendUploadPostRequest instancesInstanceKeySendUploadPostRequest, CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendTextMessageWithHttpInfoAsync (string instanceKey, TextMessage data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Send raw video.
         /// </summary>
@@ -763,11 +736,11 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendVideoPostRequest"></param>
+        /// <param name="sendVideoRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendVideoPostAsync (string instanceKey, string to, InstancesInstanceKeySendVideoPostRequest instancesInstanceKeySendVideoPostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SendVideoAsync (string instanceKey, string to, SendVideoRequest sendVideoRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Send raw video.
@@ -778,11 +751,38 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendVideoPostRequest"></param>
+        /// <param name="sendVideoRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendVideoPostWithHttpInfoAsync (string instanceKey, string to, InstancesInstanceKeySendVideoPostRequest instancesInstanceKeySendVideoPostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendVideoWithHttpInfoAsync (string instanceKey, string to, SendVideoRequest sendVideoRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Upload media.
+        /// </summary>
+        /// <remarks>
+        /// Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="uploadMediaRequest"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> UploadMediaAsync (string instanceKey, string type, UploadMediaRequest uploadMediaRequest, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Upload media.
+        /// </summary>
+        /// <remarks>
+        /// Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="uploadMediaRequest"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> UploadMediaWithHttpInfoAsync (string instanceKey, string type, UploadMediaRequest uploadMediaRequest, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -900,12 +900,12 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendAudioPostRequest"></param>
+        /// <param name="sendAudioRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendAudioPost (string instanceKey, string to, InstancesInstanceKeySendAudioPostRequest instancesInstanceKeySendAudioPostRequest, string caption = default(string))
+        public APIResponse SendAudio (string instanceKey, string to, SendAudioRequest sendAudioRequest, string caption = default(string))
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendAudioPostWithHttpInfo(instanceKey, to, instancesInstanceKeySendAudioPostRequest, caption);
+             ApiResponse<APIResponse> localVarResponse = SendAudioWithHttpInfo(instanceKey, to, sendAudioRequest, caption);
              return localVarResponse.Data;
         }
 
@@ -915,20 +915,20 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendAudioPostRequest"></param>
+        /// <param name="sendAudioRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendAudioPostWithHttpInfo (string instanceKey, string to, InstancesInstanceKeySendAudioPostRequest instancesInstanceKeySendAudioPostRequest, string caption = default(string))
+        public ApiResponse<APIResponse> SendAudioWithHttpInfo (string instanceKey, string to, SendAudioRequest sendAudioRequest, string caption = default(string))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendAudioPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendAudio");
             // verify the required parameter 'to' is set
             if (to == null)
-                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->InstancesInstanceKeySendAudioPost");
-            // verify the required parameter 'instancesInstanceKeySendAudioPostRequest' is set
-            if (instancesInstanceKeySendAudioPostRequest == null)
-                throw new ApiException(400, "Missing required parameter 'instancesInstanceKeySendAudioPostRequest' when calling MessageSendingApi->InstancesInstanceKeySendAudioPost");
+                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->SendAudio");
+            // verify the required parameter 'sendAudioRequest' is set
+            if (sendAudioRequest == null)
+                throw new ApiException(400, "Missing required parameter 'sendAudioRequest' when calling MessageSendingApi->SendAudio");
 
             var localVarPath = "/instances/{instance_key}/send/audio";
             var localVarPathParams = new Dictionary<String, String>();
@@ -955,13 +955,13 @@ namespace WhatsAPI.whatsapi
             if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
             if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
             if (caption != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "caption", caption)); // query parameter
-            if (instancesInstanceKeySendAudioPostRequest != null && instancesInstanceKeySendAudioPostRequest.GetType() != typeof(byte[]))
+            if (sendAudioRequest != null && sendAudioRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(instancesInstanceKeySendAudioPostRequest); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(sendAudioRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = instancesInstanceKeySendAudioPostRequest; // byte array
+                localVarPostBody = sendAudioRequest; // byte array
             }
 
             // authentication (ApiKeyAuth) required
@@ -979,7 +979,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendAudioPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendAudio", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -994,13 +994,13 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendAudioPostRequest"></param>
+        /// <param name="sendAudioRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendAudioPostAsync (string instanceKey, string to, InstancesInstanceKeySendAudioPostRequest instancesInstanceKeySendAudioPostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SendAudioAsync (string instanceKey, string to, SendAudioRequest sendAudioRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendAudioPostWithHttpInfoAsync(instanceKey, to, instancesInstanceKeySendAudioPostRequest, caption, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SendAudioWithHttpInfoAsync(instanceKey, to, sendAudioRequest, caption, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1011,21 +1011,21 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendAudioPostRequest"></param>
+        /// <param name="sendAudioRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendAudioPostWithHttpInfoAsync (string instanceKey, string to, InstancesInstanceKeySendAudioPostRequest instancesInstanceKeySendAudioPostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendAudioWithHttpInfoAsync (string instanceKey, string to, SendAudioRequest sendAudioRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendAudioPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendAudio");
             // verify the required parameter 'to' is set
             if (to == null)
-                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->InstancesInstanceKeySendAudioPost");
-            // verify the required parameter 'instancesInstanceKeySendAudioPostRequest' is set
-            if (instancesInstanceKeySendAudioPostRequest == null)
-                throw new ApiException(400, "Missing required parameter 'instancesInstanceKeySendAudioPostRequest' when calling MessageSendingApi->InstancesInstanceKeySendAudioPost");
+                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->SendAudio");
+            // verify the required parameter 'sendAudioRequest' is set
+            if (sendAudioRequest == null)
+                throw new ApiException(400, "Missing required parameter 'sendAudioRequest' when calling MessageSendingApi->SendAudio");
 
             var localVarPath = "/instances/{instance_key}/send/audio";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1052,13 +1052,13 @@ namespace WhatsAPI.whatsapi
             if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
             if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
             if (caption != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "caption", caption)); // query parameter
-            if (instancesInstanceKeySendAudioPostRequest != null && instancesInstanceKeySendAudioPostRequest.GetType() != typeof(byte[]))
+            if (sendAudioRequest != null && sendAudioRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(instancesInstanceKeySendAudioPostRequest); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(sendAudioRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = instancesInstanceKeySendAudioPostRequest; // byte array
+                localVarPostBody = sendAudioRequest; // byte array
             }
 
             // authentication (ApiKeyAuth) required
@@ -1076,180 +1076,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendAudioPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Send a button message with a media header. Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendButtonMediaPost (string instanceKey, ButtonMessageWithMediaPayload data)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendButtonMediaPostWithHttpInfo(instanceKey, data);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Send a button message with a media header. Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendButtonMediaPostWithHttpInfo (string instanceKey, ButtonMessageWithMediaPayload data)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendButtonMediaPost");
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendButtonMediaPost");
-
-            var localVarPath = "/instances/{instance_key}/send/button-media";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (data != null && data.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = data; // byte array
-            }
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendButtonMediaPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Send a button message with a media header. Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendButtonMediaPostAsync (string instanceKey, ButtonMessageWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendButtonMediaPostWithHttpInfoAsync(instanceKey, data, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Send a button message with a media header. Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendButtonMediaPostWithHttpInfoAsync (string instanceKey, ButtonMessageWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendButtonMediaPost");
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendButtonMediaPost");
-
-            var localVarPath = "/instances/{instance_key}/send/button-media";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (data != null && data.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = data; // byte array
-            }
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendButtonMediaPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendAudio", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1265,9 +1092,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendButtonsPost (string instanceKey, ButtonMessagePayload data)
+        public APIResponse SendButtonMessage (string instanceKey, ButtonMessagePayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendButtonsPostWithHttpInfo(instanceKey, data);
+             ApiResponse<APIResponse> localVarResponse = SendButtonMessageWithHttpInfo(instanceKey, data);
              return localVarResponse.Data;
         }
 
@@ -1278,14 +1105,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendButtonsPostWithHttpInfo (string instanceKey, ButtonMessagePayload data)
+        public ApiResponse<APIResponse> SendButtonMessageWithHttpInfo (string instanceKey, ButtonMessagePayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendButtonsPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendButtonMessage");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendButtonsPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendButtonMessage");
 
             var localVarPath = "/instances/{instance_key}/send/buttons";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1334,7 +1161,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendButtonsPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendButtonMessage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1351,9 +1178,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendButtonsPostAsync (string instanceKey, ButtonMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SendButtonMessageAsync (string instanceKey, ButtonMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendButtonsPostWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SendButtonMessageWithHttpInfoAsync(instanceKey, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1366,14 +1193,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendButtonsPostWithHttpInfoAsync (string instanceKey, ButtonMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendButtonMessageWithHttpInfoAsync (string instanceKey, ButtonMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendButtonsPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendButtonMessage");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendButtonsPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendButtonMessage");
 
             var localVarPath = "/instances/{instance_key}/send/buttons";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1422,7 +1249,180 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendButtonsPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendButtonMessage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Send a button message with a media header. Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse SendButtonWithMedia (string instanceKey, ButtonMessageWithMediaPayload data)
+        {
+             ApiResponse<APIResponse> localVarResponse = SendButtonWithMediaWithHttpInfo(instanceKey, data);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Send a button message with a media header. Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> SendButtonWithMediaWithHttpInfo (string instanceKey, ButtonMessageWithMediaPayload data)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendButtonWithMedia");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendButtonWithMedia");
+
+            var localVarPath = "/instances/{instance_key}/send/button-media";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendButtonWithMedia", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Send a button message with a media header. Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> SendButtonWithMediaAsync (string instanceKey, ButtonMessageWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await SendButtonWithMediaWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Send a button message with a media header. Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendButtonWithMediaWithHttpInfoAsync (string instanceKey, ButtonMessageWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendButtonWithMedia");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendButtonWithMedia");
+
+            var localVarPath = "/instances/{instance_key}/send/button-media";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendButtonWithMedia", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1438,9 +1438,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendContactPost (string instanceKey, ContactMessagePayload data)
+        public APIResponse SendContact (string instanceKey, ContactMessagePayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendContactPostWithHttpInfo(instanceKey, data);
+             ApiResponse<APIResponse> localVarResponse = SendContactWithHttpInfo(instanceKey, data);
              return localVarResponse.Data;
         }
 
@@ -1451,14 +1451,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendContactPostWithHttpInfo (string instanceKey, ContactMessagePayload data)
+        public ApiResponse<APIResponse> SendContactWithHttpInfo (string instanceKey, ContactMessagePayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendContactPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendContact");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendContactPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendContact");
 
             var localVarPath = "/instances/{instance_key}/send/contact";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1507,7 +1507,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendContactPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendContact", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1524,9 +1524,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendContactPostAsync (string instanceKey, ContactMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SendContactAsync (string instanceKey, ContactMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendContactPostWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SendContactWithHttpInfoAsync(instanceKey, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1539,14 +1539,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendContactPostWithHttpInfoAsync (string instanceKey, ContactMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendContactWithHttpInfoAsync (string instanceKey, ContactMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendContactPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendContact");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendContactPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendContact");
 
             var localVarPath = "/instances/{instance_key}/send/contact";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1595,7 +1595,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendContactPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendContact", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1610,12 +1610,12 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendDocumentPostRequest"></param>
+        /// <param name="sendDocumentRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendDocumentPost (string instanceKey, string to, InstancesInstanceKeySendDocumentPostRequest instancesInstanceKeySendDocumentPostRequest, string caption = default(string))
+        public APIResponse SendDocument (string instanceKey, string to, SendDocumentRequest sendDocumentRequest, string caption = default(string))
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendDocumentPostWithHttpInfo(instanceKey, to, instancesInstanceKeySendDocumentPostRequest, caption);
+             ApiResponse<APIResponse> localVarResponse = SendDocumentWithHttpInfo(instanceKey, to, sendDocumentRequest, caption);
              return localVarResponse.Data;
         }
 
@@ -1625,20 +1625,20 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendDocumentPostRequest"></param>
+        /// <param name="sendDocumentRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendDocumentPostWithHttpInfo (string instanceKey, string to, InstancesInstanceKeySendDocumentPostRequest instancesInstanceKeySendDocumentPostRequest, string caption = default(string))
+        public ApiResponse<APIResponse> SendDocumentWithHttpInfo (string instanceKey, string to, SendDocumentRequest sendDocumentRequest, string caption = default(string))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendDocumentPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendDocument");
             // verify the required parameter 'to' is set
             if (to == null)
-                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->InstancesInstanceKeySendDocumentPost");
-            // verify the required parameter 'instancesInstanceKeySendDocumentPostRequest' is set
-            if (instancesInstanceKeySendDocumentPostRequest == null)
-                throw new ApiException(400, "Missing required parameter 'instancesInstanceKeySendDocumentPostRequest' when calling MessageSendingApi->InstancesInstanceKeySendDocumentPost");
+                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->SendDocument");
+            // verify the required parameter 'sendDocumentRequest' is set
+            if (sendDocumentRequest == null)
+                throw new ApiException(400, "Missing required parameter 'sendDocumentRequest' when calling MessageSendingApi->SendDocument");
 
             var localVarPath = "/instances/{instance_key}/send/document";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1665,13 +1665,13 @@ namespace WhatsAPI.whatsapi
             if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
             if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
             if (caption != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "caption", caption)); // query parameter
-            if (instancesInstanceKeySendDocumentPostRequest != null && instancesInstanceKeySendDocumentPostRequest.GetType() != typeof(byte[]))
+            if (sendDocumentRequest != null && sendDocumentRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(instancesInstanceKeySendDocumentPostRequest); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(sendDocumentRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = instancesInstanceKeySendDocumentPostRequest; // byte array
+                localVarPostBody = sendDocumentRequest; // byte array
             }
 
             // authentication (ApiKeyAuth) required
@@ -1689,7 +1689,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendDocumentPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendDocument", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1704,13 +1704,13 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendDocumentPostRequest"></param>
+        /// <param name="sendDocumentRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendDocumentPostAsync (string instanceKey, string to, InstancesInstanceKeySendDocumentPostRequest instancesInstanceKeySendDocumentPostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SendDocumentAsync (string instanceKey, string to, SendDocumentRequest sendDocumentRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendDocumentPostWithHttpInfoAsync(instanceKey, to, instancesInstanceKeySendDocumentPostRequest, caption, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SendDocumentWithHttpInfoAsync(instanceKey, to, sendDocumentRequest, caption, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1721,21 +1721,21 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendDocumentPostRequest"></param>
+        /// <param name="sendDocumentRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendDocumentPostWithHttpInfoAsync (string instanceKey, string to, InstancesInstanceKeySendDocumentPostRequest instancesInstanceKeySendDocumentPostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendDocumentWithHttpInfoAsync (string instanceKey, string to, SendDocumentRequest sendDocumentRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendDocumentPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendDocument");
             // verify the required parameter 'to' is set
             if (to == null)
-                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->InstancesInstanceKeySendDocumentPost");
-            // verify the required parameter 'instancesInstanceKeySendDocumentPostRequest' is set
-            if (instancesInstanceKeySendDocumentPostRequest == null)
-                throw new ApiException(400, "Missing required parameter 'instancesInstanceKeySendDocumentPostRequest' when calling MessageSendingApi->InstancesInstanceKeySendDocumentPost");
+                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->SendDocument");
+            // verify the required parameter 'sendDocumentRequest' is set
+            if (sendDocumentRequest == null)
+                throw new ApiException(400, "Missing required parameter 'sendDocumentRequest' when calling MessageSendingApi->SendDocument");
 
             var localVarPath = "/instances/{instance_key}/send/document";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1762,13 +1762,13 @@ namespace WhatsAPI.whatsapi
             if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
             if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
             if (caption != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "caption", caption)); // query parameter
-            if (instancesInstanceKeySendDocumentPostRequest != null && instancesInstanceKeySendDocumentPostRequest.GetType() != typeof(byte[]))
+            if (sendDocumentRequest != null && sendDocumentRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(instancesInstanceKeySendDocumentPostRequest); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(sendDocumentRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = instancesInstanceKeySendDocumentPostRequest; // byte array
+                localVarPostBody = sendDocumentRequest; // byte array
             }
 
             // authentication (ApiKeyAuth) required
@@ -1786,7 +1786,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendDocumentPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendDocument", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1801,12 +1801,12 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendImagePostRequest"></param>
+        /// <param name="sendImageRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendImagePost (string instanceKey, string to, InstancesInstanceKeySendImagePostRequest instancesInstanceKeySendImagePostRequest, string caption = default(string))
+        public APIResponse SendImage (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string))
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendImagePostWithHttpInfo(instanceKey, to, instancesInstanceKeySendImagePostRequest, caption);
+             ApiResponse<APIResponse> localVarResponse = SendImageWithHttpInfo(instanceKey, to, sendImageRequest, caption);
              return localVarResponse.Data;
         }
 
@@ -1816,20 +1816,20 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendImagePostRequest"></param>
+        /// <param name="sendImageRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendImagePostWithHttpInfo (string instanceKey, string to, InstancesInstanceKeySendImagePostRequest instancesInstanceKeySendImagePostRequest, string caption = default(string))
+        public ApiResponse<APIResponse> SendImageWithHttpInfo (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendImagePost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendImage");
             // verify the required parameter 'to' is set
             if (to == null)
-                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->InstancesInstanceKeySendImagePost");
-            // verify the required parameter 'instancesInstanceKeySendImagePostRequest' is set
-            if (instancesInstanceKeySendImagePostRequest == null)
-                throw new ApiException(400, "Missing required parameter 'instancesInstanceKeySendImagePostRequest' when calling MessageSendingApi->InstancesInstanceKeySendImagePost");
+                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->SendImage");
+            // verify the required parameter 'sendImageRequest' is set
+            if (sendImageRequest == null)
+                throw new ApiException(400, "Missing required parameter 'sendImageRequest' when calling MessageSendingApi->SendImage");
 
             var localVarPath = "/instances/{instance_key}/send/image";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1856,13 +1856,13 @@ namespace WhatsAPI.whatsapi
             if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
             if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
             if (caption != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "caption", caption)); // query parameter
-            if (instancesInstanceKeySendImagePostRequest != null && instancesInstanceKeySendImagePostRequest.GetType() != typeof(byte[]))
+            if (sendImageRequest != null && sendImageRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(instancesInstanceKeySendImagePostRequest); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(sendImageRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = instancesInstanceKeySendImagePostRequest; // byte array
+                localVarPostBody = sendImageRequest; // byte array
             }
 
             // authentication (ApiKeyAuth) required
@@ -1880,7 +1880,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendImagePost", localVarResponse);
+                Exception exception = ExceptionFactory("SendImage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1895,13 +1895,13 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendImagePostRequest"></param>
+        /// <param name="sendImageRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendImagePostAsync (string instanceKey, string to, InstancesInstanceKeySendImagePostRequest instancesInstanceKeySendImagePostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SendImageAsync (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendImagePostWithHttpInfoAsync(instanceKey, to, instancesInstanceKeySendImagePostRequest, caption, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SendImageWithHttpInfoAsync(instanceKey, to, sendImageRequest, caption, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1912,21 +1912,21 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendImagePostRequest"></param>
+        /// <param name="sendImageRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendImagePostWithHttpInfoAsync (string instanceKey, string to, InstancesInstanceKeySendImagePostRequest instancesInstanceKeySendImagePostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendImageWithHttpInfoAsync (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendImagePost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendImage");
             // verify the required parameter 'to' is set
             if (to == null)
-                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->InstancesInstanceKeySendImagePost");
-            // verify the required parameter 'instancesInstanceKeySendImagePostRequest' is set
-            if (instancesInstanceKeySendImagePostRequest == null)
-                throw new ApiException(400, "Missing required parameter 'instancesInstanceKeySendImagePostRequest' when calling MessageSendingApi->InstancesInstanceKeySendImagePost");
+                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->SendImage");
+            // verify the required parameter 'sendImageRequest' is set
+            if (sendImageRequest == null)
+                throw new ApiException(400, "Missing required parameter 'sendImageRequest' when calling MessageSendingApi->SendImage");
 
             var localVarPath = "/instances/{instance_key}/send/image";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1953,13 +1953,13 @@ namespace WhatsAPI.whatsapi
             if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
             if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
             if (caption != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "caption", caption)); // query parameter
-            if (instancesInstanceKeySendImagePostRequest != null && instancesInstanceKeySendImagePostRequest.GetType() != typeof(byte[]))
+            if (sendImageRequest != null && sendImageRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(instancesInstanceKeySendImagePostRequest); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(sendImageRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = instancesInstanceKeySendImagePostRequest; // byte array
+                localVarPostBody = sendImageRequest; // byte array
             }
 
             // authentication (ApiKeyAuth) required
@@ -1977,7 +1977,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendImagePost", localVarResponse);
+                Exception exception = ExceptionFactory("SendImage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1993,9 +1993,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendListPost (string instanceKey, ListMessagePayload data)
+        public APIResponse SendListMessage (string instanceKey, ListMessagePayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendListPostWithHttpInfo(instanceKey, data);
+             ApiResponse<APIResponse> localVarResponse = SendListMessageWithHttpInfo(instanceKey, data);
              return localVarResponse.Data;
         }
 
@@ -2006,14 +2006,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendListPostWithHttpInfo (string instanceKey, ListMessagePayload data)
+        public ApiResponse<APIResponse> SendListMessageWithHttpInfo (string instanceKey, ListMessagePayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendListPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendListMessage");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendListPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendListMessage");
 
             var localVarPath = "/instances/{instance_key}/send/list";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2062,7 +2062,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendListPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendListMessage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2079,9 +2079,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendListPostAsync (string instanceKey, ListMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SendListMessageAsync (string instanceKey, ListMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendListPostWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SendListMessageWithHttpInfoAsync(instanceKey, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2094,14 +2094,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendListPostWithHttpInfoAsync (string instanceKey, ListMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendListMessageWithHttpInfoAsync (string instanceKey, ListMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendListPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendListMessage");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendListPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendListMessage");
 
             var localVarPath = "/instances/{instance_key}/send/list";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2150,7 +2150,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendListPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendListMessage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2166,9 +2166,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendLocationPost (string instanceKey, LocationMessagePayload data)
+        public APIResponse SendLocation (string instanceKey, LocationMessagePayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendLocationPostWithHttpInfo(instanceKey, data);
+             ApiResponse<APIResponse> localVarResponse = SendLocationWithHttpInfo(instanceKey, data);
              return localVarResponse.Data;
         }
 
@@ -2179,14 +2179,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendLocationPostWithHttpInfo (string instanceKey, LocationMessagePayload data)
+        public ApiResponse<APIResponse> SendLocationWithHttpInfo (string instanceKey, LocationMessagePayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendLocationPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendLocation");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendLocationPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendLocation");
 
             var localVarPath = "/instances/{instance_key}/send/location";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2235,7 +2235,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendLocationPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendLocation", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2252,9 +2252,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendLocationPostAsync (string instanceKey, LocationMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SendLocationAsync (string instanceKey, LocationMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendLocationPostWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SendLocationWithHttpInfoAsync(instanceKey, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2267,14 +2267,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendLocationPostWithHttpInfoAsync (string instanceKey, LocationMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendLocationWithHttpInfoAsync (string instanceKey, LocationMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendLocationPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendLocation");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendLocationPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendLocation");
 
             var localVarPath = "/instances/{instance_key}/send/location";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2323,7 +2323,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendLocationPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendLocation", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2339,9 +2339,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendMediaPost (string instanceKey, SendMediaPayload data)
+        public APIResponse SendMediaMessage (string instanceKey, SendMediaPayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendMediaPostWithHttpInfo(instanceKey, data);
+             ApiResponse<APIResponse> localVarResponse = SendMediaMessageWithHttpInfo(instanceKey, data);
              return localVarResponse.Data;
         }
 
@@ -2352,14 +2352,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendMediaPostWithHttpInfo (string instanceKey, SendMediaPayload data)
+        public ApiResponse<APIResponse> SendMediaMessageWithHttpInfo (string instanceKey, SendMediaPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendMediaPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendMediaMessage");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendMediaPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendMediaMessage");
 
             var localVarPath = "/instances/{instance_key}/send/media";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2408,7 +2408,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendMediaPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendMediaMessage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2425,9 +2425,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendMediaPostAsync (string instanceKey, SendMediaPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SendMediaMessageAsync (string instanceKey, SendMediaPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendMediaPostWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SendMediaMessageWithHttpInfoAsync(instanceKey, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2440,14 +2440,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendMediaPostWithHttpInfoAsync (string instanceKey, SendMediaPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendMediaMessageWithHttpInfoAsync (string instanceKey, SendMediaPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendMediaPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendMediaMessage");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendMediaPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendMediaMessage");
 
             var localVarPath = "/instances/{instance_key}/send/media";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2496,7 +2496,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendMediaPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendMediaMessage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2512,9 +2512,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendPollPost (string instanceKey, PollMessagePayload data)
+        public APIResponse SendPollMessage (string instanceKey, PollMessagePayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendPollPostWithHttpInfo(instanceKey, data);
+             ApiResponse<APIResponse> localVarResponse = SendPollMessageWithHttpInfo(instanceKey, data);
              return localVarResponse.Data;
         }
 
@@ -2525,14 +2525,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendPollPostWithHttpInfo (string instanceKey, PollMessagePayload data)
+        public ApiResponse<APIResponse> SendPollMessageWithHttpInfo (string instanceKey, PollMessagePayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendPollPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendPollMessage");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendPollPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendPollMessage");
 
             var localVarPath = "/instances/{instance_key}/send/poll";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2581,7 +2581,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendPollPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendPollMessage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2598,9 +2598,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendPollPostAsync (string instanceKey, PollMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SendPollMessageAsync (string instanceKey, PollMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendPollPostWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SendPollMessageWithHttpInfoAsync(instanceKey, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2613,14 +2613,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendPollPostWithHttpInfoAsync (string instanceKey, PollMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendPollMessageWithHttpInfoAsync (string instanceKey, PollMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendPollPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendPollMessage");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendPollPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendPollMessage");
 
             var localVarPath = "/instances/{instance_key}/send/poll";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2669,180 +2669,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendPollPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Send a template message with media. Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendTemplateMediaPost (string instanceKey, TemplateButtonWithMediaPayload data)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendTemplateMediaPostWithHttpInfo(instanceKey, data);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Send a template message with media. Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendTemplateMediaPostWithHttpInfo (string instanceKey, TemplateButtonWithMediaPayload data)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendTemplateMediaPost");
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendTemplateMediaPost");
-
-            var localVarPath = "/instances/{instance_key}/send/template-media";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (data != null && data.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = data; // byte array
-            }
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendTemplateMediaPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Send a template message with media. Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendTemplateMediaPostAsync (string instanceKey, TemplateButtonWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendTemplateMediaPostWithHttpInfoAsync(instanceKey, data, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Send a template message with media. Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="data">Message data</param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendTemplateMediaPostWithHttpInfoAsync (string instanceKey, TemplateButtonWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendTemplateMediaPost");
-            // verify the required parameter 'data' is set
-            if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendTemplateMediaPost");
-
-            var localVarPath = "/instances/{instance_key}/send/template-media";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (data != null && data.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = data; // byte array
-            }
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendTemplateMediaPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendPollMessage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2858,9 +2685,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendTemplatePost (string instanceKey, TemplateButtonPayload data)
+        public APIResponse SendTemplate (string instanceKey, TemplateButtonPayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendTemplatePostWithHttpInfo(instanceKey, data);
+             ApiResponse<APIResponse> localVarResponse = SendTemplateWithHttpInfo(instanceKey, data);
              return localVarResponse.Data;
         }
 
@@ -2871,14 +2698,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendTemplatePostWithHttpInfo (string instanceKey, TemplateButtonPayload data)
+        public ApiResponse<APIResponse> SendTemplateWithHttpInfo (string instanceKey, TemplateButtonPayload data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendTemplatePost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendTemplate");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendTemplatePost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendTemplate");
 
             var localVarPath = "/instances/{instance_key}/send/template";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2927,7 +2754,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendTemplatePost", localVarResponse);
+                Exception exception = ExceptionFactory("SendTemplate", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2944,9 +2771,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendTemplatePostAsync (string instanceKey, TemplateButtonPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SendTemplateAsync (string instanceKey, TemplateButtonPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendTemplatePostWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SendTemplateWithHttpInfoAsync(instanceKey, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2959,14 +2786,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendTemplatePostWithHttpInfoAsync (string instanceKey, TemplateButtonPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendTemplateWithHttpInfoAsync (string instanceKey, TemplateButtonPayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendTemplatePost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendTemplate");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendTemplatePost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendTemplate");
 
             var localVarPath = "/instances/{instance_key}/send/template";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3015,7 +2842,180 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendTemplatePost", localVarResponse);
+                Exception exception = ExceptionFactory("SendTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Send a template message with media. Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse SendTemplateWithMedia (string instanceKey, TemplateButtonWithMediaPayload data)
+        {
+             ApiResponse<APIResponse> localVarResponse = SendTemplateWithMediaWithHttpInfo(instanceKey, data);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Send a template message with media. Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> SendTemplateWithMediaWithHttpInfo (string instanceKey, TemplateButtonWithMediaPayload data)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendTemplateWithMedia");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendTemplateWithMedia");
+
+            var localVarPath = "/instances/{instance_key}/send/template-media";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendTemplateWithMedia", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Send a template message with media. Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> SendTemplateWithMediaAsync (string instanceKey, TemplateButtonWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await SendTemplateWithMediaWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Send a template message with media. Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendTemplateWithMediaWithHttpInfoAsync (string instanceKey, TemplateButtonWithMediaPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendTemplateWithMedia");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendTemplateWithMedia");
+
+            var localVarPath = "/instances/{instance_key}/send/template-media";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendTemplateWithMedia", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3031,9 +3031,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendTextPost (string instanceKey, TextMessage data)
+        public APIResponse SendTextMessage (string instanceKey, TextMessage data)
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendTextPostWithHttpInfo(instanceKey, data);
+             ApiResponse<APIResponse> localVarResponse = SendTextMessageWithHttpInfo(instanceKey, data);
              return localVarResponse.Data;
         }
 
@@ -3044,14 +3044,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="instanceKey">Instance key</param>
         /// <param name="data">Message data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendTextPostWithHttpInfo (string instanceKey, TextMessage data)
+        public ApiResponse<APIResponse> SendTextMessageWithHttpInfo (string instanceKey, TextMessage data)
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendTextPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendTextMessage");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendTextPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendTextMessage");
 
             var localVarPath = "/instances/{instance_key}/send/text";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3100,7 +3100,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendTextPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendTextMessage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3117,9 +3117,9 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendTextPostAsync (string instanceKey, TextMessage data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SendTextMessageAsync (string instanceKey, TextMessage data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendTextPostWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SendTextMessageWithHttpInfoAsync(instanceKey, data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -3132,14 +3132,14 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Message data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendTextPostWithHttpInfoAsync (string instanceKey, TextMessage data, CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendTextMessageWithHttpInfoAsync (string instanceKey, TextMessage data, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendTextPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendTextMessage");
             // verify the required parameter 'data' is set
             if (data == null)
-                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->InstancesInstanceKeySendTextPost");
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendTextMessage");
 
             var localVarPath = "/instances/{instance_key}/send/text";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3188,192 +3188,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendTextPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Upload media. Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="type">Media type</param>
-        /// <param name="instancesInstanceKeySendUploadPostRequest"></param>
-        /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendUploadPost (string instanceKey, string type, InstancesInstanceKeySendUploadPostRequest instancesInstanceKeySendUploadPostRequest)
-        {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendUploadPostWithHttpInfo(instanceKey, type, instancesInstanceKeySendUploadPostRequest);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Upload media. Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="type">Media type</param>
-        /// <param name="instancesInstanceKeySendUploadPostRequest"></param>
-        /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendUploadPostWithHttpInfo (string instanceKey, string type, InstancesInstanceKeySendUploadPostRequest instancesInstanceKeySendUploadPostRequest)
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendUploadPost");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling MessageSendingApi->InstancesInstanceKeySendUploadPost");
-            // verify the required parameter 'instancesInstanceKeySendUploadPostRequest' is set
-            if (instancesInstanceKeySendUploadPostRequest == null)
-                throw new ApiException(400, "Missing required parameter 'instancesInstanceKeySendUploadPostRequest' when calling MessageSendingApi->InstancesInstanceKeySendUploadPost");
-
-            var localVarPath = "/instances/{instance_key}/send/upload";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (type != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
-            if (instancesInstanceKeySendUploadPostRequest != null && instancesInstanceKeySendUploadPostRequest.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(instancesInstanceKeySendUploadPostRequest); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = instancesInstanceKeySendUploadPostRequest; // byte array
-            }
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendUploadPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<APIResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
-                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
-        }
-
-        /// <summary>
-        /// Upload media. Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="type">Media type</param>
-        /// <param name="instancesInstanceKeySendUploadPostRequest"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendUploadPostAsync (string instanceKey, string type, InstancesInstanceKeySendUploadPostRequest instancesInstanceKeySendUploadPostRequest, CancellationToken cancellationToken = default(CancellationToken))
-        {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendUploadPostWithHttpInfoAsync(instanceKey, type, instancesInstanceKeySendUploadPostRequest, cancellationToken);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Upload media. Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
-        /// </summary>
-        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Instance key</param>
-        /// <param name="type">Media type</param>
-        /// <param name="instancesInstanceKeySendUploadPostRequest"></param>
-        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
-        /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendUploadPostWithHttpInfoAsync (string instanceKey, string type, InstancesInstanceKeySendUploadPostRequest instancesInstanceKeySendUploadPostRequest, CancellationToken cancellationToken = default(CancellationToken))
-        {
-            // verify the required parameter 'instanceKey' is set
-            if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendUploadPost");
-            // verify the required parameter 'type' is set
-            if (type == null)
-                throw new ApiException(400, "Missing required parameter 'type' when calling MessageSendingApi->InstancesInstanceKeySendUploadPost");
-            // verify the required parameter 'instancesInstanceKeySendUploadPostRequest' is set
-            if (instancesInstanceKeySendUploadPostRequest == null)
-                throw new ApiException(400, "Missing required parameter 'instancesInstanceKeySendUploadPostRequest' when calling MessageSendingApi->InstancesInstanceKeySendUploadPost");
-
-            var localVarPath = "/instances/{instance_key}/send/upload";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "*/*"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
-            if (type != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
-            if (instancesInstanceKeySendUploadPostRequest != null && instancesInstanceKeySendUploadPostRequest.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(instancesInstanceKeySendUploadPostRequest); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = instancesInstanceKeySendUploadPostRequest; // byte array
-            }
-
-            // authentication (ApiKeyAuth) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
-            {
-                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType, cancellationToken);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendUploadPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendTextMessage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3388,12 +3203,12 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendVideoPostRequest"></param>
+        /// <param name="sendVideoRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>APIResponse</returns>
-        public APIResponse InstancesInstanceKeySendVideoPost (string instanceKey, string to, InstancesInstanceKeySendVideoPostRequest instancesInstanceKeySendVideoPostRequest, string caption = default(string))
+        public APIResponse SendVideo (string instanceKey, string to, SendVideoRequest sendVideoRequest, string caption = default(string))
         {
-             ApiResponse<APIResponse> localVarResponse = InstancesInstanceKeySendVideoPostWithHttpInfo(instanceKey, to, instancesInstanceKeySendVideoPostRequest, caption);
+             ApiResponse<APIResponse> localVarResponse = SendVideoWithHttpInfo(instanceKey, to, sendVideoRequest, caption);
              return localVarResponse.Data;
         }
 
@@ -3403,20 +3218,20 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendVideoPostRequest"></param>
+        /// <param name="sendVideoRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> InstancesInstanceKeySendVideoPostWithHttpInfo (string instanceKey, string to, InstancesInstanceKeySendVideoPostRequest instancesInstanceKeySendVideoPostRequest, string caption = default(string))
+        public ApiResponse<APIResponse> SendVideoWithHttpInfo (string instanceKey, string to, SendVideoRequest sendVideoRequest, string caption = default(string))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendVideoPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendVideo");
             // verify the required parameter 'to' is set
             if (to == null)
-                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->InstancesInstanceKeySendVideoPost");
-            // verify the required parameter 'instancesInstanceKeySendVideoPostRequest' is set
-            if (instancesInstanceKeySendVideoPostRequest == null)
-                throw new ApiException(400, "Missing required parameter 'instancesInstanceKeySendVideoPostRequest' when calling MessageSendingApi->InstancesInstanceKeySendVideoPost");
+                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->SendVideo");
+            // verify the required parameter 'sendVideoRequest' is set
+            if (sendVideoRequest == null)
+                throw new ApiException(400, "Missing required parameter 'sendVideoRequest' when calling MessageSendingApi->SendVideo");
 
             var localVarPath = "/instances/{instance_key}/send/video";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3443,13 +3258,13 @@ namespace WhatsAPI.whatsapi
             if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
             if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
             if (caption != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "caption", caption)); // query parameter
-            if (instancesInstanceKeySendVideoPostRequest != null && instancesInstanceKeySendVideoPostRequest.GetType() != typeof(byte[]))
+            if (sendVideoRequest != null && sendVideoRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(instancesInstanceKeySendVideoPostRequest); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(sendVideoRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = instancesInstanceKeySendVideoPostRequest; // byte array
+                localVarPostBody = sendVideoRequest; // byte array
             }
 
             // authentication (ApiKeyAuth) required
@@ -3467,7 +3282,7 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendVideoPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendVideo", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3482,13 +3297,13 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendVideoPostRequest"></param>
+        /// <param name="sendVideoRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> InstancesInstanceKeySendVideoPostAsync (string instanceKey, string to, InstancesInstanceKeySendVideoPostRequest instancesInstanceKeySendVideoPostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SendVideoAsync (string instanceKey, string to, SendVideoRequest sendVideoRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await InstancesInstanceKeySendVideoPostWithHttpInfoAsync(instanceKey, to, instancesInstanceKeySendVideoPostRequest, caption, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SendVideoWithHttpInfoAsync(instanceKey, to, sendVideoRequest, caption, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -3499,21 +3314,21 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="instancesInstanceKeySendVideoPostRequest"></param>
+        /// <param name="sendVideoRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> InstancesInstanceKeySendVideoPostWithHttpInfoAsync (string instanceKey, string to, InstancesInstanceKeySendVideoPostRequest instancesInstanceKeySendVideoPostRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendVideoWithHttpInfoAsync (string instanceKey, string to, SendVideoRequest sendVideoRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
-                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->InstancesInstanceKeySendVideoPost");
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendVideo");
             // verify the required parameter 'to' is set
             if (to == null)
-                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->InstancesInstanceKeySendVideoPost");
-            // verify the required parameter 'instancesInstanceKeySendVideoPostRequest' is set
-            if (instancesInstanceKeySendVideoPostRequest == null)
-                throw new ApiException(400, "Missing required parameter 'instancesInstanceKeySendVideoPostRequest' when calling MessageSendingApi->InstancesInstanceKeySendVideoPost");
+                throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->SendVideo");
+            // verify the required parameter 'sendVideoRequest' is set
+            if (sendVideoRequest == null)
+                throw new ApiException(400, "Missing required parameter 'sendVideoRequest' when calling MessageSendingApi->SendVideo");
 
             var localVarPath = "/instances/{instance_key}/send/video";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3540,13 +3355,13 @@ namespace WhatsAPI.whatsapi
             if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
             if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
             if (caption != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "caption", caption)); // query parameter
-            if (instancesInstanceKeySendVideoPostRequest != null && instancesInstanceKeySendVideoPostRequest.GetType() != typeof(byte[]))
+            if (sendVideoRequest != null && sendVideoRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(instancesInstanceKeySendVideoPostRequest); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(sendVideoRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = instancesInstanceKeySendVideoPostRequest; // byte array
+                localVarPostBody = sendVideoRequest; // byte array
             }
 
             // authentication (ApiKeyAuth) required
@@ -3564,7 +3379,192 @@ namespace WhatsAPI.whatsapi
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("InstancesInstanceKeySendVideoPost", localVarResponse);
+                Exception exception = ExceptionFactory("SendVideo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Upload media. Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="uploadMediaRequest"></param>
+        /// <returns>APIResponse</returns>
+        public APIResponse UploadMedia (string instanceKey, string type, UploadMediaRequest uploadMediaRequest)
+        {
+             ApiResponse<APIResponse> localVarResponse = UploadMediaWithHttpInfo(instanceKey, type, uploadMediaRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Upload media. Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="uploadMediaRequest"></param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> UploadMediaWithHttpInfo (string instanceKey, string type, UploadMediaRequest uploadMediaRequest)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->UploadMedia");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling MessageSendingApi->UploadMedia");
+            // verify the required parameter 'uploadMediaRequest' is set
+            if (uploadMediaRequest == null)
+                throw new ApiException(400, "Missing required parameter 'uploadMediaRequest' when calling MessageSendingApi->UploadMedia");
+
+            var localVarPath = "/instances/{instance_key}/send/upload";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (type != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (uploadMediaRequest != null && uploadMediaRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(uploadMediaRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = uploadMediaRequest; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UploadMedia", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Upload media. Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="uploadMediaRequest"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> UploadMediaAsync (string instanceKey, string type, UploadMediaRequest uploadMediaRequest, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await UploadMediaWithHttpInfoAsync(instanceKey, type, uploadMediaRequest, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Upload media. Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="uploadMediaRequest"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> UploadMediaWithHttpInfoAsync (string instanceKey, string type, UploadMediaRequest uploadMediaRequest, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->UploadMedia");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling MessageSendingApi->UploadMedia");
+            // verify the required parameter 'uploadMediaRequest' is set
+            if (uploadMediaRequest == null)
+                throw new ApiException(400, "Missing required parameter 'uploadMediaRequest' when calling MessageSendingApi->UploadMedia");
+
+            var localVarPath = "/instances/{instance_key}/send/upload";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (type != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (uploadMediaRequest != null && uploadMediaRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(uploadMediaRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = uploadMediaRequest; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UploadMedia", localVarResponse);
                 if (exception != null) throw exception;
             }
 

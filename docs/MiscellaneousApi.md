@@ -4,14 +4,14 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**InstancesInstanceKeyMiscProfilePicGet**](MiscellaneousApi.md#instancesinstancekeymiscprofilepicget) | **GET** /instances/{instance_key}/misc/profile-pic | Get profile pic.
-[**InstancesInstanceKeyMiscUserInfoPost**](MiscellaneousApi.md#instancesinstancekeymiscuserinfopost) | **POST** /instances/{instance_key}/misc/user-info | Fetches the users info.
+[**GetProfilePic**](MiscellaneousApi.md#getprofilepic) | **GET** /instances/{instance_key}/misc/profile-pic | Get profile pic.
+[**GetUsersInfo**](MiscellaneousApi.md#getusersinfo) | **POST** /instances/{instance_key}/misc/user-info | Fetches the users info.
 
 
 
-## InstancesInstanceKeyMiscProfilePicGet
+## GetProfilePic
 
-> APIResponse InstancesInstanceKeyMiscProfilePicGet (string instanceKey, string jid)
+> APIResponse GetProfilePic (string instanceKey, string jid)
 
 Get profile pic.
 
@@ -28,7 +28,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeyMiscProfilePicGetExample
+    public class GetProfilePicExample
     {
         public static void Main()
         {
@@ -45,12 +45,12 @@ namespace Example
             try
             {
                 // Get profile pic.
-                APIResponse result = apiInstance.InstancesInstanceKeyMiscProfilePicGet(instanceKey, jid);
+                APIResponse result = apiInstance.GetProfilePic(instanceKey, jid);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MiscellaneousApi.InstancesInstanceKeyMiscProfilePicGet: " + e.Message );
+                Debug.Print("Exception when calling MiscellaneousApi.GetProfilePic: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -96,9 +96,9 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## InstancesInstanceKeyMiscUserInfoPost
+## GetUsersInfo
 
-> APIResponse InstancesInstanceKeyMiscUserInfoPost (string instanceKey, UserInfoPayload data)
+> APIResponse GetUsersInfo (string instanceKey, UserInfoPayload data)
 
 Fetches the users info.
 
@@ -115,7 +115,7 @@ using WhatsAPI.models;
 
 namespace Example
 {
-    public class InstancesInstanceKeyMiscUserInfoPostExample
+    public class GetUsersInfoExample
     {
         public static void Main()
         {
@@ -132,12 +132,12 @@ namespace Example
             try
             {
                 // Fetches the users info.
-                APIResponse result = apiInstance.InstancesInstanceKeyMiscUserInfoPost(instanceKey, data);
+                APIResponse result = apiInstance.GetUsersInfo(instanceKey, data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling MiscellaneousApi.InstancesInstanceKeyMiscUserInfoPost: " + e.Message );
+                Debug.Print("Exception when calling MiscellaneousApi.GetUsersInfo: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
