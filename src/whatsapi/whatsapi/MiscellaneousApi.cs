@@ -26,6 +26,33 @@ namespace WhatsAPI.whatsapi
     {
         #region Synchronous Operations
         /// <summary>
+        /// Download media
+        /// </summary>
+        /// <remarks>
+        /// Downloads the media from the given media keys.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="fileType">File type</param>
+        /// <param name="data">Media data</param>
+        /// <param name="responseType">Response type (file, base64) (optional)</param>
+        /// <returns>APIResponse</returns>
+        APIResponse DownloadMedia (string instanceKey, string fileType, FileUpload data, string responseType = default(string));
+
+        /// <summary>
+        /// Download media
+        /// </summary>
+        /// <remarks>
+        /// Downloads the media from the given media keys.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="fileType">File type</param>
+        /// <param name="data">Media data</param>
+        /// <param name="responseType">Response type (file, base64) (optional)</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> DownloadMediaWithHttpInfo (string instanceKey, string fileType, FileUpload data, string responseType = default(string));
+        /// <summary>
         /// Get profile pic.
         /// </summary>
         /// <remarks>
@@ -71,8 +98,85 @@ namespace WhatsAPI.whatsapi
         /// <param name="data">Data</param>
         /// <returns>ApiResponse of APIResponse</returns>
         ApiResponse<APIResponse> GetUsersInfoWithHttpInfo (string instanceKey, UserInfoPayload data);
+        /// <summary>
+        /// Set chat presence
+        /// </summary>
+        /// <remarks>
+        /// Sets the presence of the given chat. (Typing, Recording, Paused) Options: typing, recording, paused
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="jid">JID</param>
+        /// <param name="presence">Presence</param>
+        /// <returns>APIResponse</returns>
+        APIResponse SetChatPresence (string instanceKey, string jid, string presence);
+
+        /// <summary>
+        /// Set chat presence
+        /// </summary>
+        /// <remarks>
+        /// Sets the presence of the given chat. (Typing, Recording, Paused) Options: typing, recording, paused
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="jid">JID</param>
+        /// <param name="presence">Presence</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> SetChatPresenceWithHttpInfo (string instanceKey, string jid, string presence);
+        /// <summary>
+        /// Update profile picture
+        /// </summary>
+        /// <remarks>
+        /// Changes the profile pic of the current logged in user.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="updateProfilePicRequest"></param>
+        /// <returns>APIResponse</returns>
+        APIResponse UpdateProfilePic (string instanceKey, UpdateProfilePicRequest updateProfilePicRequest);
+
+        /// <summary>
+        /// Update profile picture
+        /// </summary>
+        /// <remarks>
+        /// Changes the profile pic of the current logged in user.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="updateProfilePicRequest"></param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> UpdateProfilePicWithHttpInfo (string instanceKey, UpdateProfilePicRequest updateProfilePicRequest);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Download media
+        /// </summary>
+        /// <remarks>
+        /// Downloads the media from the given media keys.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="fileType">File type</param>
+        /// <param name="data">Media data</param>
+        /// <param name="responseType">Response type (file, base64) (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> DownloadMediaAsync (string instanceKey, string fileType, FileUpload data, string responseType = default(string), CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Download media
+        /// </summary>
+        /// <remarks>
+        /// Downloads the media from the given media keys.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="fileType">File type</param>
+        /// <param name="data">Media data</param>
+        /// <param name="responseType">Response type (file, base64) (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> DownloadMediaWithHttpInfoAsync (string instanceKey, string fileType, FileUpload data, string responseType = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get profile pic.
         /// </summary>
@@ -123,6 +227,58 @@ namespace WhatsAPI.whatsapi
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<APIResponse>> GetUsersInfoWithHttpInfoAsync (string instanceKey, UserInfoPayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Set chat presence
+        /// </summary>
+        /// <remarks>
+        /// Sets the presence of the given chat. (Typing, Recording, Paused) Options: typing, recording, paused
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="jid">JID</param>
+        /// <param name="presence">Presence</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> SetChatPresenceAsync (string instanceKey, string jid, string presence, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Set chat presence
+        /// </summary>
+        /// <remarks>
+        /// Sets the presence of the given chat. (Typing, Recording, Paused) Options: typing, recording, paused
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="jid">JID</param>
+        /// <param name="presence">Presence</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SetChatPresenceWithHttpInfoAsync (string instanceKey, string jid, string presence, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Update profile picture
+        /// </summary>
+        /// <remarks>
+        /// Changes the profile pic of the current logged in user.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="updateProfilePicRequest"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> UpdateProfilePicAsync (string instanceKey, UpdateProfilePicRequest updateProfilePicRequest, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Update profile picture
+        /// </summary>
+        /// <remarks>
+        /// Changes the profile pic of the current logged in user.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="updateProfilePicRequest"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> UpdateProfilePicWithHttpInfoAsync (string instanceKey, UpdateProfilePicRequest updateProfilePicRequest, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -232,6 +388,197 @@ namespace WhatsAPI.whatsapi
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Download media Downloads the media from the given media keys.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="fileType">File type</param>
+        /// <param name="data">Media data</param>
+        /// <param name="responseType">Response type (file, base64) (optional)</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse DownloadMedia (string instanceKey, string fileType, FileUpload data, string responseType = default(string))
+        {
+             ApiResponse<APIResponse> localVarResponse = DownloadMediaWithHttpInfo(instanceKey, fileType, data, responseType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Download media Downloads the media from the given media keys.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="fileType">File type</param>
+        /// <param name="data">Media data</param>
+        /// <param name="responseType">Response type (file, base64) (optional)</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> DownloadMediaWithHttpInfo (string instanceKey, string fileType, FileUpload data, string responseType = default(string))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->DownloadMedia");
+            // verify the required parameter 'fileType' is set
+            if (fileType == null)
+                throw new ApiException(400, "Missing required parameter 'fileType' when calling MiscellaneousApi->DownloadMedia");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling MiscellaneousApi->DownloadMedia");
+
+            var localVarPath = "/instances/{instance_key}/misc/download";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (fileType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "file_type", fileType)); // query parameter
+            if (responseType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "response_type", responseType)); // query parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DownloadMedia", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Download media Downloads the media from the given media keys.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="fileType">File type</param>
+        /// <param name="data">Media data</param>
+        /// <param name="responseType">Response type (file, base64) (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> DownloadMediaAsync (string instanceKey, string fileType, FileUpload data, string responseType = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await DownloadMediaWithHttpInfoAsync(instanceKey, fileType, data, responseType, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Download media Downloads the media from the given media keys.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="fileType">File type</param>
+        /// <param name="data">Media data</param>
+        /// <param name="responseType">Response type (file, base64) (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> DownloadMediaWithHttpInfoAsync (string instanceKey, string fileType, FileUpload data, string responseType = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->DownloadMedia");
+            // verify the required parameter 'fileType' is set
+            if (fileType == null)
+                throw new ApiException(400, "Missing required parameter 'fileType' when calling MiscellaneousApi->DownloadMedia");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling MiscellaneousApi->DownloadMedia");
+
+            var localVarPath = "/instances/{instance_key}/misc/download";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (fileType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "file_type", fileType)); // query parameter
+            if (responseType != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "response_type", responseType)); // query parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DownloadMedia", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
         }
 
         /// <summary>
@@ -556,6 +903,348 @@ namespace WhatsAPI.whatsapi
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetUsersInfo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Set chat presence Sets the presence of the given chat. (Typing, Recording, Paused) Options: typing, recording, paused
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="jid">JID</param>
+        /// <param name="presence">Presence</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse SetChatPresence (string instanceKey, string jid, string presence)
+        {
+             ApiResponse<APIResponse> localVarResponse = SetChatPresenceWithHttpInfo(instanceKey, jid, presence);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set chat presence Sets the presence of the given chat. (Typing, Recording, Paused) Options: typing, recording, paused
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="jid">JID</param>
+        /// <param name="presence">Presence</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> SetChatPresenceWithHttpInfo (string instanceKey, string jid, string presence)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->SetChatPresence");
+            // verify the required parameter 'jid' is set
+            if (jid == null)
+                throw new ApiException(400, "Missing required parameter 'jid' when calling MiscellaneousApi->SetChatPresence");
+            // verify the required parameter 'presence' is set
+            if (presence == null)
+                throw new ApiException(400, "Missing required parameter 'presence' when calling MiscellaneousApi->SetChatPresence");
+
+            var localVarPath = "/instances/{instance_key}/misc/chat-presence";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (jid != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "jid", jid)); // query parameter
+            if (presence != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "presence", presence)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetChatPresence", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Set chat presence Sets the presence of the given chat. (Typing, Recording, Paused) Options: typing, recording, paused
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="jid">JID</param>
+        /// <param name="presence">Presence</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> SetChatPresenceAsync (string instanceKey, string jid, string presence, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await SetChatPresenceWithHttpInfoAsync(instanceKey, jid, presence, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set chat presence Sets the presence of the given chat. (Typing, Recording, Paused) Options: typing, recording, paused
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="jid">JID</param>
+        /// <param name="presence">Presence</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SetChatPresenceWithHttpInfoAsync (string instanceKey, string jid, string presence, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->SetChatPresence");
+            // verify the required parameter 'jid' is set
+            if (jid == null)
+                throw new ApiException(400, "Missing required parameter 'jid' when calling MiscellaneousApi->SetChatPresence");
+            // verify the required parameter 'presence' is set
+            if (presence == null)
+                throw new ApiException(400, "Missing required parameter 'presence' when calling MiscellaneousApi->SetChatPresence");
+
+            var localVarPath = "/instances/{instance_key}/misc/chat-presence";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (jid != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "jid", jid)); // query parameter
+            if (presence != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "presence", presence)); // query parameter
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetChatPresence", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Update profile picture Changes the profile pic of the current logged in user.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="updateProfilePicRequest"></param>
+        /// <returns>APIResponse</returns>
+        public APIResponse UpdateProfilePic (string instanceKey, UpdateProfilePicRequest updateProfilePicRequest)
+        {
+             ApiResponse<APIResponse> localVarResponse = UpdateProfilePicWithHttpInfo(instanceKey, updateProfilePicRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update profile picture Changes the profile pic of the current logged in user.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="updateProfilePicRequest"></param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> UpdateProfilePicWithHttpInfo (string instanceKey, UpdateProfilePicRequest updateProfilePicRequest)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->UpdateProfilePic");
+            // verify the required parameter 'updateProfilePicRequest' is set
+            if (updateProfilePicRequest == null)
+                throw new ApiException(400, "Missing required parameter 'updateProfilePicRequest' when calling MiscellaneousApi->UpdateProfilePic");
+
+            var localVarPath = "/instances/{instance_key}/misc/profile-pic";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (updateProfilePicRequest != null && updateProfilePicRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(updateProfilePicRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = updateProfilePicRequest; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateProfilePic", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Update profile picture Changes the profile pic of the current logged in user.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="updateProfilePicRequest"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> UpdateProfilePicAsync (string instanceKey, UpdateProfilePicRequest updateProfilePicRequest, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await UpdateProfilePicWithHttpInfoAsync(instanceKey, updateProfilePicRequest, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update profile picture Changes the profile pic of the current logged in user.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="updateProfilePicRequest"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> UpdateProfilePicWithHttpInfoAsync (string instanceKey, UpdateProfilePicRequest updateProfilePicRequest, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MiscellaneousApi->UpdateProfilePic");
+            // verify the required parameter 'updateProfilePicRequest' is set
+            if (updateProfilePicRequest == null)
+                throw new ApiException(400, "Missing required parameter 'updateProfilePicRequest' when calling MiscellaneousApi->UpdateProfilePic");
+
+            var localVarPath = "/instances/{instance_key}/misc/profile-pic";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (updateProfilePicRequest != null && updateProfilePicRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(updateProfilePicRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = updateProfilePicRequest; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateProfilePic", localVarResponse);
                 if (exception != null) throw exception;
             }
 

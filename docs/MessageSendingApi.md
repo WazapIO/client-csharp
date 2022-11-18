@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**SendButtonWithMedia**](MessageSendingApi.md#sendbuttonwithmedia) | **POST** /instances/{instance_key}/send/button-media | Send a button message with a media header.
 [**SendContact**](MessageSendingApi.md#sendcontact) | **POST** /instances/{instance_key}/send/contact | Send a contact message.
 [**SendDocument**](MessageSendingApi.md#senddocument) | **POST** /instances/{instance_key}/send/document | Send raw document.
+[**SendGroupInvite**](MessageSendingApi.md#sendgroupinvite) | **POST** /instances/{instance_key}/send/group-invite | Send a group invite message
 [**SendImage**](MessageSendingApi.md#sendimage) | **POST** /instances/{instance_key}/send/image | Send raw image.
 [**SendListMessage**](MessageSendingApi.md#sendlistmessage) | **POST** /instances/{instance_key}/send/list | Send a List message.
 [**SendLocation**](MessageSendingApi.md#sendlocation) | **POST** /instances/{instance_key}/send/location | Send a location message.
@@ -465,9 +466,96 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## SendGroupInvite
+
+> APIResponse SendGroupInvite (string instanceKey, GroupInviteMessagePayload data)
+
+Send a group invite message
+
+Sends a group invite message to the specified number. Don't include \"https://chat.whatsapp.com/\" in the invite code.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
+
+namespace Example
+{
+    public class SendGroupInviteExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "/api";
+            // Configure API key authorization: ApiKeyAuth
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new MessageSendingApi(Configuration.Default);
+            var instanceKey = "instanceKey_example";  // string | Instance key
+            var data = new GroupInviteMessagePayload(); // GroupInviteMessagePayload | Message data
+
+            try
+            {
+                // Send a group invite message
+                APIResponse result = apiInstance.SendGroupInvite(instanceKey, data);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling MessageSendingApi.SendGroupInvite: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **instanceKey** | **string**| Instance key | 
+ **data** | [**GroupInviteMessagePayload**](GroupInviteMessagePayload.md)| Message data | 
+
+### Return type
+
+[**APIResponse**](APIResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **401** | Unauthorized |  -  |
+| **404** | Instance not found |  -  |
+| **500** | Internal Server Error |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## SendImage
 
-> APIResponse SendImage (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = null)
+> APIResponse SendImage (string instanceKey, string to, UpdateProfilePicRequest updateProfilePicRequest, string caption = null)
 
 Send raw image.
 
@@ -497,13 +585,13 @@ namespace Example
             var apiInstance = new MessageSendingApi(Configuration.Default);
             var instanceKey = "instanceKey_example";  // string | Instance key
             var to = "to_example";  // string | The recipient's number
-            var sendImageRequest = new SendImageRequest(); // SendImageRequest | 
+            var updateProfilePicRequest = new UpdateProfilePicRequest(); // UpdateProfilePicRequest | 
             var caption = "caption_example";  // string | Attached caption (optional) 
 
             try
             {
                 // Send raw image.
-                APIResponse result = apiInstance.SendImage(instanceKey, to, sendImageRequest, caption);
+                APIResponse result = apiInstance.SendImage(instanceKey, to, updateProfilePicRequest, caption);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -524,7 +612,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **instanceKey** | **string**| Instance key | 
  **to** | **string**| The recipient&#39;s number | 
- **sendImageRequest** | [**SendImageRequest**](SendImageRequest.md)|  | 
+ **updateProfilePicRequest** | [**UpdateProfilePicRequest**](UpdateProfilePicRequest.md)|  | 
  **caption** | **string**| Attached caption | [optional] 
 
 ### Return type

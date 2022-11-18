@@ -149,6 +149,29 @@ namespace WhatsAPI.whatsapi
         /// <returns>ApiResponse of APIResponse</returns>
         ApiResponse<APIResponse> SendDocumentWithHttpInfo (string instanceKey, string to, SendDocumentRequest sendDocumentRequest, string caption = default(string));
         /// <summary>
+        /// Send a group invite message
+        /// </summary>
+        /// <remarks>
+        /// Sends a group invite message to the specified number. Don't include \"https://chat.whatsapp.com/\" in the invite code.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <returns>APIResponse</returns>
+        APIResponse SendGroupInvite (string instanceKey, GroupInviteMessagePayload data);
+
+        /// <summary>
+        /// Send a group invite message
+        /// </summary>
+        /// <remarks>
+        /// Sends a group invite message to the specified number. Don't include \"https://chat.whatsapp.com/\" in the invite code.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> SendGroupInviteWithHttpInfo (string instanceKey, GroupInviteMessagePayload data);
+        /// <summary>
         /// Send raw image.
         /// </summary>
         /// <remarks>
@@ -157,10 +180,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="sendImageRequest"></param>
+        /// <param name="updateProfilePicRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>APIResponse</returns>
-        APIResponse SendImage (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string));
+        APIResponse SendImage (string instanceKey, string to, UpdateProfilePicRequest updateProfilePicRequest, string caption = default(string));
 
         /// <summary>
         /// Send raw image.
@@ -171,10 +194,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="sendImageRequest"></param>
+        /// <param name="updateProfilePicRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> SendImageWithHttpInfo (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string));
+        ApiResponse<APIResponse> SendImageWithHttpInfo (string instanceKey, string to, UpdateProfilePicRequest updateProfilePicRequest, string caption = default(string));
         /// <summary>
         /// Send a List message.
         /// </summary>
@@ -524,6 +547,31 @@ namespace WhatsAPI.whatsapi
         /// <returns>Task of ApiResponse (APIResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendDocumentWithHttpInfoAsync (string instanceKey, string to, SendDocumentRequest sendDocumentRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
+        /// Send a group invite message
+        /// </summary>
+        /// <remarks>
+        /// Sends a group invite message to the specified number. Don't include \"https://chat.whatsapp.com/\" in the invite code.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> SendGroupInviteAsync (string instanceKey, GroupInviteMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Send a group invite message
+        /// </summary>
+        /// <remarks>
+        /// Sends a group invite message to the specified number. Don't include \"https://chat.whatsapp.com/\" in the invite code.
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendGroupInviteWithHttpInfoAsync (string instanceKey, GroupInviteMessagePayload data, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
         /// Send raw image.
         /// </summary>
         /// <remarks>
@@ -532,11 +580,11 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="sendImageRequest"></param>
+        /// <param name="updateProfilePicRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> SendImageAsync (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> SendImageAsync (string instanceKey, string to, UpdateProfilePicRequest updateProfilePicRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Send raw image.
@@ -547,11 +595,11 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="sendImageRequest"></param>
+        /// <param name="updateProfilePicRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendImageWithHttpInfoAsync (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendImageWithHttpInfoAsync (string instanceKey, string to, UpdateProfilePicRequest updateProfilePicRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Send a List message.
         /// </summary>
@@ -1796,17 +1844,190 @@ namespace WhatsAPI.whatsapi
         }
 
         /// <summary>
+        /// Send a group invite message Sends a group invite message to the specified number. Don't include \"https://chat.whatsapp.com/\" in the invite code.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse SendGroupInvite (string instanceKey, GroupInviteMessagePayload data)
+        {
+             ApiResponse<APIResponse> localVarResponse = SendGroupInviteWithHttpInfo(instanceKey, data);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Send a group invite message Sends a group invite message to the specified number. Don't include \"https://chat.whatsapp.com/\" in the invite code.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> SendGroupInviteWithHttpInfo (string instanceKey, GroupInviteMessagePayload data)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendGroupInvite");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendGroupInvite");
+
+            var localVarPath = "/instances/{instance_key}/send/group-invite";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendGroupInvite", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Send a group invite message Sends a group invite message to the specified number. Don't include \"https://chat.whatsapp.com/\" in the invite code.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> SendGroupInviteAsync (string instanceKey, GroupInviteMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await SendGroupInviteWithHttpInfoAsync(instanceKey, data, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Send a group invite message Sends a group invite message to the specified number. Don't include \"https://chat.whatsapp.com/\" in the invite code.
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="data">Message data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendGroupInviteWithHttpInfoAsync (string instanceKey, GroupInviteMessagePayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->SendGroupInvite");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->SendGroupInvite");
+
+            var localVarPath = "/instances/{instance_key}/send/group-invite";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendGroupInvite", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
         /// Send raw image. Sends a image message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="sendImageRequest"></param>
+        /// <param name="updateProfilePicRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>APIResponse</returns>
-        public APIResponse SendImage (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string))
+        public APIResponse SendImage (string instanceKey, string to, UpdateProfilePicRequest updateProfilePicRequest, string caption = default(string))
         {
-             ApiResponse<APIResponse> localVarResponse = SendImageWithHttpInfo(instanceKey, to, sendImageRequest, caption);
+             ApiResponse<APIResponse> localVarResponse = SendImageWithHttpInfo(instanceKey, to, updateProfilePicRequest, caption);
              return localVarResponse.Data;
         }
 
@@ -1816,10 +2037,10 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="sendImageRequest"></param>
+        /// <param name="updateProfilePicRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> SendImageWithHttpInfo (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string))
+        public ApiResponse<APIResponse> SendImageWithHttpInfo (string instanceKey, string to, UpdateProfilePicRequest updateProfilePicRequest, string caption = default(string))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1827,9 +2048,9 @@ namespace WhatsAPI.whatsapi
             // verify the required parameter 'to' is set
             if (to == null)
                 throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->SendImage");
-            // verify the required parameter 'sendImageRequest' is set
-            if (sendImageRequest == null)
-                throw new ApiException(400, "Missing required parameter 'sendImageRequest' when calling MessageSendingApi->SendImage");
+            // verify the required parameter 'updateProfilePicRequest' is set
+            if (updateProfilePicRequest == null)
+                throw new ApiException(400, "Missing required parameter 'updateProfilePicRequest' when calling MessageSendingApi->SendImage");
 
             var localVarPath = "/instances/{instance_key}/send/image";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1856,13 +2077,13 @@ namespace WhatsAPI.whatsapi
             if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
             if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
             if (caption != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "caption", caption)); // query parameter
-            if (sendImageRequest != null && sendImageRequest.GetType() != typeof(byte[]))
+            if (updateProfilePicRequest != null && updateProfilePicRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(sendImageRequest); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(updateProfilePicRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = sendImageRequest; // byte array
+                localVarPostBody = updateProfilePicRequest; // byte array
             }
 
             // authentication (ApiKeyAuth) required
@@ -1895,13 +2116,13 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="sendImageRequest"></param>
+        /// <param name="updateProfilePicRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> SendImageAsync (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> SendImageAsync (string instanceKey, string to, UpdateProfilePicRequest updateProfilePicRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await SendImageWithHttpInfoAsync(instanceKey, to, sendImageRequest, caption, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await SendImageWithHttpInfoAsync(instanceKey, to, updateProfilePicRequest, caption, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1912,11 +2133,11 @@ namespace WhatsAPI.whatsapi
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="instanceKey">Instance key</param>
         /// <param name="to">The recipient&#39;s number</param>
-        /// <param name="sendImageRequest"></param>
+        /// <param name="updateProfilePicRequest"></param>
         /// <param name="caption">Attached caption (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendImageWithHttpInfoAsync (string instanceKey, string to, SendImageRequest sendImageRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> SendImageWithHttpInfoAsync (string instanceKey, string to, UpdateProfilePicRequest updateProfilePicRequest, string caption = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'instanceKey' is set
             if (instanceKey == null)
@@ -1924,9 +2145,9 @@ namespace WhatsAPI.whatsapi
             // verify the required parameter 'to' is set
             if (to == null)
                 throw new ApiException(400, "Missing required parameter 'to' when calling MessageSendingApi->SendImage");
-            // verify the required parameter 'sendImageRequest' is set
-            if (sendImageRequest == null)
-                throw new ApiException(400, "Missing required parameter 'sendImageRequest' when calling MessageSendingApi->SendImage");
+            // verify the required parameter 'updateProfilePicRequest' is set
+            if (updateProfilePicRequest == null)
+                throw new ApiException(400, "Missing required parameter 'updateProfilePicRequest' when calling MessageSendingApi->SendImage");
 
             var localVarPath = "/instances/{instance_key}/send/image";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1953,13 +2174,13 @@ namespace WhatsAPI.whatsapi
             if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
             if (to != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "to", to)); // query parameter
             if (caption != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "caption", caption)); // query parameter
-            if (sendImageRequest != null && sendImageRequest.GetType() != typeof(byte[]))
+            if (updateProfilePicRequest != null && updateProfilePicRequest.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(sendImageRequest); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(updateProfilePicRequest); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = sendImageRequest; // byte array
+                localVarPostBody = updateProfilePicRequest; // byte array
             }
 
             // authentication (ApiKeyAuth) required
