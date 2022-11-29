@@ -39,14 +39,13 @@ docs/TemplateButtonWithMediaPayload.md
 docs/TextMessage.md
 docs/UpdateProfilePicRequest.md
 docs/UploadMediaRequest.md
+docs/UrlMediaUploadPayload.md
 docs/UserInfoPayload.md
 docs/WebhookPayload.md
 git_push.sh
 mono_nunit_test.sh
 src/WhatsAPI.Test/WhatsAPI.Test.csproj
-src/WhatsAPI.Test/models/GroupInviteMessagePayloadTests.cs
-src/WhatsAPI.Test/models/PaymentRequestPayloadTests.cs
-src/WhatsAPI.Test/models/UpdateProfilePicRequestTests.cs
+src/WhatsAPI.Test/models/UrlMediaUploadPayloadTests.cs
 src/WhatsAPI.Test/packages.config
 src/WhatsAPI/Client/ApiClient.cs
 src/WhatsAPI/Client/ApiException.cs
@@ -90,6 +89,7 @@ src/WhatsAPI/models/TemplateButtonWithMediaPayload.cs
 src/WhatsAPI/models/TextMessage.cs
 src/WhatsAPI/models/UpdateProfilePicRequest.cs
 src/WhatsAPI/models/UploadMediaRequest.cs
+src/WhatsAPI/models/UrlMediaUploadPayload.cs
 src/WhatsAPI/models/UserInfoPayload.cs
 src/WhatsAPI/models/WebhookPayload.cs
 src/WhatsAPI/packages.config

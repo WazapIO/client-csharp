@@ -411,6 +411,31 @@ namespace WhatsAPI.whatsapi
         /// <param name="uploadMediaRequest"></param>
         /// <returns>ApiResponse of APIResponse</returns>
         ApiResponse<APIResponse> UploadMediaWithHttpInfo (string instanceKey, string type, UploadMediaRequest uploadMediaRequest);
+        /// <summary>
+        /// Upload media from url.
+        /// </summary>
+        /// <remarks>
+        /// Uploads media from a url to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="data">Media data</param>
+        /// <returns>APIResponse</returns>
+        APIResponse UploadMediaFromUrl (string instanceKey, string type, UrlMediaUploadPayload data);
+
+        /// <summary>
+        /// Upload media from url.
+        /// </summary>
+        /// <remarks>
+        /// Uploads media from a url to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="data">Media data</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        ApiResponse<APIResponse> UploadMediaFromUrlWithHttpInfo (string instanceKey, string type, UrlMediaUploadPayload data);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -831,6 +856,33 @@ namespace WhatsAPI.whatsapi
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<APIResponse>> UploadMediaWithHttpInfoAsync (string instanceKey, string type, UploadMediaRequest uploadMediaRequest, CancellationToken cancellationToken = default(CancellationToken));
+        /// <summary>
+        /// Upload media from url.
+        /// </summary>
+        /// <remarks>
+        /// Uploads media from a url to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="data">Media data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        System.Threading.Tasks.Task<APIResponse> UploadMediaFromUrlAsync (string instanceKey, string type, UrlMediaUploadPayload data, CancellationToken cancellationToken = default(CancellationToken));
+
+        /// <summary>
+        /// Upload media from url.
+        /// </summary>
+        /// <remarks>
+        /// Uploads media from a url to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </remarks>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="data">Media data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> UploadMediaFromUrlWithHttpInfoAsync (string instanceKey, string type, UrlMediaUploadPayload data, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -3786,6 +3838,191 @@ namespace WhatsAPI.whatsapi
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("UploadMedia", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Upload media from url. Uploads media from a url to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="data">Media data</param>
+        /// <returns>APIResponse</returns>
+        public APIResponse UploadMediaFromUrl (string instanceKey, string type, UrlMediaUploadPayload data)
+        {
+             ApiResponse<APIResponse> localVarResponse = UploadMediaFromUrlWithHttpInfo(instanceKey, type, data);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Upload media from url. Uploads media from a url to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="data">Media data</param>
+        /// <returns>ApiResponse of APIResponse</returns>
+        public ApiResponse<APIResponse> UploadMediaFromUrlWithHttpInfo (string instanceKey, string type, UrlMediaUploadPayload data)
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->UploadMediaFromUrl");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling MessageSendingApi->UploadMediaFromUrl");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->UploadMediaFromUrl");
+
+            var localVarPath = "/instances/{instance_key}/send/upload-url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (type != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UploadMediaFromUrl", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<APIResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (APIResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(APIResponse)));
+        }
+
+        /// <summary>
+        /// Upload media from url. Uploads media from a url to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="data">Media data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of APIResponse</returns>
+        public async System.Threading.Tasks.Task<APIResponse> UploadMediaFromUrlAsync (string instanceKey, string type, UrlMediaUploadPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+             ApiResponse<APIResponse> localVarResponse = await UploadMediaFromUrlWithHttpInfoAsync(instanceKey, type, data, cancellationToken);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Upload media from url. Uploads media from a url to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+        /// </summary>
+        /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="instanceKey">Instance key</param>
+        /// <param name="type">Media type</param>
+        /// <param name="data">Media data</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
+        /// <returns>Task of ApiResponse (APIResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> UploadMediaFromUrlWithHttpInfoAsync (string instanceKey, string type, UrlMediaUploadPayload data, CancellationToken cancellationToken = default(CancellationToken))
+        {
+            // verify the required parameter 'instanceKey' is set
+            if (instanceKey == null)
+                throw new ApiException(400, "Missing required parameter 'instanceKey' when calling MessageSendingApi->UploadMediaFromUrl");
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling MessageSendingApi->UploadMediaFromUrl");
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling MessageSendingApi->UploadMediaFromUrl");
+
+            var localVarPath = "/instances/{instance_key}/send/upload-url";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "*/*"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (instanceKey != null) localVarPathParams.Add("instance_key", this.Configuration.ApiClient.ParameterToString(instanceKey)); // path parameter
+            if (type != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
+
+            // authentication (ApiKeyAuth) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
+            {
+                localVarHeaderParams["Authorization"] = this.Configuration.GetApiKeyWithPrefix("Authorization");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType, cancellationToken);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UploadMediaFromUrl", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**SendTextMessage**](MessageSendingApi.md#sendtextmessage) | **POST** /instances/{instance_key}/send/text | Send a text message.
 [**SendVideo**](MessageSendingApi.md#sendvideo) | **POST** /instances/{instance_key}/send/video | Send raw video.
 [**UploadMedia**](MessageSendingApi.md#uploadmedia) | **POST** /instances/{instance_key}/send/upload | Upload media.
+[**UploadMediaFromUrl**](MessageSendingApi.md#uploadmediafromurl) | **POST** /instances/{instance_key}/send/upload-url | Upload media from url.
 
 
 
@@ -1403,6 +1404,95 @@ Name | Type | Description  | Notes
  **instanceKey** | **string**| Instance key | 
  **type** | **string**| Media type | 
  **uploadMediaRequest** | [**UploadMediaRequest**](UploadMediaRequest.md)|  | 
+
+### Return type
+
+[**APIResponse**](APIResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Success |  -  |
+| **400** | Bad Request |  -  |
+| **401** | Unauthorized |  -  |
+| **404** | Instance not found |  -  |
+| **500** | Internal Server Error |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UploadMediaFromUrl
+
+> APIResponse UploadMediaFromUrl (string instanceKey, string type, UrlMediaUploadPayload data)
+
+Upload media from url.
+
+Uploads media from a url to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using WhatsAPI.whatsapi;
+using WhatsAPI.Client;
+using WhatsAPI.models;
+
+namespace Example
+{
+    public class UploadMediaFromUrlExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "/api";
+            // Configure API key authorization: ApiKeyAuth
+            Configuration.Default.AddApiKey("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
+
+            var apiInstance = new MessageSendingApi(Configuration.Default);
+            var instanceKey = "instanceKey_example";  // string | Instance key
+            var type = "image";  // string | Media type
+            var data = new UrlMediaUploadPayload(); // UrlMediaUploadPayload | Media data
+
+            try
+            {
+                // Upload media from url.
+                APIResponse result = apiInstance.UploadMediaFromUrl(instanceKey, type, data);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling MessageSendingApi.UploadMediaFromUrl: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **instanceKey** | **string**| Instance key | 
+ **type** | **string**| Media type | 
+ **data** | [**UrlMediaUploadPayload**](UrlMediaUploadPayload.md)| Media data | 
 
 ### Return type
 
