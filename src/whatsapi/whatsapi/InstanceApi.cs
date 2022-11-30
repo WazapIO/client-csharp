@@ -55,9 +55,9 @@ namespace WhatsAPI.whatsapi
         /// This endpoint is used to create a new WhatsApp Web instance.
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <param name="data">Instance data</param>
         /// <returns>APIResponse</returns>
-        APIResponse CreateInstance (string instanceKey = default(string));
+        APIResponse CreateInstance (CreateInstancePayload data);
 
         /// <summary>
         /// Creates a new instance key.
@@ -66,9 +66,9 @@ namespace WhatsAPI.whatsapi
         /// This endpoint is used to create a new WhatsApp Web instance.
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <param name="data">Instance data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        ApiResponse<APIResponse> CreateInstanceWithHttpInfo (string instanceKey = default(string));
+        ApiResponse<APIResponse> CreateInstanceWithHttpInfo (CreateInstancePayload data);
         /// <summary>
         /// Delete Instance.
         /// </summary>
@@ -227,10 +227,10 @@ namespace WhatsAPI.whatsapi
         /// This endpoint is used to create a new WhatsApp Web instance.
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <param name="data">Instance data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        System.Threading.Tasks.Task<APIResponse> CreateInstanceAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<APIResponse> CreateInstanceAsync (CreateInstancePayload data, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Creates a new instance key.
@@ -239,10 +239,10 @@ namespace WhatsAPI.whatsapi
         /// This endpoint is used to create a new WhatsApp Web instance.
         /// </remarks>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <param name="data">Instance data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<APIResponse>> CreateInstanceWithHttpInfoAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<APIResponse>> CreateInstanceWithHttpInfoAsync (CreateInstancePayload data, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Delete Instance.
         /// </summary>
@@ -667,11 +667,11 @@ namespace WhatsAPI.whatsapi
         /// Creates a new instance key. This endpoint is used to create a new WhatsApp Web instance.
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <param name="data">Instance data</param>
         /// <returns>APIResponse</returns>
-        public APIResponse CreateInstance (string instanceKey = default(string))
+        public APIResponse CreateInstance (CreateInstancePayload data)
         {
-             ApiResponse<APIResponse> localVarResponse = CreateInstanceWithHttpInfo(instanceKey);
+             ApiResponse<APIResponse> localVarResponse = CreateInstanceWithHttpInfo(data);
              return localVarResponse.Data;
         }
 
@@ -679,10 +679,13 @@ namespace WhatsAPI.whatsapi
         /// Creates a new instance key. This endpoint is used to create a new WhatsApp Web instance.
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <param name="data">Instance data</param>
         /// <returns>ApiResponse of APIResponse</returns>
-        public ApiResponse<APIResponse> CreateInstanceWithHttpInfo (string instanceKey = default(string))
+        public ApiResponse<APIResponse> CreateInstanceWithHttpInfo (CreateInstancePayload data)
         {
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling InstanceApi->CreateInstance");
 
             var localVarPath = "/instances/create";
             var localVarPathParams = new Dictionary<String, String>();
@@ -694,6 +697,7 @@ namespace WhatsAPI.whatsapi
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -705,7 +709,14 @@ namespace WhatsAPI.whatsapi
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (instanceKey != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "instance_key", instanceKey)); // query parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -715,7 +726,7 @@ namespace WhatsAPI.whatsapi
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
@@ -735,12 +746,12 @@ namespace WhatsAPI.whatsapi
         /// Creates a new instance key. This endpoint is used to create a new WhatsApp Web instance.
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <param name="data">Instance data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of APIResponse</returns>
-        public async System.Threading.Tasks.Task<APIResponse> CreateInstanceAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<APIResponse> CreateInstanceAsync (CreateInstancePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<APIResponse> localVarResponse = await CreateInstanceWithHttpInfoAsync(instanceKey, cancellationToken);
+             ApiResponse<APIResponse> localVarResponse = await CreateInstanceWithHttpInfoAsync(data, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -749,11 +760,14 @@ namespace WhatsAPI.whatsapi
         /// Creates a new instance key. This endpoint is used to create a new WhatsApp Web instance.
         /// </summary>
         /// <exception cref="WhatsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="instanceKey">Insert instance key if you want to provide custom key (optional)</param>
+        /// <param name="data">Instance data</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (APIResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> CreateInstanceWithHttpInfoAsync (string instanceKey = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<APIResponse>> CreateInstanceWithHttpInfoAsync (CreateInstancePayload data, CancellationToken cancellationToken = default(CancellationToken))
         {
+            // verify the required parameter 'data' is set
+            if (data == null)
+                throw new ApiException(400, "Missing required parameter 'data' when calling InstanceApi->CreateInstance");
 
             var localVarPath = "/instances/create";
             var localVarPathParams = new Dictionary<String, String>();
@@ -765,6 +779,7 @@ namespace WhatsAPI.whatsapi
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -776,7 +791,14 @@ namespace WhatsAPI.whatsapi
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (instanceKey != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "instance_key", instanceKey)); // query parameter
+            if (data != null && data.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(data); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = data; // byte array
+            }
 
             // authentication (ApiKeyAuth) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Authorization")))
@@ -786,7 +808,7 @@ namespace WhatsAPI.whatsapi
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;

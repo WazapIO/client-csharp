@@ -5,7 +5,7 @@ All URIs are relative to */api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ChangeWebhookUrl**](InstanceApi.md#changewebhookurl) | **PUT** /instances/{instance_key}/webhook | Change Webhook url.
-[**CreateInstance**](InstanceApi.md#createinstance) | **GET** /instances/create | Creates a new instance key.
+[**CreateInstance**](InstanceApi.md#createinstance) | **POST** /instances/create | Creates a new instance key.
 [**DeleteInstance**](InstanceApi.md#deleteinstance) | **DELETE** /instances/{instance_key}/delete | Delete Instance.
 [**GetContacts**](InstanceApi.md#getcontacts) | **GET** /instances/{instance_key}/contacts | Get contacts.
 [**GetInstance**](InstanceApi.md#getinstance) | **GET** /instances/{instance_key}/ | Get Instance.
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ## CreateInstance
 
-> APIResponse CreateInstance (string instanceKey = null)
+> APIResponse CreateInstance (CreateInstancePayload data)
 
 Creates a new instance key.
 
@@ -132,12 +132,12 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Authorization", "Bearer");
 
             var apiInstance = new InstanceApi(Configuration.Default);
-            var instanceKey = "instanceKey_example";  // string | Insert instance key if you want to provide custom key (optional) 
+            var data = new CreateInstancePayload(); // CreateInstancePayload | Instance data
 
             try
             {
                 // Creates a new instance key.
-                APIResponse result = apiInstance.CreateInstance(instanceKey);
+                APIResponse result = apiInstance.CreateInstance(data);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -156,7 +156,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **instanceKey** | **string**| Insert instance key if you want to provide custom key | [optional] 
+ **data** | [**CreateInstancePayload**](CreateInstancePayload.md)| Instance data | 
 
 ### Return type
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: */*
 
 

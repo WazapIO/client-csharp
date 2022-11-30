@@ -131,7 +131,7 @@ Class | Method | HTTP request | Description
 *GroupManagementApi* | [**SetGroupName**](docs/GroupManagementApi.md#setgroupname) | **PUT** /instances/{instance_key}/groups/{group_id}/name | Set group name.
 *GroupManagementApi* | [**SetGroupPicture**](docs/GroupManagementApi.md#setgrouppicture) | **PUT** /instances/{instance_key}/groups/{group_id}/profile-pic | Set group picture.
 *InstanceApi* | [**ChangeWebhookUrl**](docs/InstanceApi.md#changewebhookurl) | **PUT** /instances/{instance_key}/webhook | Change Webhook url.
-*InstanceApi* | [**CreateInstance**](docs/InstanceApi.md#createinstance) | **GET** /instances/create | Creates a new instance key.
+*InstanceApi* | [**CreateInstance**](docs/InstanceApi.md#createinstance) | **POST** /instances/create | Creates a new instance key.
 *InstanceApi* | [**DeleteInstance**](docs/InstanceApi.md#deleteinstance) | **DELETE** /instances/{instance_key}/delete | Delete Instance.
 *InstanceApi* | [**GetContacts**](docs/InstanceApi.md#getcontacts) | **GET** /instances/{instance_key}/contacts | Get contacts.
 *InstanceApi* | [**GetInstance**](docs/InstanceApi.md#getinstance) | **GET** /instances/{instance_key}/ | Get Instance.
@@ -169,6 +169,7 @@ Class | Method | HTTP request | Description
  - [models.ButtonMessageWithMediaPayload](docs/ButtonMessageWithMediaPayload.md)
  - [models.ContactMessagePayload](docs/ContactMessagePayload.md)
  - [models.ContactMessagePayloadVcard](docs/ContactMessagePayloadVcard.md)
+ - [models.CreateInstancePayload](docs/CreateInstancePayload.md)
  - [models.FileUpload](docs/FileUpload.md)
  - [models.GroupCreatePayload](docs/GroupCreatePayload.md)
  - [models.GroupInviteMessagePayload](docs/GroupInviteMessagePayload.md)

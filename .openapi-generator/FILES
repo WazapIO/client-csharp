@@ -10,6 +10,7 @@ docs/ButtonMessagePayload.md
 docs/ButtonMessageWithMediaPayload.md
 docs/ContactMessagePayload.md
 docs/ContactMessagePayloadVcard.md
+docs/CreateInstancePayload.md
 docs/FileUpload.md
 docs/GroupCreatePayload.md
 docs/GroupInviteMessagePayload.md
@@ -45,7 +46,7 @@ docs/WebhookPayload.md
 git_push.sh
 mono_nunit_test.sh
 src/WhatsAPI.Test/WhatsAPI.Test.csproj
-src/WhatsAPI.Test/models/UrlMediaUploadPayloadTests.cs
+src/WhatsAPI.Test/models/CreateInstancePayloadTests.cs
 src/WhatsAPI.Test/packages.config
 src/WhatsAPI/Client/ApiClient.cs
 src/WhatsAPI/Client/ApiException.cs
@@ -64,6 +65,7 @@ src/WhatsAPI/models/ButtonMessagePayload.cs
 src/WhatsAPI/models/ButtonMessageWithMediaPayload.cs
 src/WhatsAPI/models/ContactMessagePayload.cs
 src/WhatsAPI/models/ContactMessagePayloadVcard.cs
+src/WhatsAPI/models/CreateInstancePayload.cs
 src/WhatsAPI/models/FileUpload.cs
 src/WhatsAPI/models/GroupCreatePayload.cs
 src/WhatsAPI/models/GroupInviteMessagePayload.cs
